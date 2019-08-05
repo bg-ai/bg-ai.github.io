@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>5 - Nature, the Enjoyer, and Consciousness</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="rust">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="../index.html">Table of Contents</a></li><li class="affix"><a href="../intro.html">Introduction</a></li><li class="affix"><a href="../14/index.html">Next Chapter</a></li><li class="affix"><a href="../12/index.html">Previous Chapter</a></li><li class="affix"><a href="index.html">Nature, the Enjoyer, and Consciousness</a></li><li class="affix"><a href="1-2.html">1-2</a></li><li class="affix"><a href="3.html">3</a></li><li class="affix"><a href="4.html">4</a></li><li class="affix"><a href="5.html" class="active">5</a></li><li class="affix"><a href="6-7.html">6-7</a></li><li class="affix"><a href="8-12.html">8-12</a></li><li class="affix"><a href="13.html">13</a></li><li class="affix"><a href="14.html">14</a></li><li class="affix"><a href="15.html">15</a></li><li class="affix"><a href="16.html">16</a></li><li class="affix"><a href="17.html">17</a></li><li class="affix"><a href="18.html">18</a></li><li class="affix"><a href="19.html">19</a></li><li class="affix"><a href="20.html">20</a></li><li class="affix"><a href="21.html">21</a></li><li class="affix"><a href="22.html">22</a></li><li class="affix"><a href="23.html">23</a></li><li class="affix"><a href="24.html">24</a></li><li class="affix"><a href="25.html">25</a></li><li class="affix"><a href="26.html">26</a></li><li class="affix"><a href="27.html">27</a></li><li class="affix"><a href="28.html">28</a></li><li class="affix"><a href="29.html">29</a></li><li class="affix"><a href="30.html">30</a></li><li class="affix"><a href="31.html">31</a></li><li class="affix"><a href="32.html">32</a></li><li class="affix"><a href="33.html">33</a></li><li class="affix"><a href="34.html">34</a></li><li class="affix"><a href="35.html">35</a></li><li class="affix"><a href="../14/index.html">Next Chapter</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Nature, the Enjoyer, and Consciousness</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3><a class="header" href="#135" id="135">13.5</a></h3>
+<p>ṛṣibhir bahudhā gītaṁ</p>
+<p>chandobhir vividhaiḥ pṛthak</p>
+<p>brahma-sūtra-padaiś caiva</p>
+<p>hetumadbhir viniścitaiḥ</p>
+<p>ṛṣibhiḥ—by the wise sages; bahudhā—in many ways; gītām—described; chandobhiḥ—Vedic hymns; vividhaiḥ—in various; pṛthak—variously; brahma-sūtra—the Vedānta; padaiḥ—aphorism; ca—also; eva—certainly; hetumadbhiḥ—with cause and effect; viniścitaiḥ—ascertain.</p>
+<p><strong>TRANSLATION</strong></p>
+<p>That knowledge of the field of activities and of the knower of activities is described by various sages in various Vedic writings—especially in the Vedānta-sūtra—and is presented with all reasoning as to cause and effect.</p>
+<p><strong>PURPORT</strong></p>
+<p>The Supreme Personality of Godhead, Kṛṣṇa, is the highest authority in explaining this knowledge.</p>
+<p>Still, as a matter of course, learned scholars and standard authorities always give evidence from previous authorities.</p>
+<p>Kṛṣṇa is explaining this most controversial point regarding the duality and non-duality of the soul and the Supersoul by referring to Scriptures, the Vedānta, which are accepted as authority.</p>
+<p>First, He says, this is according to different sages.</p>
+<p>As far as the sages are concerned, besides Himself, Vyāsadeva, the author of the Vedānta-sūtra, is a great sage, and in the Vedānta-sūtra duality is perfectly explained.</p>
+<p>And Vyāsadeva’s father, Parāśara, was also a great sage, and he writes in his books of religiosity: “aham tvaṁ ca athānye…” “We—you, I and various other living entities—are all transcendental, although in material bodies.</p>
+<p>Now we are fallen into the ways of the three modes of material nature according to our different karma.</p>
+<p>As such, some are on higher levels, and some are in the lower nature.</p>
+<p>The higher and lower natures exist due to ignorance and are being manifested in an infinite number of living entities.</p>
+<p>But the Supersoul, which is infallible, is uncontaminated by the three qualities of nature and is transcendental.”</p>
+<p>Similarly, in the original Vedas, a distinction between the soul, the Supersoul and the body is made, especially in the Kaṭha Upaniṣad.</p>
+<p>There is a manifestation of the Supreme Lord’s energy known as annamaya by which one depends simply upon food for existence.</p>
+<p>This is a materialistic realization of the Supreme.</p>
+<p>Then there is prāṇamaya; this means that after realizing the Supreme Absolute Truth in foodstuff, one can realize the Absolute Truth in the living symptoms, or life forms.</p>
+<p>In jñānamaya the living symptom develops to the point of thinking, feeling, and willing.</p>
+<p>Then there is Brahman realization and the realization called vijñānamaya by which the living entity’s mind and life symptoms are distinguished from the living entity himself.</p>
+<p>The next and supreme stage is ānandamaya, realization of the all-blissful nature.</p>
+<p>Thus there are five stages of Brahman realization, which is called brahma puccham.</p>
+<p>Out of these the first three—annamaya, prāṇamaya, and jñānamaya—involve the fields of activities of the living entities.</p>
+<p>Transcendental to all these fields of activities is the Supreme Lord, who is called ānandamaya.</p>
+<p>In the Vedānta-sūtra also the Supreme is called ānandamayo ’bhyāsāt.</p>
+<p>The Supreme Personality of Godhead is by nature full of joy, and to enjoy His transcendental bliss, He expands into vijñānamaya, prāṇamaya, jñānamaya, and annamaya.</p>
+<p>In this field of activities the living entity is considered to be the enjoyer, and different from him is the ānandamaya.</p>
+<p>That means that if the living entity decides to enjoy, in dovetailing himself with the ānandamaya, then he becomes perfect.</p>
+<p>This is the real picture of the Supreme Lord, as supreme knower of the field, the living entity, as subordinate knower, and the nature of the field of activities.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="6-7.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="6-7.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

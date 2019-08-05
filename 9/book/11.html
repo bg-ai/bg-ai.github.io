@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>11 - The Most Confidential Knowledge</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="rust">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="../index.html">Table of Contents</a></li><li class="affix"><a href="../intro.html">Introduction</a></li><li class="affix"><a href="../10/index.html">Next Chapter</a></li><li class="affix"><a href="../8/index.html">Previous Chapter</a></li><li class="affix"><a href="index.html">The Most Confidential Knowledge</a></li><li class="affix"><a href="1.html">1</a></li><li class="affix"><a href="2.html">2</a></li><li class="affix"><a href="3.html">3</a></li><li class="affix"><a href="4.html">4</a></li><li class="affix"><a href="5.html">5</a></li><li class="affix"><a href="6.html">6</a></li><li class="affix"><a href="7.html">7</a></li><li class="affix"><a href="8.html">8</a></li><li class="affix"><a href="9.html">9</a></li><li class="affix"><a href="10.html">10</a></li><li class="affix"><a href="11.html" class="active">11</a></li><li class="affix"><a href="12.html">12</a></li><li class="affix"><a href="13.html">13</a></li><li class="affix"><a href="14.html">14</a></li><li class="affix"><a href="15.html">15</a></li><li class="affix"><a href="16.html">16</a></li><li class="affix"><a href="17.html">17</a></li><li class="affix"><a href="18.html">18</a></li><li class="affix"><a href="19.html">19</a></li><li class="affix"><a href="20.html">20</a></li><li class="affix"><a href="21.html">21</a></li><li class="affix"><a href="22.html">22</a></li><li class="affix"><a href="23.html">23</a></li><li class="affix"><a href="24.html">24</a></li><li class="affix"><a href="25.html">25</a></li><li class="affix"><a href="26.html">26</a></li><li class="affix"><a href="27.html">27</a></li><li class="affix"><a href="28.html">28</a></li><li class="affix"><a href="29.html">29</a></li><li class="affix"><a href="30.html">30</a></li><li class="affix"><a href="31.html">31</a></li><li class="affix"><a href="32.html">32</a></li><li class="affix"><a href="33.html">33</a></li><li class="affix"><a href="34.html">34</a></li><li class="affix"><a href="../10/index.html">Next Chapter</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The Most Confidential Knowledge</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3><a class="header" href="#911" id="911">9.11</a></h3>
+<p>avajānanti māṁ mūḍhā</p>
+<p>mānuṣīṁ tanum āśritam</p>
+<p>paraṁ bhāvam ajānanto</p>
+<p>mama bhūta-maheśvaram</p>
+<p>avajānanti—deride; mām—Me; mūḍhāḥ—foolish men; mānuṣīm—in a human form; tanum—body; āśritam—assuming; param—transcendental; bhāvam—nature; ajānantaḥ—not knowing; mama—Mine; bhūta—everything that be; maheśvaram—supreme proprietor.</p>
+<p><strong>TRANSLATION</strong></p>
+<p>Fools deride Me when I descend in the human form.</p>
+<p>They do not know My transcendental nature and My supreme dominion over all that be.</p>
+<p><strong>PURPORT</strong></p>
+<p>From the other explanations of the previous verses in this chapter, it is clear that the Supreme Personality of Godhead, although appearing like a human being, is not a common man.</p>
+<p>The Personality of Godhead, who conducts the creation, maintenance and annihilation of the complete cosmic manifestation, cannot be a human being.</p>
+<p>Yet there are many foolish men who consider Kṛ,sṇa to be merely a powerful man and nothing more.</p>
+<p>Actually, He is the original Supreme Personality, as is confirmed in the Brahma-saṁhitā (iśvaraḥ paramaḥ kṛsṇaḥ); He is the Supreme Lord.</p>
+<p>There are many īśvaras, controllers, and one appears greater than another.</p>
+<p>In the ordinary management of affairs in the material world, we find some official or director, and above him there is a secretary, and above him a minister, and above him a president.</p>
+<p>Each of them is a controller, but one is controlled by another.</p>
+<p>In the Brahma-saṁhitā it is said that Kṛṣṇa is the supreme controller; there are many controllers undoubtedly both in the material and spiritual world, but Kṛṣṇa is the supreme controller (īśvaraḥ paramaḥ kṛṣṇaḥ), and His body is sac-cid-ānanda, non-material.</p>
+<p>Material bodies cannot perform the wonderful acts described in previous verses.</p>
+<p>His body is eternal, blissful and full of knowledge.</p>
+<p>Although He is not a common man, the foolish deride Him and consider Him to be a man.</p>
+<p>His body is called here mānuṣīm because He is acting just like a man, a friend of Arjuna’s, a politician involved in the Battle of Kurukṣetra.</p>
+<p>In so many ways He is acting just like an ordinary man, but actually His body is sac-cid-ānanda-vigraha—eternal bliss and knowledge absolute.</p>
+<p>This is confirmed in the Vedic language also (sac-cid-ānanda-rūpāya kṛṣṇāya): “I offer my obeisances unto the Supreme Personality of Godhead, Kṛṣṇa, who is the eternal blissful form of knowledge.”</p>
+<p>There are other descriptions in the Vedic language also.</p>
+<p>Tam ekaṁ govindam: “You are Govinda, the pleasure of the senses and the cows.”</p>
+<p>Sac-cid-ānanda-vigraham: “And Your form is transcendental, full of knowledge, bliss and eternality.”</p>
+<p>Despite the transcendental qualities of Lord Kṛṣṇa’s body, its full bliss and knowledge, there are many so-called scholars and commentators of Bhagavad-gītā who deride Kṛṣṇa as an ordinary man.</p>
+<p>The scholar may be born an extraordinary man due to his previous good work, but this conception of Śrī Kṛṣṇa is due to a poor fund of knowledge.</p>
+<p>Therefore he is called mūḍha, for only foolish persons consider Kṛṣṇa to be an ordinary human being because they do not know the confidential activities of the Supreme Lord and His different energies.</p>
+<p>They do not know that Kṛṣṇa’s body is a symbol of complete knowledge and bliss, that He is the proprietor of everything that be and that He can award liberation to anyone.</p>
+<p>Because they do not know that Kṛṣṇa has so many transcendental qualifications, they deride Him.</p>
+<p>Nor do they know that the appearance of the Supreme Personality of Godhead in this material world is a manifestation of His internal energy.</p>
+<p>He is the master of the material energy.</p>
+<p>As has been explained in several places (mama māyā duratyayā), He claims that the material energy, although very powerful, is under His control, and whoever surrenders unto Him can get out of the control of this material energy.</p>
+<p>If a soul surrendered to Kṛṣṇa can get out of the influence of material energy, then how can the Supreme Lord, who conducts the creation, maintenance and annihilation of the whole cosmic nature, have a material body like us? So this conception of Kṛṣṇa is complete foolishness.</p>
+<p>Foolish persons, however, cannot conceive that the Personality of Godhead, Kṛṣṇa, appearing just like an ordinary man, can be the controller of all the atoms and of the gigantic manifestation of the universal form.</p>
+<p>The biggest and the minutest are beyond their conception, so they cannot imagine that a form like that of a human being can simultaneously control the infinite and the minute.</p>
+<p>Actually although He is controlling the infinite and the finite, He is apart from all this manifestation.</p>
+<p>It is clearly stated concerning His yogam aiśvaram, His inconceivable transcendental energy, that He can control the infinite and the finite simultaneously and that He can remain aloof from them.</p>
+<p>Although the foolish cannot imagine how Kṛṣṇa, who appears just like a human being, can control the infinite and the finite, those who are pure devotees accept this, for they know that Kṛṣṇa is the Supreme Personality of Godhead.</p>
+<p>Therefore they completely surrender unto Him and engage in Kṛṣṇa consciousness, devotional service of the Lord.</p>
+<p>There are many controversies amongst the impersonalists and the personalists about the Lord’s appearance as a human being.</p>
+<p>But if we consult Bhagavad-gītā and Śrīmad-Bhāgavatam, the authoritative texts for understanding the science of Kṛṣṇa, then we can understand that Kṛṣṇa is the Supreme Personality of Godhead.</p>
+<p>He is not an ordinary man, although He appeared on this earth as an ordinary human.</p>
+<p>In the Śrīmad-Bhāgavatam, First Canto, First Chapter, when the sages inquire about the activities of Kṛṣṇa, it is stated that His appearance as a man bewilders the foolish.</p>
+<p>No human being could perform the wonderful acts that Kṛṣṇa performed while He was present on this earth.</p>
+<p>When Kṛṣṇa appeared before His father and mother, Vasudeva and Devakī, He appeared with four hands, but after the prayers of the parents, He transformed Himself into an ordinary child.</p>
+<p>His appearance as an ordinary human being is one of the features of His transcendental body.</p>
+<p>In the Eleventh Chapter of the Gītā also it is stated, tenaiva rūpeṇa etc.</p>
+<p>Arjuna prayed to see again that form of four hands, and when Kṛṣṇa was thus petitioned by Arjuna, He again assumed His original form.</p>
+<p>All these different features of the Supreme Lord are certainly not those of an ordinary human being.</p>
+<p>Some of those who deride Kṛṣṇa, who are infected with the Māyāvādī philosophy, quote the following verse from the Śrīmad-Bhāgavatam to prove that Kṛṣṇa is just an ordinary man: ahaṁ sarveṣu bhūteṣu bhūtātmāvasthitaḥ sadā: “The Supreme is present in every living entity.” (Bhāg.3.29.21) We should better take note of this particular verse from the Vaiṣṇava ācāryas like Jīva Gosvāmī instead of following the interpretation of unauthorized persons who deride Kṛṣṇa.</p>
+<p>Jīva Gosvāmī, commenting on this verse, says that Kṛṣṇa, in His plenary expansion as Paramātmā, is situated in the moving and the nonmoving entities as the Supersoul, so any neophyte devotee who simply gives his attention to the arca-mūrti, the form of the Supreme Lord in the temple, and does not respect other living entities is uselessly worshiping the form of the Lord in the temple.</p>
+<p>There are three kinds of devotees of the Lord, and the neophyte is in the lowest stage.</p>
+<p>The neophyte devotee gives more attention to the Deity in the temple than to other devotees, so Jīva Gosvāmī warns that this sort of mentality should be corrected.</p>
+<p>A devotee should see that Kṛṣṇa is present in everyone’s heart as Paramātmā; therefore every body is the embodiment or the temple of the Supreme Lord, and as such, as one offers respect to the temple of the Lord, he should similarly properly respect each and every body in whom the Paramātmā dwells.</p>
+<p>Everyone should therefore be given proper respect and should not be neglected.</p>
+<p>There are also many impersonalists who deride temple worship.</p>
+<p>They say that since God is everywhere, why should one restrict himself to temple worship? But if God is everywhere, is He not in the temple or in the Deity? Although the personalist and the impersonalist will fight with one another perpetually, a perfect devotee in Kṛṣṇa consciousness knows that although Kṛṣṇa is the Supreme Personality, He is all-pervading, as is confirmed in the Brahma-saṁhitā.</p>
+<p>Although His personal abode is Goloka Vṛndāvana and He is always staying there, still, by His different manifestations of energy and by His plenary expansion, He is present everywhere in all parts of the material and spiritual creation.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="10.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="12.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="10.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="12.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

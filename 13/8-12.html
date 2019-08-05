@@ -1,0 +1,357 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>8-12 - Nature, the Enjoyer, and Consciousness</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="rust">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="../index.html">Table of Contents</a></li><li class="affix"><a href="../intro.html">Introduction</a></li><li class="affix"><a href="../14/index.html">Next Chapter</a></li><li class="affix"><a href="../12/index.html">Previous Chapter</a></li><li class="affix"><a href="index.html">Nature, the Enjoyer, and Consciousness</a></li><li class="affix"><a href="1-2.html">1-2</a></li><li class="affix"><a href="3.html">3</a></li><li class="affix"><a href="4.html">4</a></li><li class="affix"><a href="5.html">5</a></li><li class="affix"><a href="6-7.html">6-7</a></li><li class="affix"><a href="8-12.html" class="active">8-12</a></li><li class="affix"><a href="13.html">13</a></li><li class="affix"><a href="14.html">14</a></li><li class="affix"><a href="15.html">15</a></li><li class="affix"><a href="16.html">16</a></li><li class="affix"><a href="17.html">17</a></li><li class="affix"><a href="18.html">18</a></li><li class="affix"><a href="19.html">19</a></li><li class="affix"><a href="20.html">20</a></li><li class="affix"><a href="21.html">21</a></li><li class="affix"><a href="22.html">22</a></li><li class="affix"><a href="23.html">23</a></li><li class="affix"><a href="24.html">24</a></li><li class="affix"><a href="25.html">25</a></li><li class="affix"><a href="26.html">26</a></li><li class="affix"><a href="27.html">27</a></li><li class="affix"><a href="28.html">28</a></li><li class="affix"><a href="29.html">29</a></li><li class="affix"><a href="30.html">30</a></li><li class="affix"><a href="31.html">31</a></li><li class="affix"><a href="32.html">32</a></li><li class="affix"><a href="33.html">33</a></li><li class="affix"><a href="34.html">34</a></li><li class="affix"><a href="35.html">35</a></li><li class="affix"><a href="../14/index.html">Next Chapter</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Nature, the Enjoyer, and Consciousness</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3><a class="header" href="#138-12" id="138-12">13.8-12</a></h3>
+<p>amānitvam adambhitvam</p>
+<p>ahiṁsā kṣāntir ārjavam</p>
+<p>ācāryopāsanaṁ śaucaṁ</p>
+<p>sthairyam ātma-vinigrahaḥ</p>
+<p>indriyārtheṣu vairāgyam</p>
+<p>anahaṅkāra eva ca</p>
+<p>janma-mṛtyu-jarā-vyādhi-</p>
+<p>duḥkha-doṣānudarśanam</p>
+<p>asaktir anabhiṣvaṅgaḥ</p>
+<p>putra-dāra-gṛhādiṣu</p>
+<p>nityaṁ ca sama-cittatvam</p>
+<p>iṣṭāniṣṭopapattiṣu</p>
+<p>mayi cānanya-yogena</p>
+<p>bhaktir avyabhicāriṇī</p>
+<p>vivikta-deśa-sevitvam</p>
+<p>aratir jana-saṁsadi</p>
+<p>adhyātma-jñāna-nityatvaṁ</p>
+<p>tattva-jñānārtha-darśanam</p>
+<p>etaj jñānam iti proktam</p>
+<p>ajñānaṁ yad ato ’nyathā</p>
+<p>amānitvam—humility; adambhitvam—pridelessness; ahiṁsā—nonviolence; kṣāntiḥ—tolerance; ārjavam—simplicity; ācārya-upāsanam—approaching a bona fide spiritual master; śaucam—cleanliness; sthairyam—steadfastness; ātma-vinigrahaḥ—control; iṇdriya-artheṣu—in the matter of the senses; vairāgyam—renunciation; anahaṅkāraḥ—being without false egoism; eva—certainly; ca—also; janma—birth; mṛtyu—death; jarā—old age; vyādhi—disease; duḥkha—distress; doṣa—fault; anudarśanam—observing; asaktiḥ—without attachment; anabhiṣvaṅgaḥ—without association; putra—son; dāra—wife; gṛha-ādiṣu—home, etc.; nityam; ca—also; sama-cittatvam—equilibrium; iṣṭa—desirable; aniṣṭaḥ—undesirable; upapattiṣu—having obtained; mayi—unto Me; ca—also; ananya-yogena—by devotional service; bhaktiḥ—devotion; avyabhicāriṇī—constant, unalloyed; vivikta—solitary; deśa—place; sevitvam—aspiring; aratiḥ—without attachment; jana—people in general; saṁsadi—mass; adhyātma—pertaining to the self; jñāna—knowledge; nityatvam—eternity; tattva-jñāna—knowledge of the truth; artha—the object; darśanam—philosophy; etat—all this; jñānam—knowledge; iti—thus; proktam—declared; ajñānam—ignoraṇce; yat—that which; ataḥ—from this; anyathā—others.</p>
+<p><strong>TRANSLATION</strong></p>
+<p>Humility, pridelessness, nonviolence, tolerance, simplicity, approaching a bona fide spiritual master, cleanliness, steadiness and self-control; renunciation of the objects of sense gratification, absence of false ego, the perception of the evil of birth, death, old age and disease; nonattachment to children, wife, home and the rest, and evenmindedness amid pleasant and unpleasant events; constant and unalloyed devotion to Me, resorting to solitary places, detachment from the general mass of people; accepting the importance of self-realization, and philosophical search for the Absolute Truth—all these I thus declare to be knowledge, and what is contrary to these is ignorance.</p>
+<p><strong>PURPORT</strong></p>
+<p>This process of knowledge is sometimes misunderstood by less intelligent men as being the interaction of the field of activity.</p>
+<p>But actually this is the real process of knowledge.</p>
+<p>If one accepts this process, then the possibility of approaching the Absolute Truth exists.</p>
+<p>This is not the interaction of the tenfold elements, as described before, This is actually the means to get out of it.</p>
+<p>Of all the descriptions of the process of knowledge, the most important point is described in the first line of the tenth verse: The process of knowledge terminates in unalloyed devotional service to the Lord.</p>
+<p>So, if one does not approach, or is not able to approach, the transcendental service of the Lord, then the other nineteen items are of no particular value.</p>
+<p>But, if one takes to devotional service in full Kṛṣṇa consciousness, the other nineteen items automatically develop within him.</p>
+<p>The principle of accepting a spiritual master, as mentioned in the seventh verse, is essential.</p>
+<p>Even for one who takes to devotional service, it is most important.</p>
+<p>Transcendental life begins when one accepts a bona fide spiritual master.</p>
+<p>The Supreme Personality of Godhead, Śrī Kṛṣṇa, clearly states here that this process of knowledge is the actual path.</p>
+<p>Anything speculated beyond this is nonsense.</p>
+<p>As for the knowledge outlined here, the items may be analyzed as follows: Humility means that one should not be anxious to have the satisfaction of being honored by others.</p>
+<p>The material conception of life makes us very eager to receive honor from others, but from the point of view of a man in perfect knowledge—who knows that he is not this body—anything, honor or dishonor, pertaining to this body is useless.</p>
+<p>One should not be hankering after this material deception.</p>
+<p>People are very anxious to be famous for their religion, and consequently sometimes it is found that without understanding the principles of religion, one enters into some group, which is not actually following religious principles, and then wants to advertise himself as a religious mentor.</p>
+<p>As for actual advancement in spiritual science, one should have a test to see how far he is progressing.</p>
+<p>He can judge by these items.</p>
+<p>Nonviolence is generally taken to mean not killing or destroying the body, but actually nonviolence means not to put others into distress.</p>
+<p>People in general are trapped by ignorance in the material concept of life, and they perpetually suffer material pains.</p>
+<p>So, unless one elevates people to spiritual knowledge, one is practicing violence.</p>
+<p>One should try his best to distribute real knowledge to the people, so that they may become enlightened and leave this material entanglement.</p>
+<p>That is nonviolence.</p>
+<p>Tolerance means that one should be practiced to bear insult and dishonor from others.</p>
+<p>If one is engaged in the advancement of spiritual knowledge, there will be so many insults and much dishonor from others.</p>
+<p>This is expected because material nature is so constituted.</p>
+<p>Even a boy like Prahlāda, who, only five years old, was engaged in the cultivation of spiritual knowledge, was endangered when his father became antagonistic to his devotion.</p>
+<p>The father tried to kill him in so many ways, but Prahlada tolerated him.</p>
+<p>So, for making advancement in spiritual knowledge, there may be many impediments, but we should be tolerant and continue our progress with determination.</p>
+<p>Simplicity means that without diplomacy one should be so straightforward that he can disclose the real truth even to an enemy.</p>
+<p>As for acceptance of the spiritual master, that is essential, because without the instruction of a bona fide spiritual master, one cannot progress in the spiritual science.</p>
+<p>One should approach the spiritual master with all humility and offer him all services so that he will be pleased to bestow his blessings upon the disciple.</p>
+<p>Because a bona fide spiritual master is a representative of Kṛṣṇa, if he bestows any blessings upon his disciple, that will make the disciple immediately advanced without the disciple’s following the regulated principles.</p>
+<p>Or, the regulated principles will be easier for one who has served the spiritual master without reservation.</p>
+<p>Cleanliness is essential for making advancement in spiritual life.</p>
+<p>There are two kinds of cleanliness: external and internal.</p>
+<p>External cleanliness means taking a bath, but for internal cleanliness, one has to think of Kṛṣṇa always and chant, Hare Kṛṣṇa Hare Kṛṣṇa Kṛṣṇa Kṛṣṇa Hare Hare, Hare Rāma Hare Rāma Rāma Rāma Hare Hare.</p>
+<p>This process cleans the accumulated dust of past karma from the mind.</p>
+<p>Steadiness means that one should be very determined to make progress in spiritual life.</p>
+<p>Without such determination, one cannot make tangible progress.</p>
+<p>And self-control means that one should not accept anything which is detrimental to the path of spiritual progress.</p>
+<p>One should become accustomed to this and reject anything which is against the path of spiritual progress.</p>
+<p>This is real renunciation.</p>
+<p>The senses are so strong that they are always anxious to have sense gratification.</p>
+<p>One should not cater to these demands, which are not necessary.</p>
+<p>The senses should only be gratified to keep the body fit so that one can discharge his duty in advancing in spiritual life.</p>
+<p>The most important and uncontrollable sense is the tongue.</p>
+<p>If one can control the tongue, then there is every possibility of controlling the other senses.</p>
+<p>The function of the tongue is to taste and to vibrate.</p>
+<p>Therefore, by systematic regulation, the tongue should always be engaged in tasting the remnants of foodstuffs offered to Kṛṣṇa and chanting Hare Kṛṣṇa.</p>
+<p>As far as the eyes are concerned, they should not be allowed to see anything but the beautiful form of Kṛṣṇa.</p>
+<p>That will control the eyes.</p>
+<p>Similarly, the ears should be engaged in hearing about Kṛṣṇa and the nose in smelling the flowers offered to Kṛṣṇa.</p>
+<p>This is the process of devotional service, and it is understood here that Bhagavad-gītā is simply expounding the science of devotional service.</p>
+<p>Devotional service is the main and sole objective.</p>
+<p>Unintelligent commentators on the Gītā try to divert the mind of the reader to other subjects, but there is no other subject in Bhagavad-gītā but devotional service.</p>
+<p>False ego means accepting this body as oneself.</p>
+<p>When one understands that he is not his body and is spirit soul, that is real ego.</p>
+<p>Ego is there.</p>
+<p>False ego is condemned, but not real ego.</p>
+<p>In the Vedic literature, it is said: ahaṁ brahmāsmi.</p>
+<p>I am Brahman, I am spirit.</p>
+<p>This “I am,” the sense of self, also exists in the liberated stage of self-realization.</p>
+<p>This sense of “I am” is ego, but when the sense of “I am” is applied to this false body, it is false ego.</p>
+<p>When the sense of self is applied to reality, that is real ego.</p>
+<p>There are some philosophers who say we should give up our ego, but we cannot give up our ego because ego means identity.</p>
+<p>We ought, of course, to give up the false identification with the body.</p>
+<p>One should try to understand the distress of accepting birth, death, old age and disease.</p>
+<p>There are descriptions in various Vedic literatures of birth.</p>
+<p>In the Śrīmad-Bhāgavatam the world of the unborn, the child’s stay in the womb of the mother, its suffering, etc., are all very graphically described.</p>
+<p>It should be thoroughly understood that birth is distressful.</p>
+<p>Because we forget how much distress we have suffered within the womb of the mother, we do not make any solution to the repetition of birth and death.</p>
+<p>Similarly at the time of death, there are all kinds of sufferings, and they are also mentioned in the authoritative scriptures.</p>
+<p>These should be discussed.</p>
+<p>And as far as disease and old age are concerned, everyone gets practical experience.</p>
+<p>No one wants to be diseased, and no one wants to become old, but there is no avoiding these.</p>
+<p>Unless we have a pessimistic view of this material life, considering the distresses of birth, death, old age and disease, there is no impetus for our making advancement in spiritual life.</p>
+<p>As for detachment from children, wife and home, it is not meant that one should have no feeling for these.</p>
+<p>They are natural objects of affection, but when they are not favorable to spiritual progress, then one should not be attached to them.</p>
+<p>The best process for making the home pleasant is Kṛṣṇa consciousness.</p>
+<p>If one is in full Kṛṣṇa consciousness, he can make his home very happy because this process of Kṛṣṇa consciousness is very easy.</p>
+<p>One need only chant Hare Kṛṣṇa Hare Kṛṣṇa Kṛṣṇa Kṛṣṇa Hare Hare, Hare Rāma Hare Rāma Rāma Rāma Hare Hare, accept the remnants of foodstuffs offered to Kṛṣṇa, have some discussion on books like Bhagavad-gītā and Śrīmad-Bhāgavatam, and engage oneself in Deity worship.</p>
+<p>These four will make one happy.</p>
+<p>One should train the members of his family in this way.</p>
+<p>The family members can sit down morning and evening and chant together Hare Kṛṣṇa Hare Kṛṣṇa Kṛṣṇa Kṛṣṇa Hare Hare, Hare Rāma Hare Rāma Rāma Rāma Hare Hare.</p>
+<p>If one can mold his family life in this way to develop Kṛṣṇa consciousness, following these four principles, then there is no need to change from family life to renounced life.</p>
+<p>But if it is not congenial, not favorable for spiritual advancement, then family life should be abandoned.</p>
+<p>One must sacrifice everything to realize or serve Kṛṣṇa, just as Arjuna did.</p>
+<p>Arjuna did not want to kill his family members, but when he understood that these family members were impediments to his Kṛṣṇa realization, he accepted the instruction of Kṛṣṇa and fought and killed them.</p>
+<p>In all cases, one should be detached from the happiness and distress of family life because in this world one can never be fully happy or fully miserable.</p>
+<p>Happiness and distress are concommitant factors of material life.</p>
+<p>One should learn to tolerate, as advised in Bhagavad-gītā.</p>
+<p>One can never restrict the coming and going of happiness and distress, so one should be detached from the materialistic way of life and be automatically equiposed in both cases.</p>
+<p>Generally, when we get something desirable, we are very happy, and when we get something undesirable, we are distressed.</p>
+<p>But if we are actually in the spiritual position, these things will not agitate us.</p>
+<p>To reach that stage, we have to practice unbreakable devotional service; devotional service to Kṛṣṇa without deviation means engaging oneself in the nine processes of devotional service, chanting, hearing, worshiping, offering respect, etc., as described in the last verse of the Ninth Chapter.</p>
+<p>That process should be followed.</p>
+<p>Naturally, when one is adapted to the spiritual way of life, he will not want to mix with materialistic men.</p>
+<p>That would go against his grain.</p>
+<p>One may test himself by seeing how far he is inclined to live in a solitary place without unwanted association.</p>
+<p>Naturally a devotee has no taste for unnecessary sporting or cinema-going or enjoying some social function, because he understands that these are simply a waste of time.</p>
+<p>There are many research scholars and philosophers who study sex life or some other subject, but according to Bhagavad-gītā, such research work and philosophical speculation have no value.</p>
+<p>That is more or less nonsensical.</p>
+<p>According to Bhagavad-gītā, one should make research by philosophical discretion into the nature of the soul.</p>
+<p>One should make research to understand with what the self is concerned.</p>
+<p>That is recommended here.</p>
+<p>As far as self-realization is concerned, it is clearly stated here that bhakti-yoga is especially practical.</p>
+<p>As soon as there is a question of devotion, one must consider the relationship between the Supersoul and the individual soul.</p>
+<p>The individual soul and the Supersoul cannot be one, at least not in the bhakti conception, the devotional conception of life.</p>
+<p>This service of the individual soul to the Supreme Soul is eternal, nityam, as is clearly stated.</p>
+<p>So bhakti or devotional service is eternal.</p>
+<p>One should be established in that philosophical conviction, otherwise it is only a waste of time, ignorance.</p>
+<p>In the Śrīmad-Bhāgavatam, this is explained; vadanti tat tattva-vidas tattvaṁ yaj jñānam advayam.</p>
+<p>“Those who are actually knowers of the Absolute Truth know that the Self is realized in three different phases as Brahman, Paramātmā and Bhagavān.” (Bhāg.1.2.11) Bhagavān is the last word in the realization of the Absolute Truth; therefore one should reach up to that platform of understanding the Supreme Personality of Godhead and thus engage in the devotional service of the Lord.</p>
+<p>That is perfection of knowledge.</p>
+<p>Beginning from practicing humility up to the point of realization of the Supreme Truth, the Absolute Personality of Godhead, this process is just like a staircase beginning from the ground floor up to the top floor.</p>
+<p>Now on this staircase there are so many people who have reached the first floor, the second or third floor, etc., but unless one reaches the top floor, which is the understanding of Kṛṣṇa, he is at a lower stage of knowledge.</p>
+<p>If anyone wants to compete with God and at the same time make advancement in spiritual knowledge, he will be frustrated.</p>
+<p>It is clearly stated that without humility understanding is harmful.</p>
+<p>To think oneself God is most puffed up.</p>
+<p>Although the living entity is always being kicked by the stringent laws of material nature, still he thinks, “I am God” because of ignorance.</p>
+<p>One should be humble and know that he is subordinate to the Supreme Lord.</p>
+<p>Due to rebellion against the Supreme Lord, one becomes subordinate to material nature.</p>
+<p>One must know and be convinced of this truth.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="6-7.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="13.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="6-7.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="13.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

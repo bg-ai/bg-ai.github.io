@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>42 - Transcendental Knowledge</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="rust">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="../index.html">Table of Contents</a></li><li class="affix"><a href="../intro.html">Introduction</a></li><li class="affix"><a href="../5/index.html">Next Chapter</a></li><li class="affix"><a href="../3/index.html">Previous Chapter</a></li><li class="affix"><a href="index.html">Transcendental Knowledge</a></li><li class="affix"><a href="1.html">1</a></li><li class="affix"><a href="2.html">2</a></li><li class="affix"><a href="3.html">3</a></li><li class="affix"><a href="4.html">4</a></li><li class="affix"><a href="5.html">5</a></li><li class="affix"><a href="6.html">6</a></li><li class="affix"><a href="7.html">7</a></li><li class="affix"><a href="8.html">8</a></li><li class="affix"><a href="9.html">9</a></li><li class="affix"><a href="10.html">10</a></li><li class="affix"><a href="11.html">11</a></li><li class="affix"><a href="12.html">12</a></li><li class="affix"><a href="13.html">13</a></li><li class="affix"><a href="14.html">14</a></li><li class="affix"><a href="15.html">15</a></li><li class="affix"><a href="16.html">16</a></li><li class="affix"><a href="17.html">17</a></li><li class="affix"><a href="18.html">18</a></li><li class="affix"><a href="19.html">19</a></li><li class="affix"><a href="20.html">20</a></li><li class="affix"><a href="21.html">21</a></li><li class="affix"><a href="22.html">22</a></li><li class="affix"><a href="23.html">23</a></li><li class="affix"><a href="24.html">24</a></li><li class="affix"><a href="25.html">25</a></li><li class="affix"><a href="26.html">26</a></li><li class="affix"><a href="27.html">27</a></li><li class="affix"><a href="28.html">28</a></li><li class="affix"><a href="29.html">29</a></li><li class="affix"><a href="30.html">30</a></li><li class="affix"><a href="31.html">31</a></li><li class="affix"><a href="32.html">32</a></li><li class="affix"><a href="33.html">33</a></li><li class="affix"><a href="34.html">34</a></li><li class="affix"><a href="35.html">35</a></li><li class="affix"><a href="36.html">36</a></li><li class="affix"><a href="37.html">37</a></li><li class="affix"><a href="38.html">38</a></li><li class="affix"><a href="39.html">39</a></li><li class="affix"><a href="40.html">40</a></li><li class="affix"><a href="41.html">41</a></li><li class="affix"><a href="42.html" class="active">42</a></li><li class="affix"><a href="../5/index.html">Next Chapter</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Transcendental Knowledge</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3><a class="header" href="#442" id="442">4.42</a></h3>
+<p>tasmād ajñāna-sambhūtaṁ</p>
+<p>hṛt-sthaṁ jñānāsinātmanaḥ</p>
+<p>chittvainaṁ saṁśayaṁ yogam</p>
+<p>ātiṣṭhottiṣṭha bhārata</p>
+<p>tasmāt—therefore; ajñāna-sambhūtam—outcome of ignorance; hṛt-stham—situated in the heart; jñāna—knowledge; asinā—by the weapon of; ātmanaḥ—of the self; chittvā—cutting off; enam—this; saṁśayam—doubt; yogam—in yoga; ātiṣṭha—be situated; uttiṣṭha—stand up to fight; bhārata—O descendant of Bharata.</p>
+<p><strong>TRANSLATION</strong></p>
+<p>Therefore the doubts which have arisen in your heart out of ignorance should be slashed by the weapon of knowledge.</p>
+<p>Armed with yoga, O Bhārata, stand and fight.</p>
+<p><strong>PURPORT</strong></p>
+<p>The yoga system instructed in this chapter is called sanātana-yoga, or eternal activities performed by the living entity.</p>
+<p>This yoga has two divisions of sacrificial actions: one is called sacrifice of one’s material possessions, and the other is called knowledge of self, which is pure spiritual activity.</p>
+<p>If sacrifice of one’s material possessions is not dovetailed for spiritual realization, then such sacrifice becomes material.</p>
+<p>But one who performs such sacrifices with a spiritual objective, or in devotional service, makes a perfect sacrifice.</p>
+<p>When we come to spiritual activities, we find that these are also divided into two: namely, understanding of one’s own self (or one’s constitutional position), and the truth regarding the Supreme Personality of Godhead.</p>
+<p>One who follows the path of the Gītā as it is can very easily understand these two important divisions of spiritual knowledge.</p>
+<p>For him there is no difficulty in obtaining perfect knowledge of the self as part and parcel of the Lord.</p>
+<p>And such understanding is beneficial for such a person who easily understands the transcendental activities of the Lord.</p>
+<p>In the beginning of this chapter, the transcendental activities of the Lord were discussed by the Supreme Lord Himself.</p>
+<p>One who does not understand the instructions of the Gītā is faithless, and is to be considered to be misusing the fragmental independence awarded to him by the Lord.</p>
+<p>In spite of such instructions, one who does not understand the real nature of the Lord as the eternal, blissful, all-knowing Personality of Godhead, is certainly fool number one.</p>
+<p>Ignorance can be removed by gradual acceptance of the principles of Kṛṣṇa consciousness.</p>
+<p>Kṛṣṇa consciousness is awakened by different types of sacrifices to the demigods, sacrifice to Brahman, sacrifice in celibacy, in household life, in controlling the senses, in practicing mystic yoga, in penance, in foregoing material possessions, in studying the Vedas, and in partaking of the social institution called varṇāśrama-dharma.</p>
+<p>All of these are known as sacrifice, and all of them are based on regulated action.</p>
+<p>But within all these activities, the important factor is self-realization.</p>
+<p>One who seeks that objective is the real student of Bhagavad-gītā, but one who doubts the authority of Kṛṣṇa falls back.</p>
+<p>One is therefore advised to study Bhagavad-gītā, or any other scripture, under a bona fide spiritual master, with service and surrender.</p>
+<p>A bona fide spiritual master is in the disciplic succession from time eternal, and he does not deviate at all from the instructions of the Supreme Lord as they were imparted millions of years ago to the sun-god, from whom the instructions of Bhagavad-gītā have come down to the earthly kingdom.</p>
+<p>One should, therefore, follow the path of Bhagavad-gītā as it is expressed in the Gītā itself and beware of self-interested people after personal aggrandizement who deviate others from the actual path.</p>
+<p>The Lord is definitely the supreme person, and His activities are transcendental.</p>
+<p>One who understands this is a liberated person from the very beginning of his study of the Gītā.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="41.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../5/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="41.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../5/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

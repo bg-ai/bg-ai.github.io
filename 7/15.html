@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>15 - Knowledge of the Absolute</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="rust">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="../index.html">Table of Contents</a></li><li class="affix"><a href="../intro.html">Introduction</a></li><li class="affix"><a href="../8/index.html">Next Chapter</a></li><li class="affix"><a href="../6/index.html">Previous Chapter</a></li><li class="affix"><a href="index.html">Knowledge of the Absolute</a></li><li class="affix"><a href="1.html">1</a></li><li class="affix"><a href="2.html">2</a></li><li class="affix"><a href="3.html">3</a></li><li class="affix"><a href="4.html">4</a></li><li class="affix"><a href="5.html">5</a></li><li class="affix"><a href="6.html">6</a></li><li class="affix"><a href="7.html">7</a></li><li class="affix"><a href="8.html">8</a></li><li class="affix"><a href="9.html">9</a></li><li class="affix"><a href="10.html">10</a></li><li class="affix"><a href="11.html">11</a></li><li class="affix"><a href="12.html">12</a></li><li class="affix"><a href="13.html">13</a></li><li class="affix"><a href="14.html">14</a></li><li class="affix"><a href="15.html" class="active">15</a></li><li class="affix"><a href="16.html">16</a></li><li class="affix"><a href="17.html">17</a></li><li class="affix"><a href="18.html">18</a></li><li class="affix"><a href="19.html">19</a></li><li class="affix"><a href="20.html">20</a></li><li class="affix"><a href="21.html">21</a></li><li class="affix"><a href="22.html">22</a></li><li class="affix"><a href="23.html">23</a></li><li class="affix"><a href="24.html">24</a></li><li class="affix"><a href="25.html">25</a></li><li class="affix"><a href="26.html">26</a></li><li class="affix"><a href="27.html">27</a></li><li class="affix"><a href="28.html">28</a></li><li class="affix"><a href="29.html">29</a></li><li class="affix"><a href="30.html">30</a></li><li class="affix"><a href="../8/index.html">Next Chapter</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Knowledge of the Absolute</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3><a class="header" href="#715" id="715">7.15</a></h3>
+<p>na māṁ duṣkṛtino mūḍhāḥ</p>
+<p>prapadyante narādhamāḥ</p>
+<p>māyayāpahṛta-jñānā</p>
+<p>āsuraṁ bhāvam āśritāḥ</p>
+<p>na—not; mām—unto Me; duṣkṛtinaḥ—miscreants; mūḍhāḥ—foolish; prapadyante—surrender; narādhamāḥ—lowest among mankind; māyayā—by the illusory energy; apahṛta—stolen by illusion; jñānāḥ—knowledge; asuram—demonic; bhāvam—nature; āśritāḥ—accepting.</p>
+<p><strong>TRANSLATION</strong></p>
+<p>Those miscreants who are grossly foolish, lowest among mankind, whose knowledge is stolen by illusion, and who partake of the atheistic nature of demons, do not surrender unto Me.</p>
+<p><strong>PURPORT</strong></p>
+<p>It is said in Bhagavad-gītā that simply by surrendering oneself unto the lotus feet of the Supreme Personality Kṛṣṇa, one can surmount the stringent laws of material nature.</p>
+<p>At this point a question arises: How is it that educated philosophers, scientists, businessmen, administrators and all the leaders of ordinary men do not surrender to the lotus feet of Śrī Kṛṣṇa, the all-powerful Personality of Godhead? Mukti, or liberation from the laws of material nature, is sought by the leaders of mankind in different ways and with great plans and perseverance for a great many years and births.</p>
+<p>But if that liberation is possible by simply surrendering unto the lotus feet of the Supreme Personality of Godhead, then why don’t these intelligent and hard-working leaders adopt this simple method?</p>
+<p>The Gītā answers this question very frankly.</p>
+<p>Those really learned leaders of society like Brahmā, Śiva, Kapila, the Kumāras, Manu, Vyāsa, Devala, Asita, Janaka, Prahlāda, Bali, and later on Madhvācārya, Rāmānujācārya, Śrī Caitanya and many others—who are faithful philosophers, politicians, educators, scientists, etc.—surrender to the lotus feet of the Supreme Person, the all-powerful authority.</p>
+<p>Those who are not actually philosophers, scientists, educators, administrators, etc., but who pose themselves as such for material gain, do not accept the plan or path of the Supreme Lord.</p>
+<p>They have no idea of God; they simply manufacture their own worldly plans and consequently complicate the problems of material existence in their vain attempts to solve them.</p>
+<p>Because material energy (nature) is so powerful, it can resist the unauthorized plans of the atheists and baffle the knowledge of “planning commissions.”</p>
+<p>The atheistic plan-makers are described herein by the word duṣkṛtina, or “miscreants.”</p>
+<p>Kṛtina means one who has performed meritorious work.</p>
+<p>The atheist planmaker is sometimes very intelligent and meritorious also, because any gigantic plan, good or bad, must take intelligence to execute.</p>
+<p>But because the atheist’s brain is improperly utilized in opposing the plan of the Supreme Lord, the atheistic planmaker is called duṣkṛtina, which indicates that his intelligence and efforts are misdirected.</p>
+<p>In the Gītā it is clearly mentioned that material energy works fully under the direction of the Supreme Lord.</p>
+<p>It has no independant authority.</p>
+<p>It works as the shadow moves, in accordance with the movements of the object.</p>
+<p>But still material energy is very powerful, and the atheist, due to his godless temperament, cannot know how it works; nor can he know the plan of the Supreme Lord.</p>
+<p>Under illusion and the modes of passion and ignorance, all his plans are baffled, as in the case of Hiraṇyakaśipu and Rāvaṇa, whose plans were smashed to dust although they were both materially learned as scientists, philosophers, administrators and educators.</p>
+<p>These duṣkṛtinas, or miscreants, are of four different patterns, as outlined below: (1) The mūḍhas are those who are grossly foolish, like hard-working beasts of burden.</p>
+<p>They want to enjoy the fruits of their labor by themselves, and so do not want to part with them for the Supreme.</p>
+<p>The typical example of the beast of burden is the ass.</p>
+<p>This humble beast is made to work very hard by his master.</p>
+<p>The ass does not really know for whom he works so hard day and night.</p>
+<p>He remains satisfied by filling his stomach with a bundle of grass, sleeping for a while under fear of being beaten by his master, and satisfying his sex appetite at the risk of being repeatedly kicked by the opposite party.</p>
+<p>The ass sings poetry and philosophy sometimes, but this braying only disturbs others.</p>
+<p>This is the position of the foolish fruitive worker who does not know for whom he should work.</p>
+<p>He does not know that karma (action) is meant for yajña (sacrifice).</p>
+<p>Most often, those who work very hard day and night to clear the burden of self-created duties say that they have no time to hear of the immortality of the living being.</p>
+<p>To such mūḍhas, material gains, which are destructible, are life’s all in all—despite the fact that the mūḍhas enjoy only a very small fraction of the fruit of labor.</p>
+<p>Sometimes they spend sleepless days and nights for fruitive gain, and although they may have ulcers or indigestion, they are satisfied with practically no food; they are simply absorbed in working hard day and night for the benefit of illusory masters.</p>
+<p>Ignorant of their real master, the foolish workers waste their valuable time serving mammon.</p>
+<p>Unfortunately, they never surrender to the supreme master of all masters, nor do they take time to hear of Him from the proper sources.</p>
+<p>The swine who eat the soil do not care to accept sweetmeats made of sugar and ghee.</p>
+<p>Similarly, the foolish worker will untiringly continue to hear of the sense-enjoyable tidings of the flickering mundane force that moves the material world. (2) Another class of duṣkṛtina, or miscreant, is called the narādhama, or the lowest of mankind.</p>
+<p>Nara means human being, and adhama means the lowest.</p>
+<p>Out of the 8,400,000 different species of living beings, there are 400,000 human species.</p>
+<p>Out of these there are numerous lower forms of human life that are mostly uncivilized.</p>
+<p>The civilized human beings are those who have regulated principles of social, political and religious life.</p>
+<p>Those who are socially and politically developed, but who have no religious principles, must be considered narādhamas.</p>
+<p>Nor is religion without God religion, because the purpose of following religious principles is to know the Supreme Truth and man’s relation with Him.</p>
+<p>In the Gītā the Personality of Godhead clearly states that there is no authority above Him and that He is the Supreme Truth.</p>
+<p>The civilized form of human life is meant for man’s reviving the lost consciousness of his eternal relation with the Supreme Truth, the Personality of Godhead Śrī Kṛṣṇa, who is all-powerful.</p>
+<p>Whoever loses this chance is classified as a narādhama.</p>
+<p>We get information from revealed scriptures that when the baby is in the mother’s womb (an extremely uncomfortable situation) he prays to God for deliverance and promises to worship Him alone as soon as he gets out.</p>
+<p>To pray to God when he is in difficulty is a natural instinct in every living being because he is eternally related with God.</p>
+<p>But after his deliverance, the child forgets the difficulties of birth and forgets his deliverer also, being influenced by māyā, the illusory energy.</p>
+<p>It is the duty of the guardians of children to revive the divine consciousness dormant in them.</p>
+<p>The ten processes of reformatory ceremonies, as enjoined in the Manu-smṛti, which is the guide to religious principles, are meant for reviving God consciousness in the system of varṇāśrama.</p>
+<p>However, no process is strictly followed now in any part of the world, and therefore 99.9 percent of the population is narādhama.</p>
+<p>When the whole population becomes narādhama, naturally all their so-called education is made null and void by the all-powerful energy of physical nature.</p>
+<p>According to the standard of the Gītā, a learned man is he who sees on equal terms the learned brāhmaṇa, the dog, the cow, the elephant and the dog-eater.</p>
+<p>That is the vision of a true devotee.</p>
+<p>Śrī Nityānanda Prabhu, who is the incarnation of Godhead as divine master, delivered the typical narādhamas, the brothers Jagai and Madhai, and showed how the mercy of a real devotee is bestowed upon the lowest of mankind.</p>
+<p>So the narādhama who is condemned by the Personality of Godhead can again revive his spiritual consciousness only by the mercy of a devotee.</p>
+<p>Śrī Caitanya Mahāprabhu, in propagating the bhāgavata-dharma or activities of the devotees, has recommended that people submissively hear the message of the Personality of Godhead.</p>
+<p>The essence of this message is Bhagavad-gītā.</p>
+<p>The lowest amongst human beings can be delivered by this submissive hearing process only, but unfortunately they even deny giving an aural reception to these messages, and what to speak of surrendering to the will of the Supreme Lord? Narādhamas, or the lowest of mankind, will fully neglect the prime duty of the human being. (3) The next class of duṣkṛtina is called māyayāpahṛta-jñāna, or those persons whose erudite knowledge has been nullified by the influence of illusory material energy.</p>
+<p>They are mostly very learned fellows—great philosophers, poets, literati, scientists, etc.—but the illusory energy misguides them, and therefore they disobey the Supreme Lord.</p>
+<p>There are a great number of māyayāpahṛta-jñānas at the present moment, even amongst the scholars of the Gītā.</p>
+<p>In the Gītā, in plain and simple language, it is stated that Śrī Kṛṣṇa is the Supreme Personality of Godhead.</p>
+<p>There is none equal to or greater than Him.</p>
+<p>He is mentioned as the father of Brahmā, the original father of all human beings.</p>
+<p>In fact, Śrī Kṛṣṇa is said to be not only the father of Brahmā but also the father of all species of life.</p>
+<p>He is the root of the impersonal Brahman and Paramātmā; the Supersoul in every entity is His plenary portion.</p>
+<p>He is the fountainhead of everything, and everyone is advised to surrender unto His lotus feet.</p>
+<p>Despite all these clear statements, the māyayāpahṛta-jñāna deride the Personality of the Supreme Lord and consider Him merely another human being.</p>
+<p>They do not know that the blessed form of human life is designed after the eternal and transcendental feature of the Supreme Lord.</p>
+<p>All the unauthorized interpretations of the Gītā by the class of māyayāpahṛta-jñāna, outside the purview of the paramparā system, are so many stumbling blocks in the path of spiritual understanding.</p>
+<p>The deluded interpreters do not surrender unto the lotus feet of Śrī Kṛṣṇa, nor do they teach others to follow this principle. (4) The last class of duṣkṛtina is called āsuraṁ bhāvam āśrita, or those of demonic principles.</p>
+<p>This class is openly atheistic.</p>
+<p>Some of them argue that the Supreme Lord can never descend upon this material world, but they are unable to give any tangible reasons as to why not.</p>
+<p>There are others who make Him subordinate to the impersonal feature, although the opposite is declared in the Gītā.</p>
+<p>Envious of the Supreme Personality of Godhead, the atheist will present a number of illicit incarnations manufactured in the factory of his brain.</p>
+<p>Such persons whose very principle of life is to decry the Personality of Godhead cannot surrender unto the lotus feet of Śrī Kṛṣṇa.</p>
+<p>Śrī Yāmunācārya Albandru of South India said, “O my Lord! You are unknowable to persons involved with atheistic principles despite Your uncommon qualities, features, and activities and despite Your personality being confirmed by all the revealed scriptures in the quality of goodness, and despite Your being acknowledged by the famous authorities renowned for their depth of knowledge in the transcendental science and situated in the godly qualities.”</p>
+<p>Therefore, (1) grossly foolish persons, (2) the lowest of mankind, (3) the deluded speculators, and (4) the professed atheists, as above mentioned, never surrender unto the lotus feet of the Personality of Godhead in spite of all scriptural and authoritative advice.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="14.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="16.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="14.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="16.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

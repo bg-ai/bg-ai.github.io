@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>3-4 - The Yoga of the Supreme Person</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="rust">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="../index.html">Table of Contents</a></li><li class="affix"><a href="../intro.html">Introduction</a></li><li class="affix"><a href="../16/index.html">Next Chapter</a></li><li class="affix"><a href="../14/index.html">Previous Chapter</a></li><li class="affix"><a href="index.html">The Yoga of the Supreme Person</a></li><li class="affix"><a href="1.html">1</a></li><li class="affix"><a href="2.html">2</a></li><li class="affix"><a href="3-4.html" class="active">3-4</a></li><li class="affix"><a href="5.html">5</a></li><li class="affix"><a href="6.html">6</a></li><li class="affix"><a href="7.html">7</a></li><li class="affix"><a href="8.html">8</a></li><li class="affix"><a href="9.html">9</a></li><li class="affix"><a href="10.html">10</a></li><li class="affix"><a href="11.html">11</a></li><li class="affix"><a href="12.html">12</a></li><li class="affix"><a href="13.html">13</a></li><li class="affix"><a href="14.html">14</a></li><li class="affix"><a href="15.html">15</a></li><li class="affix"><a href="16.html">16</a></li><li class="affix"><a href="17.html">17</a></li><li class="affix"><a href="18.html">18</a></li><li class="affix"><a href="19.html">19</a></li><li class="affix"><a href="20.html">20</a></li><li class="affix"><a href="../16/index.html">Next Chapter</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The Yoga of the Supreme Person</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3><a class="header" href="#153-4" id="153-4">15.3-4</a></h3>
+<p>na rūpam asyeha tathopalabhyate</p>
+<p>nānto na cādir na ca sampratiṣṭhā</p>
+<p>aśvattham enaṁ su-virūḍha-mūlam</p>
+<p>asaṅga-śastreṇa dṛḍhena chittvā</p>
+<p>tataḥ padaṁ tat parimārgitavyaṁ</p>
+<p>yasmin gatā na nivartanti bhūyaḥ</p>
+<p>tam eva cādyaṁ puruṣaṁ prapadye</p>
+<p>yataḥ pravṛttiḥ prasṛtā purāṇī</p>
+<p>na—not; rūpam—form; asya—of this tree; iha—in this; tathā—also; upalabhyate—can be perceived; na—never; antaḥ—end; na—never; ca—also; ādiḥ—beginning; na—never; ca—also; sampratiṣṭhā—the foundation; aśvattham—banyan tree; enam—this; suvirūḍha—strongly; mūlam—rooted; asaṅga-śastreṇa—by the weapon of detachment; dṛḍhena—strong; chittvā—by cutting; tataḥ—thereafter; padam—situation; tat—that; parimārgitavyam—has to be searched out; yasmin—where; gatāḥ—going; na—never; nivartanti—comes back; bhūyaḥ—again; tam—to him; eva—certainly; ca—also; ādyam—original; puruṣam—the Personality of Godhead; prapadye—surrender; yataḥ—from whom; pravṛttiḥ—beginning; prasṛtā—extension; purāṇī—very old.</p>
+<p><strong>TRANSLATION</strong></p>
+<p>The real form of this tree cannot be perceived in this world.</p>
+<p>No one can understand where it ends, where it begins, or where its foundation is.</p>
+<p>But with determination one must cut down this tree with the weapon of detachment.</p>
+<p>So doing, one must seek that place from which, having once gone, one never returns, and there surrender to that Supreme Personality of Godhead from whom everything has begun and in whom everything is abiding since time immemorial.</p>
+<p><strong>PURPORT</strong></p>
+<p>It is now clearly stated that the real form of this banyan tree cannot be understood in this material world.</p>
+<p>Since the root is upwards, the extension of the real tree is at the other end.</p>
+<p>No one can see how far the tree extends, nor can one see the beginning of this tree.</p>
+<p>Yet one has to find out the cause.</p>
+<p>“I am the son of my father, my father is the son of such and such a person, etc.”</p>
+<p>By searching in this way, one comes to Brahmā, who is generated by the Garbhodakaśāyī Viṣṇu.</p>
+<p>Finally, in this way, when one reaches to the Supreme Personality of Godhead, that is the end of research work.</p>
+<p>One has to search out that origin of this tree, the Supreme Personality of Godhead, through the association of persons who are in the knowledge of that Supreme Personality of Godhead.</p>
+<p>Then by understanding one becomes gradually detached from this false reflection of reality, and by knowledge one can cut off the connection and actually become situated in the real tree.</p>
+<p>The word asaṅga is very important in this connection because the attachment for sense enjoyment and lording it over the material nature is very strong.</p>
+<p>Therefore one must learn detachment by discussion of spiritual science based on authoritative scriptures, and one must hear from persons who are actually in knowledge.</p>
+<p>As a result of such discussion in the association of devotees, one comes to the Supreme Personality of Godhead.</p>
+<p>Then the first thing one must do is surrender to Him.</p>
+<p>The description of that place whence going no one returns to this false reflected tree is given here.</p>
+<p>The Supreme Personality of Godhead, Kṛṣṇa, is the original root from whom everything has emanated.</p>
+<p>To gain favor of that Personality of Godhead, one has only to surrender, and this is a result of performing devotional service by hearing, chanting, etc.</p>
+<p>He is the cause of this extension of this material world.</p>
+<p>This is already explained by the Lord Himself: ahaṁ sarvasya prabhavaḥ.</p>
+<p>“I am the origin of everything.”</p>
+<p>Therefore to get out of the entanglement of this strong banyan tree of material life, one must surrender to Kṛṣṇa.</p>
+<p>As soon as one surrenders unto Kṛṣṇa, he becomes detached automatically from this material extension.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="5.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="5.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
