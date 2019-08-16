@@ -255,7 +255,6 @@ window.search = window.search || {};
         searchindex = elasticlunr.Index.load(config.index);
 
         // Set up events
-        searchicon.addEventListener('click', function(e) { searchIconClickHandler(); }, false);
         searchbar.addEventListener('keyup', function(e) { searchbarKeyUpHandler(); }, false);
         document.addEventListener('keydown', function(e) { globalKeyHandler(e); }, false);
         // If the user uses the browser buttons, do the same as if a reload happened
@@ -282,12 +281,12 @@ window.search = window.search || {};
         var url = parseURL(window.location.href);
         if (url.params.hasOwnProperty(URL_SEARCH_PARAM)
             && url.params[URL_SEARCH_PARAM] != "") {
-            showSearch(true);
+            
             searchbar.value = decodeURIComponent(
                 (url.params[URL_SEARCH_PARAM]+'').replace(/\+/g, '%20'));
             searchbarKeyUpHandler(); // -> doSearch()
         } else {
-            showSearch(false);
+            
         }
 
         if (url.params.hasOwnProperty(URL_MARK_PARAM)) {
@@ -321,11 +320,11 @@ window.search = window.search || {};
             if (hasFocus()) {
                 unfocusSearchbar();
             }
-            showSearch(false);
+            
             marker.unmark();
         } else if (!hasFocus() && e.keyCode === SEARCH_HOTKEY_KEYCODE) {
             e.preventDefault();
-            showSearch(true);
+            
             window.scrollTo(0, 0);
             searchbar.select();
         } else if (hasFocus() && e.keyCode === DOWN_KEYCODE) {
@@ -359,20 +358,6 @@ window.search = window.search || {};
         }
     }
     
-    function showSearch(yes) {
-        if (yes) {
-            search_wrap.classList.remove('hidden');
-            searchicon.setAttribute('aria-expanded', 'true');
-        } else {
-            search_wrap.classList.add('hidden');
-            searchicon.setAttribute('aria-expanded', 'false');
-            var results = searchresults.children;
-            for (var i = 0; i < results.length; i++) {
-                results[i].classList.remove("focus");
-            }
-        }
-    }
-
     function showResults(yes) {
         if (yes) {
             searchresults_outer.classList.remove('hidden');
@@ -381,16 +366,6 @@ window.search = window.search || {};
         }
     }
 
-    // Eventhandler for search icon
-    function searchIconClickHandler() {
-        if (search_wrap.classList.contains('hidden')) {
-            showSearch(true);
-            window.scrollTo(0, 0);
-            searchbar.select();
-        } else {
-            showSearch(false);
-        }
-    }
     
     // Eventhandler for keyevents while the searchbar is focused
     function searchbarKeyUpHandler() {
