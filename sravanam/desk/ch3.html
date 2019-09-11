@@ -1,0 +1,431 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Karma-yoga - Sarvanam Bhagavad-gita (1972)</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="custom.css">
+        
+
+        
+    </head>
+    <body class="rust">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="../../index.html">Bhagavad-gita</a></li><li class="affix"><a href="../index.html">Sravanam</a></li><li class="affix"><a href="index.html">Table of Contents</a></li><li><a href="ch1.html"><strong aria-hidden="true">1.</strong> Observing the Armies on the Battlefield of Kuruksetra</a></li><li><a href="ch2.html"><strong aria-hidden="true">2.</strong> Contents of the Gītā Summarized</a></li><li><a href="ch3.html" class="active"><strong aria-hidden="true">3.</strong> Karma-yoga</a></li><li><a href="ch4.html"><strong aria-hidden="true">4.</strong> Transcendental Knowledge</a></li><li><a href="ch5.html"><strong aria-hidden="true">5.</strong> Karma-yoga—Action in Krsna Consciousness</a></li><li><a href="ch6.html"><strong aria-hidden="true">6.</strong> Sānkhya-yoga</a></li><li><a href="ch7.html"><strong aria-hidden="true">7.</strong> Knowledge of the Absolute</a></li><li><a href="ch8.html"><strong aria-hidden="true">8.</strong> Attaining the Supreme</a></li><li><a href="ch9.html"><strong aria-hidden="true">9.</strong> The Most Confidential Knowledge</a></li><li><a href="ch10.html"><strong aria-hidden="true">10.</strong> The Opulence of the Absolute</a></li><li><a href="ch11.html"><strong aria-hidden="true">11.</strong> The Universal Form</a></li><li><a href="ch12.html"><strong aria-hidden="true">12.</strong> Devotional Service</a></li><li><a href="ch13.html"><strong aria-hidden="true">13.</strong> Nature, the Enjoyer, and Consciousness</a></li><li><a href="ch14.html"><strong aria-hidden="true">14.</strong> The Three Modes of Material Nature</a></li><li><a href="ch15.html"><strong aria-hidden="true">15.</strong> The Yoga of the Supreme Person</a></li><li><a href="ch16.html"><strong aria-hidden="true">16.</strong> The Divine and Demoniac Natures</a></li><li><a href="ch17.html"><strong aria-hidden="true">17.</strong> The Divisions of Faith</a></li><li><a href="ch18.html"><strong aria-hidden="true">18.</strong> Conclusion—The Perfection of Renunciation</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Sarvanam Bhagavad-gita (1972)</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><strong>Listen:</strong> [ <a href="../3.mp3" target="_blank">3</a> ] MP3</p>
+<p><a href="../../3/1">3.1</a></p>
+<p>arjuna uvāca</p>
+<p>jyāyasī cet karmaṇas te</p>
+<p>matā buddhir janārdana</p>
+<p>tat kiṁ karmaṇi ghore māṁ</p>
+<p>niyojayasi keśava</p>
+<p><a href="../../3/2">3.2</a></p>
+<p>vyāmiśreṇeva vākyena</p>
+<p>buddhiṁ mohayasīva me</p>
+<p>tad ekaṁ vada niścitya</p>
+<p>yena śreyo ’ham āpnuyām</p>
+<p><a href="../../3/3">3.3</a></p>
+<p>śrī-bhagavān uvāca</p>
+<p>loke ’smin dvi-vidhā niṣṭhā</p>
+<p>purā proktā mayānagha</p>
+<p>jñāna-yogena sāṅkhyānāṁ</p>
+<p>karma-yogena yoginām</p>
+<p><a href="../../3/4">3.4</a></p>
+<p>na karmaṇām anārambhān</p>
+<p>naiṣkarmyaṁ puruṣo ’śnute</p>
+<p>na ca sannyasanād eva</p>
+<p>siddhiṁ samadhigacchati</p>
+<p><a href="../../3/5">3.5</a></p>
+<p>na hi kaścit kṣaṇam api</p>
+<p>jātu tiṣṭhaty akarma-kṛt</p>
+<p>kāryate hy avaśaḥ karma</p>
+<p>sarvaḥ prakṛti-jair guṇaiḥ</p>
+<p><a href="../../3/6">3.6</a></p>
+<p>karmendriyāṇi saṁyamya</p>
+<p>ya āste manasā smaran</p>
+<p>indriyārthān vimūḍhātmā</p>
+<p>mithyācāraḥ sa ucyate</p>
+<p><a href="../../3/7">3.7</a></p>
+<p>yas tv indriyāṇi manasā</p>
+<p>niyamyārabhate ’rjuna</p>
+<p>karmendriyaiḥ karma-yogam</p>
+<p>asaktaḥ sa viśiṣyate</p>
+<p><a href="../../3/8">3.8</a></p>
+<p>niyataṁ kuru karma tvaṁ</p>
+<p>karma jyāyo hy akarmaṇaḥ</p>
+<p>śarīra-yātrāpi ca te</p>
+<p>na prasiddhyed akarmaṇaḥ</p>
+<p><a href="../../3/9">3.9</a></p>
+<p>yajñārthāt karmaṇo ’nyatra</p>
+<p>loko ’yaṁ karma-bandhanaḥ</p>
+<p>tad-arthaṁ karma kaunteya</p>
+<p>mukta-saṅgaḥ samācara</p>
+<p><a href="../../3/10">3.10</a></p>
+<p>saha-yajñāḥ prajāḥ sṛṣṭvā</p>
+<p>purovāca prajāpatiḥ</p>
+<p>anena prasaviṣyadhvam</p>
+<p>eṣa vo ’stv iṣṭa-kāma-dhuk</p>
+<p><a href="../../3/11">3.11</a></p>
+<p>devān bhāvayatānena</p>
+<p>te devā bhāvayantu vaḥ</p>
+<p>parasparaṁ bhāvayantaḥ</p>
+<p>śreyaḥ param avāpsyatha</p>
+<p><a href="../../3/12">3.12</a></p>
+<p>iṣṭān bhogān hi vo devā</p>
+<p>dāsyante yajña-bhāvitāḥ</p>
+<p>tair dattān apradāyaibhyo</p>
+<p>yo bhuṅkte stena eva saḥ</p>
+<p><a href="../../3/13">3.13</a></p>
+<p>yajña-śiṣṭāśinaḥ santo</p>
+<p>mucyante sarva-kilbiṣaiḥ</p>
+<p>bhuñjate te tv aghaṁ pāpā</p>
+<p>ye pacanty ātma-kāraṇāt</p>
+<p><a href="../../3/14">3.14</a></p>
+<p>annād bhavanti bhūtāni</p>
+<p>parjanyād anna-sambhavaḥ</p>
+<p>yajñād bhavati parjanyo</p>
+<p>yajñaḥ karma-samudbhavaḥ</p>
+<p><a href="../../3/15">3.15</a></p>
+<p>karma brahmodbhavaṁ viddhi</p>
+<p>brahmākṣara-samudbhavam</p>
+<p>tasmāt sarva-gataṁ brahma</p>
+<p>nityaṁ yajñe pratiṣṭhitam</p>
+<p><a href="../../3/16">3.16</a></p>
+<p>evaṁ pravartitaṁ cakraṁ</p>
+<p>nānuvartayatīha yaḥ</p>
+<p>aghāyur indriyārāmo</p>
+<p>moghaṁ pārtha sa jīvati</p>
+<p><a href="../../3/17">3.17</a></p>
+<p>yas tv ātma-ratir eva syād</p>
+<p>ātma-tṛptaś ca mānavaḥ</p>
+<p>ātmany eva ca santuṣṭas</p>
+<p>tasya kāryaṁ na vidyate</p>
+<p><a href="../../3/18">3.18</a></p>
+<p>naiva tasya kṛtenārtho</p>
+<p>nākṛteneha kaścana</p>
+<p>na cāsya sarva-bhūteṣu</p>
+<p>kaścid artha-vyapāśrayaḥ</p>
+<p>sarva-bhūteṣu</p>
+<p><a href="../../3/19">3.19</a></p>
+<p>tasmād asaktaḥ satataṁ</p>
+<p>kāryaṁ karma samācara</p>
+<p>asakto hy ācaran karma</p>
+<p>param āpnoti pūruṣaḥ</p>
+<p><a href="../../3/20">3.20</a></p>
+<p>karmaṇaiva hi saṁsiddhim</p>
+<p>āsthitā janakādayaḥ</p>
+<p>loka-saṅgraham evāpi</p>
+<p>sampaśyan kartum arhasi</p>
+<p><a href="../../3/21">3.21</a></p>
+<p>yad yad ācarati śreṣṭhas</p>
+<p>tat tad evetaro janaḥ</p>
+<p>sa yat pramāṇaṁ kurute</p>
+<p>lokas tad anuvartate</p>
+<p><a href="../../3/22">3.22</a></p>
+<p>na me pārthāsti kartavyaṁ</p>
+<p>triṣu lokeṣu kiñcana</p>
+<p>nānavāptam avāptavyaṁ</p>
+<p>varta eva ca karmaṇi</p>
+<p><a href="../../3/23">3.23</a></p>
+<p>yadi hy ahaṁ na varteyaṁ</p>
+<p>jātu karmaṇy atandritaḥ</p>
+<p>mama vartmānuvartante</p>
+<p>manuṣyāḥ pārtha sarvaśaḥ</p>
+<p><a href="../../3/24">3.24</a></p>
+<p>utsīdeyur ime lokā</p>
+<p>na kuryāṁ karma ced aham</p>
+<p>saṅkarasya ca kartā syām</p>
+<p>upahanyām imāḥ prajāḥ</p>
+<p><a href="../../3/25">3.25</a></p>
+<p>saktāḥ karmaṇy avidvāṁso</p>
+<p>yathā kurvanti bhārata</p>
+<p>kuryād vidvāṁs tathāsaktaś</p>
+<p>cikīrṣur loka-saṅgraham</p>
+<p><a href="../../3/26">3.26</a></p>
+<p>na buddhi-bhedaṁ janayed</p>
+<p>ajñānāṁ karma-saṅginām</p>
+<p>joṣayet sarva-karmāṇi</p>
+<p>vidvān yuktaḥ samācaran</p>
+<p><a href="../../3/27">3.27</a></p>
+<p>prakṛteḥ kriyamāṇāni</p>
+<p>guṇaiḥ karmāṇi sarvaśaḥ</p>
+<p>ahaṅkāra-vimūḍhātmā</p>
+<p>kartāham iti manyate</p>
+<p><a href="../../3/28">3.28</a></p>
+<p>tattva-vit tu mahā-bāho</p>
+<p>guṇa-karma-vibhāgayoḥ</p>
+<p>guṇā guṇeṣu vartanta</p>
+<p>iti matvā na sajjate</p>
+<p><a href="../../3/29">3.29</a></p>
+<p>prakṛter guṇa-sammūḍhāḥ</p>
+<p>sajjante guṇa-karmasu</p>
+<p>tān akṛtsna-vido mandān</p>
+<p>kṛtsna-vin na vicālayet</p>
+<p><a href="../../3/30">3.30</a></p>
+<p>mayi sarvāṇi karmāṇi</p>
+<p>sannyasyādhyātma-cetasā</p>
+<p>nirāśīr nirmamo bhūtvā</p>
+<p>yudhyasva vigata-jvaraḥ</p>
+<p><a href="../../3/31">3.31</a></p>
+<p>ye me matam idaṁ nityam</p>
+<p>anutiṣṭhanti mānavāḥ</p>
+<p>śraddhāvanto ’nasūyanto</p>
+<p>mucyante te ’pi karmabhiḥ</p>
+<p><a href="../../3/32">3.32</a></p>
+<p>ye tv etad abhyasūyanto</p>
+<p>nānutiṣṭhanti me matam</p>
+<p>sarva-jñāna-vimūḍhāṁs tān</p>
+<p>viddhi naṣṭān acetasaḥ</p>
+<p><a href="../../3/33">3.33</a></p>
+<p>sadṛśaṁ ceṣṭate svasyāḥ</p>
+<p>prakṛter jñānavān api</p>
+<p>prakṛtiṁ yānti bhūtāni</p>
+<p>nigrahaḥ kiṁ kariṣyati</p>
+<p><a href="../../3/34">3.34</a></p>
+<p>indriyasyendriyasyārthe</p>
+<p>rāga-dveṣau vyavasthitau</p>
+<p>tayor na vaśam āgacchet</p>
+<p>tau hy asya paripanthinau</p>
+<p><a href="../../3/35">3.35</a></p>
+<p>śreyān sva-dharmo viguṇaḥ</p>
+<p>para-dharmāt sv-anuṣṭhitāt</p>
+<p>sva-dharme nidhanaṁ śreyaḥ</p>
+<p>para-dharmo bhayāvahaḥ</p>
+<p><a href="../../3/36">3.36</a></p>
+<p>arjuna uvāca</p>
+<p>atha kena prayukto ’yaṁ</p>
+<p>pāpaṁ carati pūruṣaḥ</p>
+<p>anicchann api vārṣṇeya</p>
+<p>balād iva niyojitaḥ</p>
+<p><a href="../../3/37">3.37</a></p>
+<p>śrī-bhagavān uvāca</p>
+<p>kāma eṣa krodha eṣa</p>
+<p>rajo-guṇa-samudbhavaḥ</p>
+<p>mahāśano mahā-pāpmā</p>
+<p>viddhy enam iha vairiṇam</p>
+<p><a href="../../3/38">3.38</a></p>
+<p>dhūmenāvriyate vahnir</p>
+<p>yathādarśo malena ca</p>
+<p>yatholbenāvṛto garbhas</p>
+<p>tathā tenedam āvṛtam</p>
+<p><a href="../../3/39">3.39</a></p>
+<p>āvṛtaṁ jñānam etena</p>
+<p>jñānino nitya-vairiṇā</p>
+<p>kāma-rūpeṇa kaunteya</p>
+<p>duṣpūreṇānalena ca</p>
+<p><a href="../../3/40">3.40</a></p>
+<p>indriyāṇi mano buddhir</p>
+<p>asyādhiṣṭhānam ucyate</p>
+<p>etair vimohayaty eṣa</p>
+<p>jñānam āvṛtya dehinam</p>
+<p><a href="../../3/41">3.41</a></p>
+<p>tasmāt tvam indriyāṇy ādau</p>
+<p>niyamya bharatarṣabha</p>
+<p>pāpmānaṁ prajahi hy enaṁ</p>
+<p>jñāna-vijñāna-nāśanam</p>
+<p><a href="../../3/42">3.42</a></p>
+<p>indriyāṇi parāṇy āhur</p>
+<p>indriyebhyaḥ paraṁ manaḥ</p>
+<p>manasas tu parā buddhir</p>
+<p>yo buddheḥ paratas tu saḥ</p>
+<p><a href="../../3/43">3.43</a></p>
+<p>evaṁ buddheḥ paraṁ buddhvā</p>
+<p>saṁstabhyātmānam ātmanā</p>
+<p>jahi śatruṁ mahā-bāho</p>
+<p>kāma-rūpaṁ durāsadam</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="ch2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="ch4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="ch2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="ch4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
