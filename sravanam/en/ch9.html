@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>The Most Confidential Knowledge - Sravanam Bhagavad-gita English (1972)</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="custom.css">
+        
+
+        
+    </head>
+    <body class="rust">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="../../index.html">Bhagavad-gita</a></li><li class="affix"><a href="index.html">Table of Contents</a></li><li><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="ch1.html"><strong aria-hidden="true">2.</strong> Observing the Armies on the Battlefield of Kuruksetra</a></li><li><a href="ch2.html"><strong aria-hidden="true">3.</strong> Contents of the Gītā Summarized</a></li><li><a href="ch3.html"><strong aria-hidden="true">4.</strong> Karma-yoga</a></li><li><a href="ch4.html"><strong aria-hidden="true">5.</strong> Transcendental Knowledge</a></li><li><a href="ch5.html"><strong aria-hidden="true">6.</strong> Karma-yoga—Action in Krsna Consciousness</a></li><li><a href="ch6.html"><strong aria-hidden="true">7.</strong> Sānkhya-yoga</a></li><li><a href="ch7.html"><strong aria-hidden="true">8.</strong> Knowledge of the Absolute</a></li><li><a href="ch8.html"><strong aria-hidden="true">9.</strong> Attaining the Supreme</a></li><li><a href="ch9.html" class="active"><strong aria-hidden="true">10.</strong> The Most Confidential Knowledge</a></li><li><a href="ch10.html"><strong aria-hidden="true">11.</strong> The Opulence of the Absolute</a></li><li><a href="ch11.html"><strong aria-hidden="true">12.</strong> The Universal Form</a></li><li><a href="ch12.html"><strong aria-hidden="true">13.</strong> Devotional Service</a></li><li><a href="ch13.html"><strong aria-hidden="true">14.</strong> Nature, the Enjoyer, and Consciousness</a></li><li><a href="ch14.html"><strong aria-hidden="true">15.</strong> The Three Modes of Material Nature</a></li><li><a href="ch15.html"><strong aria-hidden="true">16.</strong> The Yoga of the Supreme Person</a></li><li><a href="ch16.html"><strong aria-hidden="true">17.</strong> The Divine and Demoniac Natures</a></li><li><a href="ch17.html"><strong aria-hidden="true">18.</strong> The Divisions of Faith</a></li><li><a href="ch18.html"><strong aria-hidden="true">19.</strong> Conclusion—The Perfection of Renunciation</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Sravanam Bhagavad-gita English (1972)</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>[ <a href="9.mp3" target="_blank">MP3</a> ] (10:28)</p>
+<p><a href="../../9/1">9.1</a></p>
+<p>The Supreme Lord said: My dear Arjuna, because you are never envious of Me, I shall impart to you this most secret wisdom, knowing which you shall be relieved of the miseries of material existence.</p>
+<p><a href="../../9/2">9.2</a></p>
+<p>This knowledge is the king of education, the most secret of all secrets.</p>
+<p>It is the purest knowledge, and because it gives direct perception of the self by realization, it is the perfection of religion.</p>
+<p>It is everlasting, and it is joyfully performed.</p>
+<p><a href="../../9/3">9.3</a></p>
+<p>Those who are not faithful on the path of devotional service cannot attain Me, O conqueror of foes, but return to birth and death in this material world.</p>
+<p><a href="../../9/4">9.4</a></p>
+<p>By Me, in My unmanifested form, this entire universe is pervaded.</p>
+<p>All beings are in Me, but I am not in them.</p>
+<p><a href="../../9/5">9.5</a></p>
+<p>And yet everything that is created does not rest in Me.</p>
+<p>Behold My mystiopulence! Although I am the maintainer of all living entities, and although I am everywhere, still My Self is the very source of creation.</p>
+<p><a href="../../9/6">9.6</a></p>
+<p>As the mighty wind, blowing everywhere, always rests in ethereal space know that in the same manner all beings rest in Me.</p>
+<p><a href="../../9/7">9.7</a></p>
+<p>O son of Kuntī, at the end of the millennium every material manifestation enters into My nature, and at the beginning of another millennium, by My potency I again create.</p>
+<p><a href="../../9/8">9.8</a></p>
+<p>The whole cosmiorder is under Me.</p>
+<p>By My will it is manifested again and again, and by My will it is annihilated at the end.</p>
+<p><a href="../../9/9">9.9</a></p>
+<p>O Dhanañjaya, all this work cannot bind Me.</p>
+<p>I am ever detached, seated as though neutral.</p>
+<p><a href="../../9/10">9.10</a></p>
+<p>This material nature is working under My direction, O son of Kuntī, and it is producing all moving and unmoving beings.</p>
+<p>By its rule this manifestation is created and annihilated again and again.</p>
+<p><a href="../../9/11">9.11</a></p>
+<p>Fools deride Me when I descend in the human form.</p>
+<p>They do not know My transcendental nature and My supreme dominion over all that be.</p>
+<p><a href="../../9/12">9.12</a></p>
+<p>Those who are thus bewildered are attracted by demoniand atheistiviews.</p>
+<p>In that deluded condition, their hopes for liberation, their fruitive activities, and their culture of knowledge are all defeated.</p>
+<p><a href="../../9/13">9.13</a></p>
+<p>O son of Pṛthā, those who are not deluded, the great souls, are under the protection of the divine nature.</p>
+<p>They are fully engaged in devotional service because they know Me as the Supreme Personality of Godhead, original and inexhaustible.</p>
+<p><a href="../../9/14">9.14</a></p>
+<p>Always chanting My glories, endeavoring with great determination, bowing down before Me, these great souls perpetually worship Me with devotion.</p>
+<p><a href="../../9/15">9.15</a></p>
+<p>Others, who are engaged in the cultivation of knowledge, worship the Supreme Lord as the one without a second, diverse in many, and in the universal form.</p>
+<p><a href="../../9/16">9.16</a></p>
+<p>But it is I who am the ritual, I the sacrifice, the offering to the ancestors, the healing herb, the transcendental chant.</p>
+<p>I am the butter and the fire and the offering.</p>
+<p><a href="../../9/17">9.17</a></p>
+<p>I am the father of this universe, the mother, the support, and the grandsire.</p>
+<p>I am the object of knowledge, the purifier and the syllable om.</p>
+<p>I am also the Ṛk, the Sāma, and the Yajur [Vedas].</p>
+<p><a href="../../9/18">9.18</a></p>
+<p>I am the goal, the sustainer, the master, the witness, the abode, the refuge and the most dear friend.</p>
+<p>I am the creation and the annihilation, the basis of everything, the resting place and the eternal seed.</p>
+<p><a href="../../9/19">9.19</a></p>
+<p>O Arjuna, I control heat, the rain and the drought.</p>
+<p>I am immortality, and I am also death personified.</p>
+<p>Both being and nonbeing are in Me.</p>
+<p><a href="../../9/20">9.20</a></p>
+<p>Those who study the Vedas and drink the soma juice, seeking the heavenly planets, worship Me indirectly.</p>
+<p>They take birth on the planet of Indra, where they enjoy godly delights.</p>
+<p><a href="../../9/21">9.21</a></p>
+<p>When they have thus enjoyed heavenly sense pleasure, they return to this mortal planet again.</p>
+<p>Thus, through the Vediprinciples, they achieve only flickering happiness.</p>
+<p><a href="../../9/22">9.22</a></p>
+<p>But those who worship Me with devotion, meditating on My transcendental form—to them I carry what they lack and preserve what they have.</p>
+<p><a href="../../9/23">9.23</a></p>
+<p>Whatever a man may sacrifice to other gods, O son of Kuntī, is really meant for Me alone, but it is offered without true understanding.</p>
+<p><a href="../../9/24">9.24</a></p>
+<p>I am the only enjoyer and the only object of sacrifice.</p>
+<p>Those who do not recognize My true transcendental nature fall down.</p>
+<p><a href="../../9/25">9.25</a></p>
+<p>Those who worship the demigods will take birth among the demigods; those who worship ghosts and spirits will take birth among such beings; those who worship ancestors go to the ancestors; and those who worship Me will live with Me.</p>
+<p><a href="../../9/26">9.26</a></p>
+<p>If one offers Me with love and devotion a leaf, a flower, fruit a water, I will accept it.</p>
+<p><a href="../../9/27">9.27</a></p>
+<p>O son of Kuntī, all that you do, all that you eat, all that you offer and give away, as well as all austerities that you may perform, should be done as an offering unto Me.</p>
+<p><a href="../../9/28">9.28</a></p>
+<p>In this way you will be freed from all reactions to good and evil deeds, and by this principle of renunciation you will be liberated and come to Me.</p>
+<p><a href="../../9/29">9.29</a></p>
+<p>I envy no one, nor am I partial to anyone.</p>
+<p>I am equal to all.</p>
+<p>But whoever renders service unto Me in devotion is a friend, is in Me, and I am also a friend to him.</p>
+<p><a href="../../9/30">9.30</a></p>
+<p>Even if one commits the most abominable actions, if he is engaged in devotional service, he is to be considered saintly because he is properly situated.</p>
+<p><a href="../../9/31">9.31</a></p>
+<p>He quickly becomes righteous and attains lasting peace.</p>
+<p>O son of Kuntī, declare it boldly that My devotee never perishes.</p>
+<p><a href="../../9/32">9.32</a></p>
+<p>O son of Pṛthā, those who take shelter in Me, though they be of lower birth—women, vaiśyas [merchants], as well as śūdras [workers]—can approach the supreme destination.</p>
+<p><a href="../../9/33">9.33</a></p>
+<p>How much greater then are the brāhmaṇas, the righteous, the devotees and saintly kings who in this temporary miserable world engage in loving service unto Me.</p>
+<p><a href="../../9/34">9.34</a></p>
+<p>Engage your mind always in thinking of Me, offer obeisances and worship Me.</p>
+<p>Being completely absorbed in Me, surely you will come to Me.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="ch8.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="ch10.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="ch8.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="ch10.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
