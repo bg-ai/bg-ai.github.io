@@ -1,1815 +1,1044 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-	@media (prefers-color-scheme: dark){
-		body {color:#fff;background:#000}
-		a:link {color:#9cf}
-		a:hover, a:visited:hover {color:#cef}
-		a:visited {color:#c9f}
-	}
-	body{
-		margin:1em auto;
-		max-width:40em;
-		padding:0 .62em;
-		font:1.2em/1.62 sans-serif;
-		line-height:1.4;
-	}
-	h1,h2,strong {
-		line-height:1.2;
-	}
-	@media print{
-		body{
-			max-width:none
-		}
-	}
-</style>
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+<!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Find Nectar in Bhagavad-gita</title>
+        
 
-</head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
 
-<body>
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
 
-<article>
-<h1>Bhagavad-gita</h1>
-<p>1972 Edition - Srila Prabhupada</p>
-<h1>Nature, the Enjoyer, and Consciousness</h1>
-<a href="#13.1-2">13.1-2</a>
-<a href="#13.3">13.3</a>
-<a href="#13.4">13.4</a>
-<a href="#13.5">13.5</a>
-<a href="#13.6-7">13.6-7</a>
-<a href="#13.8-12">13.8-12</a>
-<a href="#13.13">13.13</a>
-<a href="#13.14">13.14</a>
-<a href="#13.15">13.15</a>
-<a href="#13.16">13.16</a>
-<a href="#13.17">13.17</a>
-<a href="#13.18">13.18</a>
-<a href="#13.19">13.19</a>
-<a href="#13.20">13.20</a>
-<a href="#13.21">13.21</a>
-<a href="#13.22">13.22</a>
-<a href="#13.23">13.23</a>
-<a href="#13.24">13.24</a>
-<a href="#13.25">13.25</a>
-<a href="#13.26">13.26</a>
-<a href="#13.27">13.27</a>
-<a href="#13.28">13.28</a>
-<a href="#13.29">13.29</a>
-<a href="#13.30">13.30</a>
-<a href="#13.31">13.31</a>
-<a href="#13.32">13.32</a>
-<a href="#13.33">13.33</a>
-<a href="#13.34">13.34</a>
-<a href="#13.35">13.35</a>
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
 
-<p><a name="13.1-2"><strong>13.1-2</strong></a></p>
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
 
-<p>arjuna uvāca</p>
+    </head>
+    <body class="rust">
 
-<p>prakṛtiṁ puruṣaṁ caiva</p>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "rust";
+        </script>
 
-<p>kṣetraṁ kṣetra-jñam eva ca</p>
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
 
-<p>etad veditum icchāmi</p>
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
 
-<p>jñānaṁ jñeyaṁ ca keśava</p>
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
 
-<p>śrī-bhagavān uvāca</p>
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
 
-<p>idaṁ śarīraṁ kaunteya</p>
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
 
-<p>kṣetram ity abhidhīyate</p>
 
-<p>etad yo vetti taṁ prāhuḥ</p>
+            <div class="page">
 
-<p>kṣetra-jña iti tad-vidaḥ</p>
+                  <a class="header" href="../index.html">Back to Nectarian Randomness</a>
 
-<p>arjunaḥ uvāca—Arjuna said; prakṛtim—nature; puruṣam—the enjoyer; ca—also; eva—certainly; kṣetram—body; kṣetrajñam—knower of the body; eva—certainly; ca—also; etat—all this; veditum—to understand; icchāmi—I wish; jñānam—knowledge; jñeyam—the object of knowledge; ca—also; keśava—O Kṛṣṇa; śrī bhagavān uvāca—the Personality of Godhead said; idam—this; śarīram—body; kaunteya—O son of Kuntī; kṣetram—the field; iti—thus; abhidhīyate—is called; etat—this; yaḥ—anyone; vetti—knows; tam—him; prāhuḥ—is called; kṣetrajñaḥ—knower of the body; iti—thus; tat-vidaḥ—one who knows.</p>
+</div>
 
+                <div id="content" class="content">
+            
+        <main>
+                        <h1>Search Bhagavad-gita for...</h1>
+                            
+
+                <div id="search-wrapper">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="" aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+                        <h1><a class="header" href="#" id=""></a></h1>
+                        <h1><a class="header" href="#nature-the-enjoyer-and-consciousness" id="nature-the-enjoyer-and-consciousness">Nature, the Enjoyer, and Consciousness</a></h1>
+<h3><a class="header" href="#131-2" id="131-2">13.1-2</a></h3>
+<p>arjuna uvaca</p>
+<p>prakrtim purusam caiva</p>
+<p>ksetram ksetra-jnam eva ca</p>
+<p>etad veditum icchami</p>
+<p>jnanam jneyam ca kesava</p>
+<p>sri-bhagavan uvaca</p>
+<p>idam sariram kaunteya</p>
+<p>ksetram ity abhidhiyate</p>
+<p>etad yo vetti tam prahuh</p>
+<p>ksetra-jna iti tad-vidah</p>
+<p>arjunah uvaca--Arjuna said; prakrtim--nature; purusam--the enjoyer; ca--also; eva--certainly; ksetram--body; ksetrajnam--knower of the body; eva--certainly; ca--also; etat--all this; veditum--to understand; icchami--I wish; jnanam--knowledge; jneyam--the object of knowledge; ca--also; kesava--O Krsna; sri bhagavan uvaca--the Personality of Godhead said; idam--this; sariram--body; kaunteya--O son of Kunti; ksetram--the field; iti--thus; abhidhiyate--is called; etat--this; yah--anyone; vetti--knows; tam--him; prahuh--is called; ksetrajnah--knower of the body; iti--thus; tat-vidah--one who knows.</p>
 <p><strong>TRANSLATION</strong></p>
-
-<p>Arjuna said: O my dear Kṛṣṇa, I wish to know about prakṛti [nature], Puruṣa [the enjoyer], and the field and the knower of the field, and of knowledge and the end of knowledge.</p>
-
-<p>The Blessed Lord then said: This body, O son of Kuntī, is called the field, and one who knows this body is called the knower of the field.</p>
-
+<p>Arjuna said: O my dear Krsna, I wish to know about prakrti [nature], Purusa [the enjoyer], and the field and the knower of the field, and of knowledge and the end of knowledge.</p>
+<p>The Blessed Lord then said: This body, O son of Kunti, is called the field, and one who knows this body is called the knower of the field.</p>
 <p><strong>PURPORT</strong></p>
-
-<p>Arjuna was inquisitive about prakṛti or nature, puruṣa, the enjoyer, kṣetra, the field, kṣetrajña, its knower, and of knowledge and the object of knowledge.</p>
-
-<p>When he inquired about all these, Kṛṣṇa said that this body is called the field and that one who knows this body is called the knower of the field.</p>
-
+<p>Arjuna was inquisitive about prakrti or nature, purusa, the enjoyer, ksetra, the field, ksetrajna, its knower, and of knowledge and the object of knowledge.</p>
+<p>When he inquired about all these, Krsna said that this body is called the field and that one who knows this body is called the knower of the field.</p>
 <p>This body is the field of activity for the conditioned soul.</p>
-
 <p>The conditioned soul is entrapped in material existence, and he attempts to lord over material nature.</p>
-
 <p>And so, according to his capacity to dominate material nature, he gets a field of activity.</p>
-
 <p>That field of activity is the body.</p>
-
 <p>And what is the body? The body is made of senses.</p>
-
 <p>The conditioned soul wants to enjoy sense gratification, and, according to his capacity to enjoy sense gratification, he is offered a body, or field of activity.</p>
-
-<p>Therefore the body is called kṣetra, or the field of activity for the conditioned soul.</p>
-
-<p>Now, the person who does not identify himself with the body is called kṣetrajña, the knower of the field.</p>
-
+<p>Therefore the body is called ksetra, or the field of activity for the conditioned soul.</p>
+<p>Now, the person who does not identify himself with the body is called ksetrajna, the knower of the field.</p>
 <p>It is not very difficult to understand the difference between the field and its knower, the body and the knower of the body.</p>
-
 <p>Any person can consider that from childhood to old age he undergoes so many changes of body and yet is still one person, remaining.</p>
-
 <p>Thus there is a difference between the knower of the field of activities and the actual field of activities.</p>
-
 <p>A living conditioned soul can thus understand that he is different from the body.</p>
-
-<p>It is described in the beginning—dehe ’smin—that the living entity is within the body and that the body is changing from childhood to boyhood and from boyhood to youth and from youth to old age, and the person who owns the body knows that the body is changing.</p>
-
-<p>The owner is distinctly kṣetrajña.</p>
-
+<p>It is described in the beginning--dehe 'smin--that the living entity is within the body and that the body is changing from childhood to boyhood and from boyhood to youth and from youth to old age, and the person who owns the body knows that the body is changing.</p>
+<p>The owner is distinctly ksetrajna.</p>
 <p>Sometimes we understand that I am happy, I am mad, I am a woman, I am a dog, I am a cat: these are the knowers.</p>
-
 <p>The knower is different from the field.</p>
-
-<p>Although we use many articles—our clothes, etc.—we know- that we are different from the things used.</p>
-
+<p>Although we use many articles--our clothes, etc.--we know- that we are different from the things used.</p>
 <p>Similarly, we also understand by a little contemplation that we are different from the body.</p>
-
-<p>In the first six chapters of Bhagavad-gītā, the knower of the body, the living entity, and the position by which he can understand the Supreme Lord are described.</p>
-
-<p>In the middle six chapters of the Gītā, the Supreme Personality of Godhead and the relationship between the individual soul and the Supersoul in regard to devotional service are described.</p>
-
+<p>In the first six chapters of Bhagavad-gita, the knower of the body, the living entity, and the position by which he can understand the Supreme Lord are described.</p>
+<p>In the middle six chapters of the Gita, the Supreme Personality of Godhead and the relationship between the individual soul and the Supersoul in regard to devotional service are described.</p>
 <p>The superior position of the Supreme Personality of Godhead and the subordinate position of the individual soul are definitely defined in these chapters.</p>
-
 <p>The living entities are subordinate under all circumstances, but in their forgetfulness they are suffering.</p>
-
-<p>When enlightened by pious activities, they approach the Supreme Lord in different capacities—as the distressed, those in want of money, the inquisitive, and those in search of knowledge.</p>
-
+<p>When enlightened by pious activities, they approach the Supreme Lord in different capacities--as the distressed, those in want of money, the inquisitive, and those in search of knowledge.</p>
 <p>That is also described.</p>
-
 <p>Now, starting with the Thirteenth Chapter, how the living entity comes into contact with material nature, how he is delivered by the Supreme Lord through the different methods of fruitive activities, cultivation of knowledge, and the discharge of devotional service are explained.</p>
-
 <p>Although the living entity is completely different from the material body, he somehow becomes related.</p>
-
 <p>This also is explained.</p>
-
-<p><a name="13.3"><strong>13.3</strong></a></p>
-
-<p>kṣetra-jñaṁ cāpi māṁ viddhi</p>
-
-<p>sarva-kṣetreṣu bhārata</p>
-
-<p>kṣetra-kṣetrajñayor jñānaṁ</p>
-
-<p>yat taj jñānaṁ mataṁ mama</p>
-
-<p>kṣetrajñam—the knower; ca—also; api—certainly; mām—Me; viddhi—know; sarva—all; kṣetreṣu—in bodily fields; bhārata—O son of Bharata; kṣetra—field of activities (the body); kṣetrajñayoḥ—the knower of the field; jñānam—knowledge; yat—that which is taught; tat—that; jñānam—knowledge; matam—opinion; mama—that.</p>
-
+<h3><a class="header" href="#133" id="133">13.3</a></h3>
+<p>ksetra-jnam capi mam viddhi</p>
+<p>sarva-ksetresu bharata</p>
+<p>ksetra-ksetrajnayor jnanam</p>
+<p>yat taj jnanam matam mama</p>
+<p>ksetrajnam--the knower; ca--also; api--certainly; mam--Me; viddhi--know; sarva--all; ksetresu--in bodily fields; bharata--O son of Bharata; ksetra--field of activities (the body); ksetrajnayoh--the knower of the field; jnanam--knowledge; yat--that which is taught; tat--that; jnanam--knowledge; matam--opinion; mama--that.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>O scion of Bharata, you should understand that I am also the knower in all bodies, and to understand this body and its owner is called knowledge.</p>
-
 <p>That is My opinion.</p>
-
 <p><strong>PURPORT</strong></p>
-
 <p>While discussing the subject of this body and the owner of the body, the soul and the Supersoul, we shall find three different topics of study: the Lord, the living entity, and matter.</p>
-
 <p>In every field of activities, in every body, there are two souls: the individual soul and the Supersoul.</p>
-
-<p>Because the Supersoul is the plenary expansion of the Supreme Personality of Godhead, Kṛṣṇa, Kṛṣṇa says, “I am also the knower, but I am not the individual owner of the body.</p>
-
+<p>Because the Supersoul is the plenary expansion of the Supreme Personality of Godhead, Krsna, Krsna says, &quot;I am also the knower, but I am not the individual owner of the body.</p>
 <p>I am the superknower.</p>
-
-<p>I am present in every body as the Paramātmā, or Supersoul.”</p>
-
-<p>One who studies the subject matter of the field of activity and the knower of the field very minutely, in terms of this Bhagavad-gītā, can attain to knowledge.</p>
-
-<p>The Lord says: “I am the knower of the field of activities in every individual body.”</p>
-
+<p>I am present in every body as the Paramatma, or Supersoul.&quot;</p>
+<p>One who studies the subject matter of the field of activity and the knower of the field very minutely, in terms of this Bhagavad-gita, can attain to knowledge.</p>
+<p>The Lord says: &quot;I am the knower of the field of activities in every individual body.&quot;</p>
 <p>The individual may be the knower of his own body, but he is not in knowledge of other bodies.</p>
-
 <p>The Supreme Personality of Godhead, who is present as the Supersoul in all bodies, knows everything about all bodies.</p>
-
 <p>He knows all the different bodies of all the various species of life.</p>
-
 <p>A citizen may know everything about his patch of land, but the king knows not only his palace but all the properties possessed by the individual citizens.</p>
-
 <p>Similarly, one may be the proprietor of the body individually, but the Supreme Lord is the proprietor of all bodies.</p>
-
 <p>The king is the original proprietor of the kingdom, and the citizen is the secondary proprietor.</p>
-
 <p>Similarly, the Supreme Lord is the supreme proprietor of all bodies.</p>
-
 <p>The body consists of the senses.</p>
-
-<p>The Supreme Lord is Hṛṣīkeśa, which means controller of the senses.</p>
-
+<p>The Supreme Lord is Hrsikesa, which means controller of the senses.</p>
 <p>He is the original controller of the senses, just as the king is the original controller of all the activities of the state, and the citizens are secondary controllers.</p>
-
-<p>The Lord also says: “I am also the knower.”</p>
-
+<p>The Lord also says: &quot;I am also the knower.&quot;</p>
 <p>This means that He is the superknower; the individual soul knows only his particular body.</p>
-
 <p>In the Vedic literature, it is stated as follows:</p>
-
-<p>kṣetrāṇi hi śarīrāṇi bījaṁ cāpi śubhāśubhe tāni vetti sa yogātmā tataḥ kṣetrajña ucyate.</p>
-
-<p>This body is called the kṣetra, and within it dwells the owner of the body and the Supreme Lord who knows both the body and the owner of the body.</p>
-
+<p>ksetrani hi sarirani bijam capi subhasubhe tani vetti sa yogatma tatah ksetrajna ucyate.</p>
+<p>This body is called the ksetra, and within it dwells the owner of the body and the Supreme Lord who knows both the body and the owner of the body.</p>
 <p>Therefore He is called the knower of all fields.</p>
-
 <p>The distinction between the field of activities, the owner of activities and the supreme owner of activities is described as follows.</p>
-
-<p>Perfect knowledge of the constitution of the body, the constitution of the individual soul, and the constitution of the Supersoul is known in terms of Vedic literature as jñānam.</p>
-
-<p>That is the opinion of Kṛṣṇa.</p>
-
+<p>Perfect knowledge of the constitution of the body, the constitution of the individual soul, and the constitution of the Supersoul is known in terms of Vedic literature as jnanam.</p>
+<p>That is the opinion of Krsna.</p>
 <p>To understand both the soul and the Supersoul as one yet distinct is knowledge.</p>
-
 <p>One who does not understand the field of activity and the knower of activity is not in perfect knowledge.</p>
-
-<p>One has to understand the position of prakṛti, nature, and puruṣa, the enjoyer of the nature, and īśvara, the knower who dominates or controls nature and the individual soul.</p>
-
+<p>One has to understand the position of prakrti, nature, and purusa, the enjoyer of the nature, and isvara, the knower who dominates or controls nature and the individual soul.</p>
 <p>One should not confuse the three in their different capacities.</p>
-
 <p>One should not confuse the painter, the painting and the easel.</p>
-
 <p>This material world, which is the field of activities, is nature, and the enjoyer of nature is the living entity, and above them both is the supreme controller, the Personality of Godhead.</p>
-
-<p>It is stated in the Vedic language: “bhoktā bhogyaṁ preritāraṁ ca matvā sarvaṁ proktaṁ tri-vidhaṁ brahmam etat.”</p>
-
-<p>There are three Brahman conceptions: prakṛti is Brahman as the field of activities, and the jīva (individual soul) is also Brahman and is trying to control material nature, and the controller of both of them is also Brahman, but He is the factual controller.</p>
-
+<p>It is stated in the Vedic language: &quot;bhokta bhogyam preritaram ca matva sarvam proktam tri-vidham brahmam etat.&quot;</p>
+<p>There are three Brahman conceptions: prakrti is Brahman as the field of activities, and the jiva (individual soul) is also Brahman and is trying to control material nature, and the controller of both of them is also Brahman, but He is the factual controller.</p>
 <p>In this chapter it will be also explained that out of the two knowers, one is fallible and the other is infallible.</p>
-
 <p>One is superior and the other is subordinate.</p>
-
-<p>One who understands the two knowers of the field to be one and the same contradicts the Supreme Personality of Godhead who states here very clearly that “I am also the knower of the field of activity.”</p>
-
+<p>One who understands the two knowers of the field to be one and the same contradicts the Supreme Personality of Godhead who states here very clearly that &quot;I am also the knower of the field of activity.&quot;</p>
 <p>One who misunderstands a rope to be a serpent is not in knowledge.</p>
-
 <p>There are different kinds of bodies, and there are different owners of the bodies.</p>
-
 <p>Because each individual soul has his individual capacity of lording it over material nature, there are different bodies.</p>
-
 <p>But the Supreme also is present in them as the controller.</p>
-
 <p>The word ca is significant, for it indicates the total number of bodies.</p>
-
-<p>That is the opinion of Śrīla Baladeva Vidyābhūṣaṇa: Kṛṣṇa is the Supersoul present in each and every body apart from the individual soul.</p>
-
-<p>And Kṛṣṇa explicitly says here that the Supersoul is the controller of both the field of activities and the finite enjoyer.</p>
-
-<p><a name="13.4"><strong>13.4</strong></a></p>
-
-<p>tat kṣetraṁ yac ca yādṛk ca</p>
-
-<p>yad-vikāri yataś ca yat</p>
-
-<p>sa ca yo yat-prabhāvaś ca</p>
-
-<p>tat samāsena me śṛṇu</p>
-
-<p>tat—that; kṣetram—field of activities; yat—as; ca—also; yādṛk—as it is; ca—also; yat—what is; vikāri—changes; yataḥ—from which; ca—also; yat—one; saḥ—he; ca—also; yaḥ—one; yat—which; prabhāvaḥ ca—influence also; tat—that; samāsena—in detail; me—from Me; śṛṇu—understand.</p>
-
+<p>That is the opinion of Srila Baladeva Vidyabhusana: Krsna is the Supersoul present in each and every body apart from the individual soul.</p>
+<p>And Krsna explicitly says here that the Supersoul is the controller of both the field of activities and the finite enjoyer.</p>
+<h3><a class="header" href="#134" id="134">13.4</a></h3>
+<p>tat ksetram yac ca yadrk ca</p>
+<p>yad-vikari yatas ca yat</p>
+<p>sa ca yo yat-prabhavas ca</p>
+<p>tat samasena me srnu</p>
+<p>tat--that; ksetram--field of activities; yat--as; ca--also; yadrk--as it is; ca--also; yat--what is; vikari--changes; yatah--from which; ca--also; yat--one; sah--he; ca--also; yah--one; yat--which; prabhavah ca--influence also; tat--that; samasena--in detail; me--from Me; srnu--understand.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>Now please hear My brief description of this field of activity and how it is constituted, what its changes are, whence it is produced, who that knower of the field of activities is, and what his influences are.</p>
-
 <p><strong>PURPORT</strong></p>
-
 <p>The Lord is describing the field of activities and the knower of the field of activities in their constitutional positions.</p>
-
 <p>One has to know how this body is constituted, the materials of which this body is made, under whose control this body is working, how the changes are taking place, wherefrom the changes are coming, what the causes are, what the reasons are, what the ultimate goal of the individual is, and what the actual form of the individual soul is.</p>
-
 <p>One should also know the distinction between the individual living soul and the Supersoul, the different influences, their potentials, etc.</p>
-
-<p>One just has to understand this Bhagavad-gītā directly from the description given by the Supreme Personality of Godhead, and all this will be clarified.</p>
-
-<p>But one should be careful not to consider the Supreme Personality of Godhead in every body and individual soul to be the jīva.</p>
-
+<p>One just has to understand this Bhagavad-gita directly from the description given by the Supreme Personality of Godhead, and all this will be clarified.</p>
+<p>But one should be careful not to consider the Supreme Personality of Godhead in every body and individual soul to be the jiva.</p>
 <p>This is something like equalizing the potent and the impotent.</p>
-
-<p><a name="13.5"><strong>13.5</strong></a></p>
-
-<p>ṛṣibhir bahudhā gītaṁ</p>
-
-<p>chandobhir vividhaiḥ pṛthak</p>
-
-<p>brahma-sūtra-padaiś caiva</p>
-
-<p>hetumadbhir viniścitaiḥ</p>
-
-<p>ṛṣibhiḥ—by the wise sages; bahudhā—in many ways; gītām—described; chandobhiḥ—Vedic hymns; vividhaiḥ—in various; pṛthak—variously; brahma-sūtra—the Vedānta; padaiḥ—aphorism; ca—also; eva—certainly; hetumadbhiḥ—with cause and effect; viniścitaiḥ—ascertain.</p>
-
+<h3><a class="header" href="#135" id="135">13.5</a></h3>
+<p>rsibhir bahudha gitam</p>
+<p>chandobhir vividhaih prthak</p>
+<p>brahma-sutra-padais caiva</p>
+<p>hetumadbhir viniscitaih</p>
+<p>rsibhih--by the wise sages; bahudha--in many ways; gitam--described; chandobhih--Vedic hymns; vividhaih--in various; prthak--variously; brahma-sutra--the Vedanta; padaih--aphorism; ca--also; eva--certainly; hetumadbhih--with cause and effect; viniscitaih--ascertain.</p>
 <p><strong>TRANSLATION</strong></p>
-
-<p>That knowledge of the field of activities and of the knower of activities is described by various sages in various Vedic writings—especially in the Vedānta-sūtra—and is presented with all reasoning as to cause and effect.</p>
-
+<p>That knowledge of the field of activities and of the knower of activities is described by various sages in various Vedic writings--especially in the Vedanta-sutra--and is presented with all reasoning as to cause and effect.</p>
 <p><strong>PURPORT</strong></p>
-
-<p>The Supreme Personality of Godhead, Kṛṣṇa, is the highest authority in explaining this knowledge.</p>
-
+<p>The Supreme Personality of Godhead, Krsna, is the highest authority in explaining this knowledge.</p>
 <p>Still, as a matter of course, learned scholars and standard authorities always give evidence from previous authorities.</p>
-
-<p>Kṛṣṇa is explaining this most controversial point regarding the duality and non-duality of the soul and the Supersoul by referring to Scriptures, the Vedānta, which are accepted as authority.</p>
-
+<p>Krsna is explaining this most controversial point regarding the duality and non-duality of the soul and the Supersoul by referring to Scriptures, the Vedanta, which are accepted as authority.</p>
 <p>First, He says, this is according to different sages.</p>
-
-<p>As far as the sages are concerned, besides Himself, Vyāsadeva, the author of the Vedānta-sūtra, is a great sage, and in the Vedānta-sūtra duality is perfectly explained.</p>
-
-<p>And Vyāsadeva’s father, Parāśara, was also a great sage, and he writes in his books of religiosity: “aham tvaṁ ca athānye…” “We—you, I and various other living entities—are all transcendental, although in material bodies.</p>
-
+<p>As far as the sages are concerned, besides Himself, Vyasadeva, the author of the Vedanta-sutra, is a great sage, and in the Vedanta-sutra duality is perfectly explained.</p>
+<p>And Vyasadeva's father, Parasara, was also a great sage, and he writes in his books of religiosity: &quot;aham tvam ca athanye...&quot; &quot;We--you, I and various other living entities--are all transcendental, although in material bodies.</p>
 <p>Now we are fallen into the ways of the three modes of material nature according to our different karma.</p>
-
 <p>As such, some are on higher levels, and some are in the lower nature.</p>
-
 <p>The higher and lower natures exist due to ignorance and are being manifested in an infinite number of living entities.</p>
-
-<p>But the Supersoul, which is infallible, is uncontaminated by the three qualities of nature and is transcendental.”</p>
-
-<p>Similarly, in the original Vedas, a distinction between the soul, the Supersoul and the body is made, especially in the Kaṭha Upaniṣad.</p>
-
-<p>There is a manifestation of the Supreme Lord’s energy known as annamaya by which one depends simply upon food for existence.</p>
-
+<p>But the Supersoul, which is infallible, is uncontaminated by the three qualities of nature and is transcendental.&quot;</p>
+<p>Similarly, in the original Vedas, a distinction between the soul, the Supersoul and the body is made, especially in the Katha Upanisad.</p>
+<p>There is a manifestation of the Supreme Lord's energy known as annamaya by which one depends simply upon food for existence.</p>
 <p>This is a materialistic realization of the Supreme.</p>
-
-<p>Then there is prāṇamaya; this means that after realizing the Supreme Absolute Truth in foodstuff, one can realize the Absolute Truth in the living symptoms, or life forms.</p>
-
-<p>In jñānamaya the living symptom develops to the point of thinking, feeling, and willing.</p>
-
-<p>Then there is Brahman realization and the realization called vijñānamaya by which the living entity’s mind and life symptoms are distinguished from the living entity himself.</p>
-
-<p>The next and supreme stage is ānandamaya, realization of the all-blissful nature.</p>
-
+<p>Then there is pranamaya; this means that after realizing the Supreme Absolute Truth in foodstuff, one can realize the Absolute Truth in the living symptoms, or life forms.</p>
+<p>In jnanamaya the living symptom develops to the point of thinking, feeling, and willing.</p>
+<p>Then there is Brahman realization and the realization called vijnanamaya by which the living entity's mind and life symptoms are distinguished from the living entity himself.</p>
+<p>The next and supreme stage is anandamaya, realization of the all-blissful nature.</p>
 <p>Thus there are five stages of Brahman realization, which is called brahma puccham.</p>
-
-<p>Out of these the first three—annamaya, prāṇamaya, and jñānamaya—involve the fields of activities of the living entities.</p>
-
-<p>Transcendental to all these fields of activities is the Supreme Lord, who is called ānandamaya.</p>
-
-<p>In the Vedānta-sūtra also the Supreme is called ānandamayo ’bhyāsāt.</p>
-
-<p>The Supreme Personality of Godhead is by nature full of joy, and to enjoy His transcendental bliss, He expands into vijñānamaya, prāṇamaya, jñānamaya, and annamaya.</p>
-
-<p>In this field of activities the living entity is considered to be the enjoyer, and different from him is the ānandamaya.</p>
-
-<p>That means that if the living entity decides to enjoy, in dovetailing himself with the ānandamaya, then he becomes perfect.</p>
-
+<p>Out of these the first three--annamaya, pranamaya, and jnanamaya--involve the fields of activities of the living entities.</p>
+<p>Transcendental to all these fields of activities is the Supreme Lord, who is called anandamaya.</p>
+<p>In the Vedanta-sutra also the Supreme is called anandamayo 'bhyasat.</p>
+<p>The Supreme Personality of Godhead is by nature full of joy, and to enjoy His transcendental bliss, He expands into vijnanamaya, pranamaya, jnanamaya, and annamaya.</p>
+<p>In this field of activities the living entity is considered to be the enjoyer, and different from him is the anandamaya.</p>
+<p>That means that if the living entity decides to enjoy, in dovetailing himself with the anandamaya, then he becomes perfect.</p>
 <p>This is the real picture of the Supreme Lord, as supreme knower of the field, the living entity, as subordinate knower, and the nature of the field of activities.</p>
-
-<p><a name="13.6-7"><strong>13.6-7</strong></a></p>
-
-<p>mahā-bhūtāny ahaṅkāro</p>
-
+<h3><a class="header" href="#136-7" id="136-7">13.6-7</a></h3>
+<p>maha-bhutany ahankaro</p>
 <p>buddhir avyaktam eva ca</p>
-
-<p>indriyāṇi daśaikaṁ ca</p>
-
-<p>pañca cendriya-gocarāḥ</p>
-
-<p>icchā dveṣaḥ sukhaṁ duḥkhaṁ</p>
-
-<p>saṅghātaś cetanā dhṛtiḥ</p>
-
-<p>etat kṣetraṁ samāsena</p>
-
-<p>sa-vikāram udāhṛtam</p>
-
-<p>mahā-bhūtāni—great elements; ahaṅkāraḥ—false ego; buddhiḥ—intelligence; avyaktam—the unmanifested; eva—certainly; ca—also; indriyāṇi—senses ; daśa ekam—eleven; ca—also; pañca—five; ca—also; indriya-gocarāḥ—objects of the senses; icchā—desire; dveṣaḥ—hatred; sukham—happiness; duḥkham—distress; saṅghataḥ—the aggregate; cetanā—living symptoms; dhṛtiḥ—conviction; etat—all this; kṣetram—field of activities; samāsena—in summary; sa-vikāram—interaction; udāhṛtam—exemplified.</p>
-
+<p>indriyani dasaikam ca</p>
+<p>panca cendriya-gocarah</p>
+<p>iccha dvesah sukham duhkham</p>
+<p>sanghatas cetana dhrtih</p>
+<p>etat ksetram samasena</p>
+<p>sa-vikaram udahrtam</p>
+<p>maha-bhutani--great elements; ahankarah--false ego; buddhih--intelligence; avyaktam--the unmanifested; eva--certainly; ca--also; indriyani--senses ; dasa ekam--eleven; ca--also; panca--five; ca--also; indriya-gocarah--objects of the senses; iccha--desire; dvesah--hatred; sukham--happiness; duhkham--distress; sanghatah--the aggregate; cetana--living symptoms; dhrtih--conviction; etat--all this; ksetram--field of activities; samasena--in summary; sa-vikaram--interaction; udahrtam--exemplified.</p>
 <p><strong>TRANSLATION</strong></p>
-
-<p>The five great elements, false ego, intelligence, the unmanifested, the ten senses, the mind, the five sense objects, desire, hatred, happiness, distress, the aggregate, the life symptoms, and convictions—all these are considered, in summary, to be the field of activities and its interactions.</p>
-
+<p>The five great elements, false ego, intelligence, the unmanifested, the ten senses, the mind, the five sense objects, desire, hatred, happiness, distress, the aggregate, the life symptoms, and convictions--all these are considered, in summary, to be the field of activities and its interactions.</p>
 <p><strong>PURPORT</strong></p>
-
-<p>From all the authoritative statements of the great sages, the Vedic hymns and the aphorisms of the Vedānta-sūtra, the components of this world are earth, water, fire, air and ether.</p>
-
-<p>These are the five great elements (mahābhūta).</p>
-
+<p>From all the authoritative statements of the great sages, the Vedic hymns and the aphorisms of the Vedanta-sutra, the components of this world are earth, water, fire, air and ether.</p>
+<p>These are the five great elements (mahabhuta).</p>
 <p>Then there are false ego, intelligence and the unmanifested stage of the three modes of nature.</p>
-
 <p>Then there are five senses for acquiring knowledge: the eyes, ears, nose, tongue and touch.</p>
-
 <p>Then five working senses: voice, legs, hands, the anus and the genitals.</p>
-
 <p>Then, above the senses, there is the mind, which is within and which can be called the sense within.</p>
-
 <p>Therefore, including the mind, there are eleven senses altogether.</p>
-
 <p>Then there are the five objects of the senses: smell, taste, warmth, touch and sound.</p>
-
 <p>Now the aggregate of these twenty-four elements is called the field of activity.</p>
-
 <p>If one makes an analytical study of these twenty-four subjects, then he can very well understand the field of activity.</p>
-
 <p>Then there is desire, hatred, pleasure and pain, which are interactions, representations of the five great elements in the gross body.</p>
-
-<p>The living symptoms, represented by consciousness and conviction, are the manifestation of the subtle body—mind, ego and intelligence.</p>
-
+<p>The living symptoms, represented by consciousness and conviction, are the manifestation of the subtle body--mind, ego and intelligence.</p>
 <p>These subtle elements are included within the field of activities.</p>
-
 <p>The five great elements are a gross representation of the subtle false ego.</p>
-
 <p>They are a representation in the material conception.</p>
-
 <p>Consciousness is represented by intelligence, of which the unmanifested stage is the three modes of material nature.</p>
-
-<p>The unmanifested three modes of material nature is called pradhāna.</p>
-
+<p>The unmanifested three modes of material nature is called pradhana.</p>
 <p>One who desires to know the twenty-four elements in detail along with their interactions should study the philosophy in more detail.</p>
-
-<p>In Bhagavad-gītā, a summary only is given.</p>
-
+<p>In Bhagavad-gita, a summary only is given.</p>
 <p>The body is the representation of all these factors, and there are changes of the body, which are six in number: the body is born, it grows, it stays, it produces by-products, then begins to decay, and at the last stage it vanishes.</p>
-
 <p>Therefore the field is a nonpermanent material thing.</p>
-
-<p>However, the kṣetrajña, the knower of the field, its proprietor, is different.</p>
-
-<p><a name="13.8-12"><strong>13.8-12</strong></a></p>
-
-<p>amānitvam adambhitvam</p>
-
-<p>ahiṁsā kṣāntir ārjavam</p>
-
-<p>ācāryopāsanaṁ śaucaṁ</p>
-
-<p>sthairyam ātma-vinigrahaḥ</p>
-
-<p>indriyārtheṣu vairāgyam</p>
-
-<p>anahaṅkāra eva ca</p>
-
-<p>janma-mṛtyu-jarā-vyādhi-</p>
-
-<p>duḥkha-doṣānudarśanam</p>
-
-<p>asaktir anabhiṣvaṅgaḥ</p>
-
-<p>putra-dāra-gṛhādiṣu</p>
-
-<p>nityaṁ ca sama-cittatvam</p>
-
-<p>iṣṭāniṣṭopapattiṣu</p>
-
-<p>mayi cānanya-yogena</p>
-
-<p>bhaktir avyabhicāriṇī</p>
-
-<p>vivikta-deśa-sevitvam</p>
-
-<p>aratir jana-saṁsadi</p>
-
-<p>adhyātma-jñāna-nityatvaṁ</p>
-
-<p>tattva-jñānārtha-darśanam</p>
-
-<p>etaj jñānam iti proktam</p>
-
-<p>ajñānaṁ yad ato ’nyathā</p>
-
-<p>amānitvam—humility; adambhitvam—pridelessness; ahiṁsā—nonviolence; kṣāntiḥ—tolerance; ārjavam—simplicity; ācārya-upāsanam—approaching a bona fide spiritual master; śaucam—cleanliness; sthairyam—steadfastness; ātma-vinigrahaḥ—control; iṇdriya-artheṣu—in the matter of the senses; vairāgyam—renunciation; anahaṅkāraḥ—being without false egoism; eva—certainly; ca—also; janma—birth; mṛtyu—death; jarā—old age; vyādhi—disease; duḥkha—distress; doṣa—fault; anudarśanam—observing; asaktiḥ—without attachment; anabhiṣvaṅgaḥ—without association; putra—son; dāra—wife; gṛha-ādiṣu—home, etc.; nityam; ca—also; sama-cittatvam—equilibrium; iṣṭa—desirable; aniṣṭaḥ—undesirable; upapattiṣu—having obtained; mayi—unto Me; ca—also; ananya-yogena—by devotional service; bhaktiḥ—devotion; avyabhicāriṇī—constant, unalloyed; vivikta—solitary; deśa—place; sevitvam—aspiring; aratiḥ—without attachment; jana—people in general; saṁsadi—mass; adhyātma—pertaining to the self; jñāna—knowledge; nityatvam—eternity; tattva-jñāna—knowledge of the truth; artha—the object; darśanam—philosophy; etat—all this; jñānam—knowledge; iti—thus; proktam—declared; ajñānam—ignoraṇce; yat—that which; ataḥ—from this; anyathā—others.</p>
-
+<p>However, the ksetrajna, the knower of the field, its proprietor, is different.</p>
+<h3><a class="header" href="#138-12" id="138-12">13.8-12</a></h3>
+<p>amanitvam adambhitvam</p>
+<p>ahimsa ksantir arjavam</p>
+<p>acaryopasanam saucam</p>
+<p>sthairyam atma-vinigrahah</p>
+<p>indriyarthesu vairagyam</p>
+<p>anahankara eva ca</p>
+<p>janma-mrtyu-jara-vyadhi-</p>
+<p>duhkha-dosanudarsanam</p>
+<p>asaktir anabhisvangah</p>
+<p>putra-dara-grhadisu</p>
+<p>nityam ca sama-cittatvam</p>
+<p>istanistopapattisu</p>
+<p>mayi cananya-yogena</p>
+<p>bhaktir avyabhicarini</p>
+<p>vivikta-desa-sevitvam</p>
+<p>aratir jana-samsadi</p>
+<p>adhyatma-jnana-nityatvam</p>
+<p>tattva-jnanartha-darsanam</p>
+<p>etaj jnanam iti proktam</p>
+<p>ajnanam yad ato 'nyatha</p>
+<p>amanitvam--humility; adambhitvam--pridelessness; ahimsa--nonviolence; ksantih--tolerance; arjavam--simplicity; acarya-upasanam--approaching a bona fide spiritual master; saucam--cleanliness; sthairyam--steadfastness; atma-vinigrahah--control; indriya-arthesu--in the matter of the senses; vairagyam--renunciation; anahankarah--being without false egoism; eva--certainly; ca--also; janma--birth; mrtyu--death; jara--old age; vyadhi--disease; duhkha--distress; dosa--fault; anudarsanam--observing; asaktih--without attachment; anabhisvangah--without association; putra--son; dara--wife; grha-adisu--home, etc.; nityam; ca--also; sama-cittatvam--equilibrium; ista--desirable; anistah--undesirable; upapattisu--having obtained; mayi--unto Me; ca--also; ananya-yogena--by devotional service; bhaktih--devotion; avyabhicarini--constant, unalloyed; vivikta--solitary; desa--place; sevitvam--aspiring; aratih--without attachment; jana--people in general; samsadi--mass; adhyatma--pertaining to the self; jnana--knowledge; nityatvam--eternity; tattva-jnana--knowledge of the truth; artha--the object; darsanam--philosophy; etat--all this; jnanam--knowledge; iti--thus; proktam--declared; ajnanam--ignorance; yat--that which; atah--from this; anyatha--others.</p>
 <p><strong>TRANSLATION</strong></p>
-
-<p>Humility, pridelessness, nonviolence, tolerance, simplicity, approaching a bona fide spiritual master, cleanliness, steadiness and self-control; renunciation of the objects of sense gratification, absence of false ego, the perception of the evil of birth, death, old age and disease; nonattachment to children, wife, home and the rest, and evenmindedness amid pleasant and unpleasant events; constant and unalloyed devotion to Me, resorting to solitary places, detachment from the general mass of people; accepting the importance of self-realization, and philosophical search for the Absolute Truth—all these I thus declare to be knowledge, and what is contrary to these is ignorance.</p>
-
+<p>Humility, pridelessness, nonviolence, tolerance, simplicity, approaching a bona fide spiritual master, cleanliness, steadiness and self-control; renunciation of the objects of sense gratification, absence of false ego, the perception of the evil of birth, death, old age and disease; nonattachment to children, wife, home and the rest, and evenmindedness amid pleasant and unpleasant events; constant and unalloyed devotion to Me, resorting to solitary places, detachment from the general mass of people; accepting the importance of self-realization, and philosophical search for the Absolute Truth--all these I thus declare to be knowledge, and what is contrary to these is ignorance.</p>
 <p><strong>PURPORT</strong></p>
-
 <p>This process of knowledge is sometimes misunderstood by less intelligent men as being the interaction of the field of activity.</p>
-
 <p>But actually this is the real process of knowledge.</p>
-
 <p>If one accepts this process, then the possibility of approaching the Absolute Truth exists.</p>
-
 <p>This is not the interaction of the tenfold elements, as described before, This is actually the means to get out of it.</p>
-
 <p>Of all the descriptions of the process of knowledge, the most important point is described in the first line of the tenth verse: The process of knowledge terminates in unalloyed devotional service to the Lord.</p>
-
 <p>So, if one does not approach, or is not able to approach, the transcendental service of the Lord, then the other nineteen items are of no particular value.</p>
-
-<p>But, if one takes to devotional service in full Kṛṣṇa consciousness, the other nineteen items automatically develop within him.</p>
-
+<p>But, if one takes to devotional service in full Krsna consciousness, the other nineteen items automatically develop within him.</p>
 <p>The principle of accepting a spiritual master, as mentioned in the seventh verse, is essential.</p>
-
 <p>Even for one who takes to devotional service, it is most important.</p>
-
 <p>Transcendental life begins when one accepts a bona fide spiritual master.</p>
-
-<p>The Supreme Personality of Godhead, Śrī Kṛṣṇa, clearly states here that this process of knowledge is the actual path.</p>
-
+<p>The Supreme Personality of Godhead, Sri Krsna, clearly states here that this process of knowledge is the actual path.</p>
 <p>Anything speculated beyond this is nonsense.</p>
-
 <p>As for the knowledge outlined here, the items may be analyzed as follows: Humility means that one should not be anxious to have the satisfaction of being honored by others.</p>
-
-<p>The material conception of life makes us very eager to receive honor from others, but from the point of view of a man in perfect knowledge—who knows that he is not this body—anything, honor or dishonor, pertaining to this body is useless.</p>
-
+<p>The material conception of life makes us very eager to receive honor from others, but from the point of view of a man in perfect knowledge--who knows that he is not this body--anything, honor or dishonor, pertaining to this body is useless.</p>
 <p>One should not be hankering after this material deception.</p>
-
 <p>People are very anxious to be famous for their religion, and consequently sometimes it is found that without understanding the principles of religion, one enters into some group, which is not actually following religious principles, and then wants to advertise himself as a religious mentor.</p>
-
 <p>As for actual advancement in spiritual science, one should have a test to see how far he is progressing.</p>
-
 <p>He can judge by these items.</p>
-
 <p>Nonviolence is generally taken to mean not killing or destroying the body, but actually nonviolence means not to put others into distress.</p>
-
 <p>People in general are trapped by ignorance in the material concept of life, and they perpetually suffer material pains.</p>
-
 <p>So, unless one elevates people to spiritual knowledge, one is practicing violence.</p>
-
 <p>One should try his best to distribute real knowledge to the people, so that they may become enlightened and leave this material entanglement.</p>
-
 <p>That is nonviolence.</p>
-
 <p>Tolerance means that one should be practiced to bear insult and dishonor from others.</p>
-
 <p>If one is engaged in the advancement of spiritual knowledge, there will be so many insults and much dishonor from others.</p>
-
 <p>This is expected because material nature is so constituted.</p>
-
-<p>Even a boy like Prahlāda, who, only five years old, was engaged in the cultivation of spiritual knowledge, was endangered when his father became antagonistic to his devotion.</p>
-
+<p>Even a boy like Prahlada, who, only five years old, was engaged in the cultivation of spiritual knowledge, was endangered when his father became antagonistic to his devotion.</p>
 <p>The father tried to kill him in so many ways, but Prahlada tolerated him.</p>
-
 <p>So, for making advancement in spiritual knowledge, there may be many impediments, but we should be tolerant and continue our progress with determination.</p>
-
 <p>Simplicity means that without diplomacy one should be so straightforward that he can disclose the real truth even to an enemy.</p>
-
 <p>As for acceptance of the spiritual master, that is essential, because without the instruction of a bona fide spiritual master, one cannot progress in the spiritual science.</p>
-
 <p>One should approach the spiritual master with all humility and offer him all services so that he will be pleased to bestow his blessings upon the disciple.</p>
-
-<p>Because a bona fide spiritual master is a representative of Kṛṣṇa, if he bestows any blessings upon his disciple, that will make the disciple immediately advanced without the disciple’s following the regulated principles.</p>
-
+<p>Because a bona fide spiritual master is a representative of Krsna, if he bestows any blessings upon his disciple, that will make the disciple immediately advanced without the disciple's following the regulated principles.</p>
 <p>Or, the regulated principles will be easier for one who has served the spiritual master without reservation.</p>
-
 <p>Cleanliness is essential for making advancement in spiritual life.</p>
-
 <p>There are two kinds of cleanliness: external and internal.</p>
-
-<p>External cleanliness means taking a bath, but for internal cleanliness, one has to think of Kṛṣṇa always and chant, Hare Kṛṣṇa Hare Kṛṣṇa Kṛṣṇa Kṛṣṇa Hare Hare, Hare Rāma Hare Rāma Rāma Rāma Hare Hare.</p>
-
+<p>External cleanliness means taking a bath, but for internal cleanliness, one has to think of Krsna always and chant, Hare Krsna Hare Krsna Krsna Krsna Hare Hare, Hare Rama Hare Rama Rama Rama Hare Hare.</p>
 <p>This process cleans the accumulated dust of past karma from the mind.</p>
-
 <p>Steadiness means that one should be very determined to make progress in spiritual life.</p>
-
 <p>Without such determination, one cannot make tangible progress.</p>
-
 <p>And self-control means that one should not accept anything which is detrimental to the path of spiritual progress.</p>
-
 <p>One should become accustomed to this and reject anything which is against the path of spiritual progress.</p>
-
 <p>This is real renunciation.</p>
-
 <p>The senses are so strong that they are always anxious to have sense gratification.</p>
-
 <p>One should not cater to these demands, which are not necessary.</p>
-
 <p>The senses should only be gratified to keep the body fit so that one can discharge his duty in advancing in spiritual life.</p>
-
 <p>The most important and uncontrollable sense is the tongue.</p>
-
 <p>If one can control the tongue, then there is every possibility of controlling the other senses.</p>
-
 <p>The function of the tongue is to taste and to vibrate.</p>
-
-<p>Therefore, by systematic regulation, the tongue should always be engaged in tasting the remnants of foodstuffs offered to Kṛṣṇa and chanting Hare Kṛṣṇa.</p>
-
-<p>As far as the eyes are concerned, they should not be allowed to see anything but the beautiful form of Kṛṣṇa.</p>
-
+<p>Therefore, by systematic regulation, the tongue should always be engaged in tasting the remnants of foodstuffs offered to Krsna and chanting Hare Krsna.</p>
+<p>As far as the eyes are concerned, they should not be allowed to see anything but the beautiful form of Krsna.</p>
 <p>That will control the eyes.</p>
-
-<p>Similarly, the ears should be engaged in hearing about Kṛṣṇa and the nose in smelling the flowers offered to Kṛṣṇa.</p>
-
-<p>This is the process of devotional service, and it is understood here that Bhagavad-gītā is simply expounding the science of devotional service.</p>
-
+<p>Similarly, the ears should be engaged in hearing about Krsna and the nose in smelling the flowers offered to Krsna.</p>
+<p>This is the process of devotional service, and it is understood here that Bhagavad-gita is simply expounding the science of devotional service.</p>
 <p>Devotional service is the main and sole objective.</p>
-
-<p>Unintelligent commentators on the Gītā try to divert the mind of the reader to other subjects, but there is no other subject in Bhagavad-gītā but devotional service.</p>
-
+<p>Unintelligent commentators on the Gita try to divert the mind of the reader to other subjects, but there is no other subject in Bhagavad-gita but devotional service.</p>
 <p>False ego means accepting this body as oneself.</p>
-
 <p>When one understands that he is not his body and is spirit soul, that is real ego.</p>
-
 <p>Ego is there.</p>
-
 <p>False ego is condemned, but not real ego.</p>
-
-<p>In the Vedic literature, it is said: ahaṁ brahmāsmi.</p>
-
+<p>In the Vedic literature, it is said: aham brahmasmi.</p>
 <p>I am Brahman, I am spirit.</p>
-
-<p>This “I am,” the sense of self, also exists in the liberated stage of self-realization.</p>
-
-<p>This sense of “I am” is ego, but when the sense of “I am” is applied to this false body, it is false ego.</p>
-
+<p>This &quot;I am,&quot; the sense of self, also exists in the liberated stage of self-realization.</p>
+<p>This sense of &quot;I am&quot; is ego, but when the sense of &quot;I am&quot; is applied to this false body, it is false ego.</p>
 <p>When the sense of self is applied to reality, that is real ego.</p>
-
 <p>There are some philosophers who say we should give up our ego, but we cannot give up our ego because ego means identity.</p>
-
 <p>We ought, of course, to give up the false identification with the body.</p>
-
 <p>One should try to understand the distress of accepting birth, death, old age and disease.</p>
-
 <p>There are descriptions in various Vedic literatures of birth.</p>
-
-<p>In the Śrīmad-Bhāgavatam the world of the unborn, the child’s stay in the womb of the mother, its suffering, etc., are all very graphically described.</p>
-
+<p>In the Srimad-Bhagavatam the world of the unborn, the child's stay in the womb of the mother, its suffering, etc., are all very graphically described.</p>
 <p>It should be thoroughly understood that birth is distressful.</p>
-
 <p>Because we forget how much distress we have suffered within the womb of the mother, we do not make any solution to the repetition of birth and death.</p>
-
 <p>Similarly at the time of death, there are all kinds of sufferings, and they are also mentioned in the authoritative scriptures.</p>
-
 <p>These should be discussed.</p>
-
 <p>And as far as disease and old age are concerned, everyone gets practical experience.</p>
-
 <p>No one wants to be diseased, and no one wants to become old, but there is no avoiding these.</p>
-
 <p>Unless we have a pessimistic view of this material life, considering the distresses of birth, death, old age and disease, there is no impetus for our making advancement in spiritual life.</p>
-
 <p>As for detachment from children, wife and home, it is not meant that one should have no feeling for these.</p>
-
 <p>They are natural objects of affection, but when they are not favorable to spiritual progress, then one should not be attached to them.</p>
-
-<p>The best process for making the home pleasant is Kṛṣṇa consciousness.</p>
-
-<p>If one is in full Kṛṣṇa consciousness, he can make his home very happy because this process of Kṛṣṇa consciousness is very easy.</p>
-
-<p>One need only chant Hare Kṛṣṇa Hare Kṛṣṇa Kṛṣṇa Kṛṣṇa Hare Hare, Hare Rāma Hare Rāma Rāma Rāma Hare Hare, accept the remnants of foodstuffs offered to Kṛṣṇa, have some discussion on books like Bhagavad-gītā and Śrīmad-Bhāgavatam, and engage oneself in Deity worship.</p>
-
+<p>The best process for making the home pleasant is Krsna consciousness.</p>
+<p>If one is in full Krsna consciousness, he can make his home very happy because this process of Krsna consciousness is very easy.</p>
+<p>One need only chant Hare Krsna Hare Krsna Krsna Krsna Hare Hare, Hare Rama Hare Rama Rama Rama Hare Hare, accept the remnants of foodstuffs offered to Krsna, have some discussion on books like Bhagavad-gita and Srimad-Bhagavatam, and engage oneself in Deity worship.</p>
 <p>These four will make one happy.</p>
-
 <p>One should train the members of his family in this way.</p>
-
-<p>The family members can sit down morning and evening and chant together Hare Kṛṣṇa Hare Kṛṣṇa Kṛṣṇa Kṛṣṇa Hare Hare, Hare Rāma Hare Rāma Rāma Rāma Hare Hare.</p>
-
-<p>If one can mold his family life in this way to develop Kṛṣṇa consciousness, following these four principles, then there is no need to change from family life to renounced life.</p>
-
+<p>The family members can sit down morning and evening and chant together Hare Krsna Hare Krsna Krsna Krsna Hare Hare, Hare Rama Hare Rama Rama Rama Hare Hare.</p>
+<p>If one can mold his family life in this way to develop Krsna consciousness, following these four principles, then there is no need to change from family life to renounced life.</p>
 <p>But if it is not congenial, not favorable for spiritual advancement, then family life should be abandoned.</p>
-
-<p>One must sacrifice everything to realize or serve Kṛṣṇa, just as Arjuna did.</p>
-
-<p>Arjuna did not want to kill his family members, but when he understood that these family members were impediments to his Kṛṣṇa realization, he accepted the instruction of Kṛṣṇa and fought and killed them.</p>
-
+<p>One must sacrifice everything to realize or serve Krsna, just as Arjuna did.</p>
+<p>Arjuna did not want to kill his family members, but when he understood that these family members were impediments to his Krsna realization, he accepted the instruction of Krsna and fought and killed them.</p>
 <p>In all cases, one should be detached from the happiness and distress of family life because in this world one can never be fully happy or fully miserable.</p>
-
 <p>Happiness and distress are concommitant factors of material life.</p>
-
-<p>One should learn to tolerate, as advised in Bhagavad-gītā.</p>
-
+<p>One should learn to tolerate, as advised in Bhagavad-gita.</p>
 <p>One can never restrict the coming and going of happiness and distress, so one should be detached from the materialistic way of life and be automatically equiposed in both cases.</p>
-
 <p>Generally, when we get something desirable, we are very happy, and when we get something undesirable, we are distressed.</p>
-
 <p>But if we are actually in the spiritual position, these things will not agitate us.</p>
-
-<p>To reach that stage, we have to practice unbreakable devotional service; devotional service to Kṛṣṇa without deviation means engaging oneself in the nine processes of devotional service, chanting, hearing, worshiping, offering respect, etc., as described in the last verse of the Ninth Chapter.</p>
-
+<p>To reach that stage, we have to practice unbreakable devotional service; devotional service to Krsna without deviation means engaging oneself in the nine processes of devotional service, chanting, hearing, worshiping, offering respect, etc., as described in the last verse of the Ninth Chapter.</p>
 <p>That process should be followed.</p>
-
 <p>Naturally, when one is adapted to the spiritual way of life, he will not want to mix with materialistic men.</p>
-
 <p>That would go against his grain.</p>
-
 <p>One may test himself by seeing how far he is inclined to live in a solitary place without unwanted association.</p>
-
 <p>Naturally a devotee has no taste for unnecessary sporting or cinema-going or enjoying some social function, because he understands that these are simply a waste of time.</p>
-
-<p>There are many research scholars and philosophers who study sex life or some other subject, but according to Bhagavad-gītā, such research work and philosophical speculation have no value.</p>
-
+<p>There are many research scholars and philosophers who study sex life or some other subject, but according to Bhagavad-gita, such research work and philosophical speculation have no value.</p>
 <p>That is more or less nonsensical.</p>
-
-<p>According to Bhagavad-gītā, one should make research by philosophical discretion into the nature of the soul.</p>
-
+<p>According to Bhagavad-gita, one should make research by philosophical discretion into the nature of the soul.</p>
 <p>One should make research to understand with what the self is concerned.</p>
-
 <p>That is recommended here.</p>
-
 <p>As far as self-realization is concerned, it is clearly stated here that bhakti-yoga is especially practical.</p>
-
 <p>As soon as there is a question of devotion, one must consider the relationship between the Supersoul and the individual soul.</p>
-
 <p>The individual soul and the Supersoul cannot be one, at least not in the bhakti conception, the devotional conception of life.</p>
-
 <p>This service of the individual soul to the Supreme Soul is eternal, nityam, as is clearly stated.</p>
-
 <p>So bhakti or devotional service is eternal.</p>
-
 <p>One should be established in that philosophical conviction, otherwise it is only a waste of time, ignorance.</p>
-
-<p>In the Śrīmad-Bhāgavatam, this is explained; vadanti tat tattva-vidas tattvaṁ yaj jñānam advayam.</p>
-
-<p>“Those who are actually knowers of the Absolute Truth know that the Self is realized in three different phases as Brahman, Paramātmā and Bhagavān.” (Bhāg.1.2.11) Bhagavān is the last word in the realization of the Absolute Truth; therefore one should reach up to that platform of understanding the Supreme Personality of Godhead and thus engage in the devotional service of the Lord.</p>
-
+<p>In the Srimad-Bhagavatam, this is explained; vadanti tat tattva-vidas tattvam yaj jnanam advayam.</p>
+<p>&quot;Those who are actually knowers of the Absolute Truth know that the Self is realized in three different phases as Brahman, Paramatma and Bhagavan.&quot; (Bhag.1.2.11) Bhagavan is the last word in the realization of the Absolute Truth; therefore one should reach up to that platform of understanding the Supreme Personality of Godhead and thus engage in the devotional service of the Lord.</p>
 <p>That is perfection of knowledge.</p>
-
 <p>Beginning from practicing humility up to the point of realization of the Supreme Truth, the Absolute Personality of Godhead, this process is just like a staircase beginning from the ground floor up to the top floor.</p>
-
-<p>Now on this staircase there are so many people who have reached the first floor, the second or third floor, etc., but unless one reaches the top floor, which is the understanding of Kṛṣṇa, he is at a lower stage of knowledge.</p>
-
+<p>Now on this staircase there are so many people who have reached the first floor, the second or third floor, etc., but unless one reaches the top floor, which is the understanding of Krsna, he is at a lower stage of knowledge.</p>
 <p>If anyone wants to compete with God and at the same time make advancement in spiritual knowledge, he will be frustrated.</p>
-
 <p>It is clearly stated that without humility understanding is harmful.</p>
-
 <p>To think oneself God is most puffed up.</p>
-
-<p>Although the living entity is always being kicked by the stringent laws of material nature, still he thinks, “I am God” because of ignorance.</p>
-
+<p>Although the living entity is always being kicked by the stringent laws of material nature, still he thinks, &quot;I am God&quot; because of ignorance.</p>
 <p>One should be humble and know that he is subordinate to the Supreme Lord.</p>
-
 <p>Due to rebellion against the Supreme Lord, one becomes subordinate to material nature.</p>
-
 <p>One must know and be convinced of this truth.</p>
-
-<p><a name="13.13"><strong>13.13</strong></a></p>
-
-<p>jñeyaṁ yat tat pravakṣyāmi</p>
-
-<p>yaj jñātvāmṛtam aśnute</p>
-
-<p>anādi mat-paraṁ brahma</p>
-
-<p>na sat tan nāsad ucyate</p>
-
-<p>jñeyam—knowable; yat—that; tat—which; pravakṣyāmi—I shall now explain; yat—which; jñātvā—knowing; amṛtam—nectar; aśnute—taste; anādi—beginningless; mat-param—subordinate to Me; brahma—spirit; na—neither; sat—cause; tat—that; na—nor; asat—effect; ucyate—is called.</p>
-
+<h3><a class="header" href="#1313" id="1313">13.13</a></h3>
+<p>jneyam yat tat pravaksyami</p>
+<p>yaj jnatvamrtam asnute</p>
+<p>anadi mat-param brahma</p>
+<p>na sat tan nasad ucyate</p>
+<p>jneyam--knowable; yat--that; tat--which; pravaksyami--I shall now explain; yat--which; jnatva--knowing; amrtam--nectar; asnute--taste; anadi--beginningless; mat-param--subordinate to Me; brahma--spirit; na--neither; sat--cause; tat--that; na--nor; asat--effect; ucyate--is called.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>I shall now explain the knowable, knowing which you will taste the eternal.</p>
-
 <p>This is beginningless, and it is subordinate to Me.</p>
-
 <p>It is called Brahman, the spirit, and it lies beyond the cause and effect of this material world.</p>
-
 <p><strong>PURPORT</strong></p>
-
 <p>The Lord has explained the field of activities and the knower of the field.</p>
-
 <p>He has also explained the process of knowing the knower of the field of activities.</p>
-
 <p>Now He is explaining the knowable, both the soul and the Supersoul respectively.</p>
-
 <p>By knowledge of the knower, both the soul and the Supersoul, one can relish the nectar of life.</p>
-
 <p>As explained in the Second Chapter, the living entity is eternal.</p>
-
 <p>This is also confirmed here.</p>
-
-<p>There is no specific date at which the jīva was born.</p>
-
-<p>Nor can anyone trace out the history of jīvātmā’s manifestation from the Supreme Lord.</p>
-
+<p>There is no specific date at which the jiva was born.</p>
+<p>Nor can anyone trace out the history of jivatma's manifestation from the Supreme Lord.</p>
 <p>Therefore it is beginningless.</p>
-
-<p>The Vedic literature confirms this: na jāyate mṛjayate vā vipaścit.</p>
-
+<p>The Vedic literature confirms this: na jayate mrjayate va vipascit.</p>
 <p>The knower of the body is never born and never dies, and he is full of knowledge.</p>
-
-<p>The Supreme Lord is also stated in the Vedic literature as pradhāna-kṣetrajña-patir guṇeśaḥ.</p>
-
+<p>The Supreme Lord is also stated in the Vedic literature as pradhana-ksetrajna-patir gunesah.</p>
 <p>The Supreme Lord as the Supersoul is the chief knower of the body, and He is the master of the three modes of material nature.</p>
-
-<p>In the smṛti it is said: dāsa-bhūto harer eva nānyasvaiva kadācana.</p>
-
+<p>In the smrti it is said: dasa-bhuto harer eva nanyasvaiva kadacana.</p>
 <p>The living entities are eternally in the service of the Supreme Lord.</p>
-
-<p>This is also confirmed by Lord Caitanya in His teaching; therefore the description of Brahman mentioned in this verse is in relation to the individual soul, and when the word Brahman is applied to the living entity, it is to be understood that he is vijñānaṁ brahma as opposed to ananta-brahma.</p>
-
+<p>This is also confirmed by Lord Caitanya in His teaching; therefore the description of Brahman mentioned in this verse is in relation to the individual soul, and when the word Brahman is applied to the living entity, it is to be understood that he is vijnanam brahma as opposed to ananta-brahma.</p>
 <p>Ananta-brahma is the Supreme Brahman Personality of Godhead.</p>
-
-<p><a name="13.14"><strong>13.14</strong></a></p>
-
-<p>sarvataḥ pāṇi-pādaṁ tat</p>
-
-<p>sarvato ’kṣi-śiro-mukham</p>
-
-<p>sarvataḥ śrutimal loke</p>
-
-<p>sarvam āvṛtya tiṣṭhati</p>
-
-<p>sarvataḥ—everywhere; pāṇi—hands; pādam—legs; tat—that; sarvataḥ—everywhere; akṣi—eyes; śiraḥ—head; mukham—face; sarvataḥ—everywhere; śrutimat—hearing; loke—in the world; sarvam—everywhere, āvṛtya—covering; tiṣṭhati—exists.</p>
-
+<h3><a class="header" href="#1314" id="1314">13.14</a></h3>
+<p>sarvatah pani-padam tat</p>
+<p>sarvato 'ksi-siro-mukham</p>
+<p>sarvatah srutimal loke</p>
+<p>sarvam avrtya tisthati</p>
+<p>sarvatah--everywhere; pani--hands; padam--legs; tat--that; sarvatah--everywhere; aksi--eyes; sirah--head; mukham--face; sarvatah--everywhere; srutimat--hearing; loke--in the world; sarvam--everywhere, avrtya--covering; tisthati--exists.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>Everywhere are His hands and legs, His eyes and faces, and He hears everything.</p>
-
 <p>In this way the Supersoul exists.</p>
-
 <p><strong>PURPORT</strong></p>
-
 <p>As the sun exists diffusing its unlimited rays, so does the Supersoul, or Supreme Personality of Godhead.</p>
-
-<p>He exists in His all-pervading form, and in Him exist all the individual living entities, beginning from the first great teacher, Brahmā, down to the small ants.</p>
-
+<p>He exists in His all-pervading form, and in Him exist all the individual living entities, beginning from the first great teacher, Brahma, down to the small ants.</p>
 <p>There are unlimited heads, legs, hands and eyes, and unlimited living entities.</p>
-
 <p>All are existing in and on the Supersoul.</p>
-
 <p>Therefore the Supersoul is all-pervading.</p>
-
 <p>The individual soul, however, cannot say that he has his hands, legs and eyes everywhere.</p>
-
 <p>That is not possible.</p>
-
 <p>If he thinks that although under ignorance he is not conscious that his hands and legs are diffused all over, but when he attains to proper knowledge he will come to that stage, his thinking is contradictory.</p>
-
 <p>This means that the individual soul, having become conditioned by material nature, is not supreme.</p>
-
 <p>The Supreme is different from the individual soul.</p>
-
 <p>The Supreme Lord can extend His hand without limit; the individual soul cannot.</p>
-
-<p>In Bhagavad-gītā the Lord says that if anyone offers Him a flower, or a fruit, or a little water, He accepts.</p>
-
+<p>In Bhagavad-gita the Lord says that if anyone offers Him a flower, or a fruit, or a little water, He accepts.</p>
 <p>If the Lord is a far distance away, how can He accept things? This is the omnipotence of the Lord: even though He is situated in His own abode, far, far away from earth, He can extend His hand to accept what anyone offers.</p>
-
 <p>That is His potency.</p>
-
-<p>In the Brahmā-saṁhitā it is stated, goloka eva nivasati: although He is always engaged in pastimes in His transcendental planet, He is all-pervading.</p>
-
+<p>In the Brahma-samhita it is stated, goloka eva nivasati: although He is always engaged in pastimes in His transcendental planet, He is all-pervading.</p>
 <p>The individual soul cannot claim that he is all-pervading.</p>
-
 <p>Therefore this verse describes the Supreme Soul, the Personality of Godhead, not the individual soul.</p>
-
-<p><a name="13.15"><strong>13.15</strong></a></p>
-
-<p>sarvendriya-guṇābhāsaṁ</p>
-
+<h3><a class="header" href="#1315" id="1315">13.15</a></h3>
+<p>sarvendriya-gunabhasam</p>
 <p>sarvendriya-vivarjitam</p>
-
-<p>asaktaṁ sarva-bhṛc caiva</p>
-
-<p>nirguṇaṁ guṇa-bhoktṛ ca</p>
-
-<p>sarve—all; indriya—senses; guṇa—qualities; ābhāsam—original source; sarva—all; indriya—senses; vivarjitam—being without; asaktam—without attachment; sarva-bhṛt—maintainer of everyone; ca—also; eva—certainly; nirguṇam—without material qualities; guṇa-bhoktṛ—simultaneously master of the guṇas; ca—also.</p>
-
+<p>asaktam sarva-bhrc caiva</p>
+<p>nirgunam guna-bhoktr ca</p>
+<p>sarve--all; indriya--senses; guna--qualities; abhasam--original source; sarva--all; indriya--senses; vivarjitam--being without; asaktam--without attachment; sarva-bhrt--maintainer of everyone; ca--also; eva--certainly; nirgunam--without material qualities; guna-bhoktr--simultaneously master of the gunas; ca--also.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>The Supersoul is the original source of all senses, yet He is without senses.</p>
-
 <p>He is unattached, although He is the maintainer of all living beings.</p>
-
 <p>He transcends the modes of nature, and at the same time He is the master of all modes of material nature.</p>
-
 <p><strong>PURPORT</strong></p>
-
-<p>The Supreme Lord, although the source of all the senses of the living entities, doesn’t have material senses like they have.</p>
-
+<p>The Supreme Lord, although the source of all the senses of the living entities, doesn't have material senses like they have.</p>
 <p>Actually, the individual souls have spiritual senses, but in condemned life they are covered with the material elements and therefore the sense activities are exhibited through matter.</p>
-
-<p>The Supreme Lord’s senses are not so covered.</p>
-
-<p>His senses are transcendental and are therefore called nirguṇa.</p>
-
-<p>Guṇa means the material modes, but His senses are without material covering.</p>
-
+<p>The Supreme Lord's senses are not so covered.</p>
+<p>His senses are transcendental and are therefore called nirguna.</p>
+<p>Guna means the material modes, but His senses are without material covering.</p>
 <p>It should be understood that His senses are not exactly like ours.</p>
-
 <p>Although He is the source of all our sensual activities, He has His transcendental senses which are uncontaminated.</p>
-
-<p>This is very nicely explained in the Śvetāśvatara Upaniṣad in the verse: sarvataḥ pāṇi-pādam.</p>
-
+<p>This is very nicely explained in the Svetasvatara Upanisad in the verse: sarvatah pani-padam.</p>
 <p>The Supreme Personality of Godhead has no hands which are materially contaminated, but He has His hands and accepts whatever sacrifice is offered to Him.</p>
-
 <p>That is the distinction between the conditioned soul and the Supersoul.</p>
-
-<p>He has no material eyes, but He has eyes—otherwise how could He see? He sees everything, past, present and future.</p>
-
+<p>He has no material eyes, but He has eyes--otherwise how could He see? He sees everything, past, present and future.</p>
 <p>He lives within the heart of the living being, and He knows what we have done in the past, what we are doing now, and what is awaiting us in the future.</p>
-
-<p>This is also confirmed in Bhagavad-gītā: He knows everything, but no one knows Him.</p>
-
+<p>This is also confirmed in Bhagavad-gita: He knows everything, but no one knows Him.</p>
 <p>It is said that the Supreme Lord has no legs like us, but He can travel throughout space because He has spiritual legs.</p>
-
 <p>In other words, the Lord is not impersonal; He has His eyes, legs, hands and everything else, and because we are part and parcel of the Supreme Lord we also have these things.</p>
-
 <p>But His hands, legs, eyes and senses are not contaminated by material nature.</p>
-
-<p>Bhagavad-gītā also confirms that when the Lord appears He appears as He is by His internal potency.</p>
-
+<p>Bhagavad-gita also confirms that when the Lord appears He appears as He is by His internal potency.</p>
 <p>He is not contaminated by the material energy because He is the Lord of material energy.</p>
-
 <p>In the Vedic literature we find that His whole embodiment is spiritual.</p>
-
-<p>He has His eternal form called sac-cid-ānanda-vigraha.</p>
-
+<p>He has His eternal form called sac-cid-ananda-vigraha.</p>
 <p>He is full of all opulence.</p>
-
 <p>He is the proprietor of all wealth and the owner of all energy.</p>
-
 <p>He is the most intelligent and is full of knowledge.</p>
-
 <p>These are some of the symptoms of the Supreme Personality of Godhead.</p>
-
 <p>He is maintainer of all living entities and the witness of all activities.</p>
-
 <p>As far as we can understand from Vedic literature, the Supreme Lord is always transcendental.</p>
-
-<p>Although we do not see His head, face, hands, or legs, He has them, and when we are elevated to the transcendental situation then we can see the Lord’s form.</p>
-
+<p>Although we do not see His head, face, hands, or legs, He has them, and when we are elevated to the transcendental situation then we can see the Lord's form.</p>
 <p>Due to materially contaminated senses, we cannot see His form.</p>
-
 <p>Therefore the impersonalists who are still materially affected cannot understand the Personality of Godhead.</p>
-
-<p><a name="13.16"><strong>13.16</strong></a></p>
-
-<p>bahir antaś ca bhūtānām</p>
-
-<p>acaraṁ caram eva ca</p>
-
-<p>sūkṣmatvāt tad avijñeyaṁ</p>
-
-<p>dūra-sthaṁ cāntike ca tat</p>
-
-<p>bahiḥ—outside; antaḥ—inside; ca—also; bhūtānām—of all living entities; acaram—not moving; caram—moving; eva—also; ca—and; sūkṣmatvāt—on account of being subtle; tat—that; avijñeyam—unknowable; dūrasthaṁ—far away; ca antike—near also; ca—and; tat—that.</p>
-
+<h3><a class="header" href="#1316" id="1316">13.16</a></h3>
+<p>bahir antas ca bhutanam</p>
+<p>acaram caram eva ca</p>
+<p>suksmatvat tad avijneyam</p>
+<p>dura-stham cantike ca tat</p>
+<p>bahih--outside; antah--inside; ca--also; bhutanam--of all living entities; acaram--not moving; caram--moving; eva--also; ca--and; suksmatvat--on account of being subtle; tat--that; avijneyam--unknowable; durastham--far away; ca antike--near also; ca--and; tat--that.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>The Supreme Truth exists both internally and externally, in the moving and nonmoving.</p>
-
 <p>He is beyond the power of the material senses to see or to know.</p>
-
 <p>Although far, far away, He is also near to all.</p>
-
 <p><strong>PURPORT</strong></p>
-
-<p>In Vedic literature we understand that Nārāyaṇa, the Supreme Person, is residing both outside and inside of every living entity.</p>
-
+<p>In Vedic literature we understand that Narayana, the Supreme Person, is residing both outside and inside of every living entity.</p>
 <p>He is present both in the spiritual and material world.</p>
-
 <p>Although He is far, far away, still He is near to us.</p>
-
 <p>These are the statements of Vedic literature.</p>
-
-<p>Āsīno dūraṁ vrajati śayāno yāti sarvataḥ.</p>
-
+<p>Asino duram vrajati sayano yati sarvatah.</p>
 <p>And, because He is always engaged in transcendental bliss, we cannot understand how He is enjoying His full opulence.</p>
-
 <p>We cannot see or understand with these material senses.</p>
-
 <p>Therefore in the Vedic language it is said that to understand Him our material mind and senses cannot act.</p>
-
-<p>But one who has purified his mind and senses by practicing Kṛṣṇa consciousness in devotional service can see Him constantly.</p>
-
-<p>It is confirmed in Brahmā-saṁhitā that the devotee who has developed love for the Supreme God can see Him always, without cessation.</p>
-
-<p>And it is confirmed in Bhagavad-gītā (11.54) that He can be seen and understood only by devotional service.</p>
-
-<p>Bhaktyā tvananyayā śakyaḥ.</p>
-
-<p><a name="13.17"><strong>13.17</strong></a></p>
-
-<p>avibhaktaṁ ca bhūteṣu</p>
-
+<p>But one who has purified his mind and senses by practicing Krsna consciousness in devotional service can see Him constantly.</p>
+<p>It is confirmed in Brahma-samhita that the devotee who has developed love for the Supreme God can see Him always, without cessation.</p>
+<p>And it is confirmed in Bhagavad-gita (11.54) that He can be seen and understood only by devotional service.</p>
+<p>Bhaktya tvananyaya sakyah.</p>
+<h3><a class="header" href="#1317" id="1317">13.17</a></h3>
+<p>avibhaktam ca bhutesu</p>
 <p>vibhaktam iva ca sthitam</p>
-
-<p>bhūta-bhartṛ ca taj jñeyaṁ</p>
-
-<p>grasiṣṇu prabhaviṣṇu ca</p>
-
-<p>avibhaktam—without division; ca—also; bhūteṣu—in every living being; vibhaktam—divided; iva—as if; ca—also; sthitam—situated; bhūta-bhartṛ—maintainer of all living entities; ca—also; tat—that; jñeyam—to be understood; grasiṣṇu—devours; prabhaviṣṇu—develops; ca—also.</p>
-
+<p>bhuta-bhartr ca taj jneyam</p>
+<p>grasisnu prabhavisnu ca</p>
+<p>avibhaktam--without division; ca--also; bhutesu--in every living being; vibhaktam--divided; iva--as if; ca--also; sthitam--situated; bhuta-bhartr--maintainer of all living entities; ca--also; tat--that; jneyam--to be understood; grasisnu--devours; prabhavisnu--develops; ca--also.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>Although the Supersoul appears to be divided, He is never divided.</p>
-
 <p>He is situated as one.</p>
-
 <p>Although He is the maintainer of every living entity, it is to be understood that He devours and develops all.</p>
-
 <p><strong>PURPORT</strong></p>
-
-<p>The Lord is situated in everyone’s heart as the Supersoul.</p>
-
+<p>The Lord is situated in everyone's heart as the Supersoul.</p>
 <p>Does that mean that He has become divided? No.</p>
-
 <p>Actually, He is one.</p>
-
 <p>The example is given of the sun: the sun, at the meridian, is situated in his place.</p>
-
-<p>But if one goes for five thousand miles in all directions and asks, “Where is the sun?” everyone will say that it is shining on his head.</p>
-
+<p>But if one goes for five thousand miles in all directions and asks, &quot;Where is the sun?&quot; everyone will say that it is shining on his head.</p>
 <p>In the Vedic literature this example is given to show that although He is undivided, He is situated as if divided.</p>
-
-<p>Also it is said in Vedic literature that one Viṣṇu is present everywhere by His omnipotence, just as the sun appears in many places to many persons.</p>
-
+<p>Also it is said in Vedic literature that one Visnu is present everywhere by His omnipotence, just as the sun appears in many places to many persons.</p>
 <p>And the Supreme Lord, although the maintainer of every living entity, devours everything at the time of annihilation.</p>
-
-<p>This was confirmed in the Eleventh Chapter when the Lord said that He has come to devour all the warriors assembled at Kurukṣetra.</p>
-
+<p>This was confirmed in the Eleventh Chapter when the Lord said that He has come to devour all the warriors assembled at Kuruksetra.</p>
 <p>He also mentions that in the form of time He devours also.</p>
-
 <p>He is the annihilator, the killer of all.</p>
-
 <p>When there is creation, He develops all from their original state, and at the time of annihilation He devours them.</p>
-
 <p>The Vedic hymns confirm the fact that He is the origin of all living entities and the rest of all.</p>
-
 <p>After creation, everything rests in His omnipotence, and after annihilation, everything again returns to rest in Him.</p>
-
 <p>These are the confirmations of Vedic hymns.</p>
-
-<p>Yato vā imāni bhūtāni jāyante yena jātāni jīvanti yat prayanty abhisaṁviśanti tad brahma tad vijijñāsasva. (Taittirīya Upaniṣad, 3.1)</p>
-
-<p><a name="13.18"><strong>13.18</strong></a></p>
-
-<p>jyotiṣām api taj jyotis</p>
-
-<p>tamasaḥ param ucyate</p>
-
-<p>jñānaṁ jñeyaṁ jñāna-gamyaṁ</p>
-
-<p>hṛdi sarvasya viṣṭhitam</p>
-
-<p>jyotiṣām—in all luminous objects; api—also; tat—that; jyotiḥ—source of light; tamasaḥ—of the darkness; param—beyond; ucyate—is said; jñānam—knowledge; jñeyam—to be known; jñāna-gamyam—to be approached by knowledge; hṛdi—in the heart; sarvasya—of everyone; viṣṭhitam—situated.</p>
-
+<p>Yato va imani bhutani jayante yena jatani jivanti yat prayanty abhisamvisanti tad brahma tad vijijnasasva. (Taittiriya Upanisad, 3.1)</p>
+<h3><a class="header" href="#1318" id="1318">13.18</a></h3>
+<p>jyotisam api taj jyotis</p>
+<p>tamasah param ucyate</p>
+<p>jnanam jneyam jnana-gamyam</p>
+<p>hrdi sarvasya visthitam</p>
+<p>jyotisam--in all luminous objects; api--also; tat--that; jyotih--source of light; tamasah--of the darkness; param--beyond; ucyate--is said; jnanam--knowledge; jneyam--to be known; jnana-gamyam--to be approached by knowledge; hrdi--in the heart; sarvasya--of everyone; visthitam--situated.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>He is the source of light in all luminous objects.</p>
-
 <p>He is beyond the darkness of matter and is unmanifested.</p>
-
 <p>He is knowledge, He is the object of knowledge, and He is the goal of knowledge.</p>
-
-<p>He is situated in everyone’s heart.</p>
-
+<p>He is situated in everyone's heart.</p>
 <p><strong>PURPORT</strong></p>
-
 <p>The Supersoul, the Supreme Personality of Godhead, is the source of light in all luminous objects like the sun, moon, stars, etc.</p>
-
 <p>In the Vedic literature we find that in the spiritual kingdom there is no need of sun or moon because the effulgence of the Supreme Lord is there.</p>
-
-<p>In the material world that brahmajyoti the Lord’s spiritual effulgence, is covered by the mahat-tattva, the material elements; therefore in this material world we require the assistance of sun, moon, electricity, etc., for light.</p>
-
+<p>In the material world that brahmajyoti the Lord's spiritual effulgence, is covered by the mahat-tattva, the material elements; therefore in this material world we require the assistance of sun, moon, electricity, etc., for light.</p>
 <p>But in the spiritual world there is no need of such things.</p>
-
 <p>It is clearly stated in the Vedic literature that because of His luminous effulgence, everything is illuminated.</p>
-
 <p>It is clear, therefore, that His situation is not in the material world.</p>
-
 <p>He is situated in the spiritual world which is far, far away in the spiritual sky.</p>
-
 <p>That is also confirmed in the Vedic literature.</p>
-
-<p>Āditya-varṇam tamasaḥ parastāt.</p>
-
+<p>Aditya-varnam tamasah parastat.</p>
 <p>He is just like the sun, eternally luminous, but He is far, far beyond the darkness of this material world.</p>
-
 <p>His knowledge is transcendental.</p>
-
 <p>The Vedic literature confirms that Brahman is concentrated transcendental knowledge.</p>
-
-<p>To one who is anxious to be transferred to that spiritual world, knowledge is given by the Supreme Lord who is situated in everyone’s heart.</p>
-
-<p>One Vedic mantra says: taṁ ha devam ātma-buddhi-prakāśaṁ mumukṣur vai śaraṇam aham prapadye.</p>
-
+<p>To one who is anxious to be transferred to that spiritual world, knowledge is given by the Supreme Lord who is situated in everyone's heart.</p>
+<p>One Vedic mantra says: tam ha devam atma-buddhi-prakasam mumuksur vai saranam aham prapadye.</p>
 <p>One must surrender unto the Supreme Personality of Godhead if he at all wants liberation.</p>
-
-<p>As far as the goal of ultimate knowledge is concerned, it is also confirmed in Vedic literature: tam eva viditvātimṛtyum eti.</p>
-
-<p>“Only by knowing You can one surpass the boundary of birth and death.”</p>
-
-<p>He is situated in everyone’s heart as the supreme controller.</p>
-
+<p>As far as the goal of ultimate knowledge is concerned, it is also confirmed in Vedic literature: tam eva viditvatimrtyum eti.</p>
+<p>&quot;Only by knowing You can one surpass the boundary of birth and death.&quot;</p>
+<p>He is situated in everyone's heart as the supreme controller.</p>
 <p>The Supreme has legs and hands distributed everywhere, and this cannot be said of the individual soul.</p>
-
 <p>Therefore that there are two knowers of the field of activity, the individual soul and the Supersoul, must be admitted.</p>
-
-<p>One’s hands and legs are distributed locally, but Kṛṣṇa’s hands and legs are distributed everywhere.</p>
-
-<p>This is confirmed in the Śvetāśvatara Upaniṣad: sarvasya prabhum īśānaṁ sarvasya śaraṇaṁ bṛhat.</p>
-
+<p>One's hands and legs are distributed locally, but Krsna's hands and legs are distributed everywhere.</p>
+<p>This is confirmed in the Svetasvatara Upanisad: sarvasya prabhum isanam sarvasya saranam brhat.</p>
 <p>That Supreme Personality of Godhead, Supersoul, is the prabhu or master of all living entities; therefore He is the ultimate center of all living entities.</p>
-
 <p>So there is no denying the fact that the Supreme Supersoul and the individual soul are always different.</p>
-
-<p><a name="13.19"><strong>13.19</strong></a></p>
-
-<p>iti kṣetraṁ tathā jñānaṁ</p>
-
-<p>jñeyaṁ coktaṁ samāsataḥ</p>
-
-<p>mad-bhakta etad vijñāya</p>
-
-<p>mad-bhāvāyopapadyate</p>
-
-<p>iti—thus; kṣetram—field of activities (the body); tathā—also; jñānam—knowledge; jñeyam—knowable; ca—also; uktam—describe; samāsataḥ—in summary; mat-bhaktaḥ—My devotee; etat—all this; vijñāya—after understanding; mat-bhāvāya—My nature; upapadyate—attains.</p>
-
+<h3><a class="header" href="#1319" id="1319">13.19</a></h3>
+<p>iti ksetram tatha jnanam</p>
+<p>jneyam coktam samasatah</p>
+<p>mad-bhakta etad vijnaya</p>
+<p>mad-bhavayopapadyate</p>
+<p>iti--thus; ksetram--field of activities (the body); tatha--also; jnanam--knowledge; jneyam--knowable; ca--also; uktam--describe; samasatah--in summary; mat-bhaktah--My devotee; etat--all this; vijnaya--after understanding; mat-bhavaya--My nature; upapadyate--attains.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>Thus the field of activities [the body], knowledge, and the knowable have been summarily described by Me.</p>
-
 <p>Only My devotees can understand this thoroughly and thus attain to My nature.</p>
-
 <p><strong>PURPORT</strong></p>
-
 <p>The Lord has described in summary the body, knowledge and the knowable.</p>
-
 <p>This knowledge is of three things: the knower, the knowable and the process of knowing.</p>
-
-<p>Combined, these are called vijñānam, or the science of knowledge.</p>
-
+<p>Combined, these are called vijnanam, or the science of knowledge.</p>
 <p>Perfect knowledge can be understood by the unalloyed devotees of the Lord directly.</p>
-
 <p>Others are unable to understand.</p>
-
 <p>The monists say that at the ultimate stage these three items become one, but the devotees do not accept this.</p>
-
-<p>Knowledge and development of knowledge mean understanding oneself in Kṛṣṇa consciousness.</p>
-
-<p>We are being led by material consciousness, but as soon as we transfer all consciousness to Kṛṣṇa’s activities and realize that Kṛṣṇa is everything, then we attain real knowledge.</p>
-
+<p>Knowledge and development of knowledge mean understanding oneself in Krsna consciousness.</p>
+<p>We are being led by material consciousness, but as soon as we transfer all consciousness to Krsna's activities and realize that Krsna is everything, then we attain real knowledge.</p>
 <p>In other words, knowledge is nothing but the preliminary stage of understanding devotional service perfectly.</p>
-
-<p><a name="13.20"><strong>13.20</strong></a></p>
-
-<p>prakṛtiṁ puruṣaṁ caiva</p>
-
-<p>viddhy anādī ubhāv api</p>
-
-<p>vikārāṁś ca guṇāṁś caiva</p>
-
-<p>viddhi prakṛti-sambhavān</p>
-
-<p>prakṛtim—material nature; puruṣam—living entities; ca—also; eva—certainly; viddhi—must know; anādī—without beginning; ubhau—both; api—also; vikārān—transformation; ca—also; guṇān—three modes of nature; ca—also; eva—certainly; viddhi—know; prakṛti—material nature; sambhavān—produced of.</p>
-
+<h3><a class="header" href="#1320" id="1320">13.20</a></h3>
+<p>prakrtim purusam caiva</p>
+<p>viddhy anadi ubhav api</p>
+<p>vikarams ca gunams caiva</p>
+<p>viddhi prakrti-sambhavan</p>
+<p>prakrtim--material nature; purusam--living entities; ca--also; eva--certainly; viddhi--must know; anadi--without beginning; ubhau--both; api--also; vikaran--transformation; ca--also; gunan--three modes of nature; ca--also; eva--certainly; viddhi--know; prakrti--material nature; sambhavan--produced of.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>Material nature and the living entities should be understood to be beginningless.</p>
-
 <p>Their transformations and the modes of matter are products of material nature.</p>
-
 <p><strong>PURPORT</strong></p>
-
 <p>By this knowledge, the body, the field of activities and the knowers of the body (both the individual soul and the Supersoul) can be known.</p>
-
 <p>The body is the field of activity and is composed of material nature.</p>
-
 <p>It is the individual soul which is embodied.</p>
-
-<p>Enjoying the activities of the body is the puruṣa, or the living entity.</p>
-
+<p>Enjoying the activities of the body is the purusa, or the living entity.</p>
 <p>He is one knower, and the other is the Supersoul.</p>
-
 <p>Of course, it is to be understood that both the Supersoul and the individual entity are different manifestations of the Supreme Personality of Godhead.</p>
-
 <p>The living entity is in the category of His energy, and the Supersoul is in the category of His personal expansion.</p>
-
 <p>Both material nature and the living entity are eternal.</p>
-
 <p>That is to say that they existed before the creation.</p>
-
 <p>The material manifestation is from the energy of the Supreme Lord and so also are the living entities, but they are of the superior energy.</p>
-
 <p>Both of them existed before this cosmos was manifested.</p>
-
-<p>Material nature was absorbed in the Supreme Personality of Godhead, Mahā-Visṇu, and when it was required, it was manifested by the agency of mahat-tattva.</p>
-
+<p>Material nature was absorbed in the Supreme Personality of Godhead, Maha-Visnu, and when it was required, it was manifested by the agency of mahat-tattva.</p>
 <p>Similarly, the living entities are also in Him, and because they are conditioned, they are adverse to serving the Supreme Lord.</p>
-
 <p>Thus they are not allowed to enter into the spiritual sky.</p>
-
 <p>After the winding up of material nature, these living entities are again given a chance to act in the material world and prepare themselves to enter into the spiritual world.</p>
-
 <p>That is the mystery of this material creation.</p>
-
 <p>Actually the living entity is originally the spiritual part and parcel of the Supreme Lord, but due to his rebellious nature, he is conditioned within material nature.</p>
-
 <p>It really does not matter how these living entities or superior entities of the Supreme Lord have come in contact with material nature.</p>
-
 <p>The Supreme Personality of Godhead knows, however, how and why this actually took place.</p>
-
 <p>In the scriptures the Lord says that those attracted by this material nature are undergoing a hard struggle for existence.</p>
-
 <p>But we should know it with certainty from the descriptions of these few verses that all the transformations and influences of material nature by the three modes are also productions of material nature.</p>
-
 <p>All transformations and variety in respect to living entities are due to the body.</p>
-
 <p>As far as spirit is concerned, living entities are all the same.</p>
-
-<p><a name="13.21"><strong>13.21</strong></a></p>
-
-<p>kārya-kāraṇa-kartṛtve</p>
-
-<p>hetuḥ prakṛtir ucyate</p>
-
-<p>puruṣaḥ sukha-duḥkhānāṁ</p>
-
-<p>bhoktṛtve hetur ucyate</p>
-
-<p>kārya—effect; kāraṇa—cause; kartṛtve—in the matter of creation; hetuḥ—instrument; prakṛtiḥ—material nature; ucyate—is said to be; puruṣaḥ—the living entities; sukha—happiness; duḥkhānām—of distresses; bhoktṛtve—in enjoyment; hetuḥ—instrument; ucyate—is said to be.</p>
-
+<h3><a class="header" href="#1321" id="1321">13.21</a></h3>
+<p>karya-karana-kartrtve</p>
+<p>hetuh prakrtir ucyate</p>
+<p>purusah sukha-duhkhanam</p>
+<p>bhoktrtve hetur ucyate</p>
+<p>karya--effect; karana--cause; kartrtve--in the matter of creation; hetuh--instrument; prakrtih--material nature; ucyate--is said to be; purusah--the living entities; sukha--happiness; duhkhanam--of distresses; bhoktrtve--in enjoyment; hetuh--instrument; ucyate--is said to be.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>Nature is said to be the cause of all material activities and effects, whereas the living entity is the cause of the various sufferings and enjoyments in this world.</p>
-
 <p><strong>PURPORT</strong></p>
-
 <p>The different manifestations of body and senses among the living entities are due to material nature.</p>
-
 <p>There are 8,400,000 different species of life, and these varieties are the creation of the material nature.</p>
-
 <p>They arise from the different sensual pleasures of the living entity, who thus desires to live in this body or that.</p>
-
 <p>When he is put into different bodies, he enjoys different kinds of happiness and distress.</p>
-
 <p>His material happiness and distress are due to his body, and not to himself as he is.</p>
-
 <p>In his original state there is no doubt of enjoyment; therefore that is his real state.</p>
-
 <p>Because of the desire to lord it over material nature, he is in the material world.</p>
-
 <p>In the spiritual world there is no such thing.</p>
-
 <p>The spiritual world is pure, but in the material world everyone is struggling hard to acquire victims who present different pleasures to the body.</p>
-
 <p>It might be more clear to state that this body is the effect of the senses.</p>
-
 <p>The senses are instruments for gratifying desire.</p>
-
-<p>Now, the sum total—body and instrument senses—are offered by material nature, and, as will be clear in the next verse, the living entity is blessed or damned with circumstances according to his past desire and activity.</p>
-
-<p>According to one’s desires and activities, material nature places one in various residential quarters.</p>
-
+<p>Now, the sum total--body and instrument senses--are offered by material nature, and, as will be clear in the next verse, the living entity is blessed or damned with circumstances according to his past desire and activity.</p>
+<p>According to one's desires and activities, material nature places one in various residential quarters.</p>
 <p>The being himself is the cause of his attaining such residential quarters and his attendant enjoyment or suffering.</p>
-
 <p>Once placed in some particular kind of body, he comes under the control of nature because the body, being matter, acts according to the laws of nature.</p>
-
 <p>At that time, the living entity has no power to change that law.</p>
-
 <p>Suppose an entity is put into the body of a dog.</p>
-
 <p>As soon as he is put into the body of a dog, he must act like a dog.</p>
-
 <p>He cannot act otherwise.</p>
-
 <p>And if the living entity is put into the body of a hog, then he is forced to eat stool and act like a hog.</p>
-
 <p>Similarly, if the living entity is put into the body of a demigod, he must act according to his body.</p>
-
 <p>This is the law of nature.</p>
-
 <p>But in all circumstances, the Supersoul is with the individual soul.</p>
-
-<p>That is explained in the Vedas as follows: dvā suparṇā sayujā sakhāyā.</p>
-
-<p>The Supreme Lord is so kind upon the living entity that He always accompanies the individual soul and in all circumstances is present as the Supersoul or Paramātmā.</p>
-
-<p><a name="13.22"><strong>13.22</strong></a></p>
-
-<p>puruṣaḥ prakṛti-stho hi</p>
-
-<p>bhuṅkte prakṛti-jān guṇān</p>
-
-<p>kāraṇaṁ guṇa-saṅgo ’sya</p>
-
+<p>That is explained in the Vedas as follows: dva suparna sayuja sakhaya.</p>
+<p>The Supreme Lord is so kind upon the living entity that He always accompanies the individual soul and in all circumstances is present as the Supersoul or Paramatma.</p>
+<h3><a class="header" href="#1322" id="1322">13.22</a></h3>
+<p>purusah prakrti-stho hi</p>
+<p>bhunkte prakrti-jan gunan</p>
+<p>karanam guna-sango 'sya</p>
 <p>sad-asad-yoni-janmasu</p>
-
-<p>puruṣaḥ—the living entity; prakṛti-sthaḥ—being situated in the material energy; hi—certainly; bhuṅkte—enjoys; prakṛti-jān—produced by the material nature; guṇān—modes of nature; kāraṇam—cause; guṇa-saṅgaḥ—association with the modes of nature; asya—of the living entity; sat-asat—good and bad; yoni—species of life; janmasu—birth.</p>
-
+<p>purusah--the living entity; prakrti-sthah--being situated in the material energy; hi--certainly; bhunkte--enjoys; prakrti-jan--produced by the material nature; gunan--modes of nature; karanam--cause; guna-sangah--association with the modes of nature; asya--of the living entity; sat-asat--good and bad; yoni--species of life; janmasu--birth.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>The living entity in material nature thus follows the ways of life, enjoying the three modes of nature.</p>
-
 <p>This is due to his association with that material nature.</p>
-
 <p>Thus he meets with good and evil amongst various species.</p>
-
 <p><strong>PURPORT</strong></p>
-
 <p>This verse is very important for an understanding of how the living entities transmigrate from one body to another.</p>
-
 <p>It is explained in the Second Chapter that the living entity is transmigrating from one body to another just as one changes dress.</p>
-
 <p>This change of dress is due to his attachment to material existence.</p>
-
 <p>As long as he is captivated by this false manifestation, he has to continue transmigrating from one body to another.</p>
-
 <p>Due to his desire to lord it over material nature, he is put into such undesirable circumstances.</p>
-
 <p>Under the influence of material desire, the entity is born sometimes as a demigod, sometimes as a man, sometimes as a beast, as a bird, as a worm, as an aquatic, as a saintly man, as a bug.</p>
-
 <p>This is going on.</p>
-
 <p>And in all cases the living entity thinks himself to be the master of his circumstances, yet he is under the influence of material nature.</p>
-
 <p>How he is put into such different bodies is explained here.</p>
-
 <p>It is due to association with the different modes of nature.</p>
-
 <p>One has to rise, therefore, above the three material modes and become situated in the transcendental position.</p>
-
-<p>That is called Kṛṣṇa consciousness.</p>
-
-<p>Unless one is situated in Kṛṣṇa consciousness, his material consciousness will oblige him to transfer from one body to another because he has material desires since time immemorial.</p>
-
+<p>That is called Krsna consciousness.</p>
+<p>Unless one is situated in Krsna consciousness, his material consciousness will oblige him to transfer from one body to another because he has material desires since time immemorial.</p>
 <p>But he has to change that conception.</p>
-
 <p>That change can be effected only by hearing from authoritative sources.</p>
-
-<p>The best example is here: Arjuna is hearing the science of God from Kṛṣṇa.</p>
-
+<p>The best example is here: Arjuna is hearing the science of God from Krsna.</p>
 <p>The living entity, if he submits to this hearing process, will lose his long-cherished desire to dominate material nature, and gradually and proportionately, as he reduces his long desire to dominate, he comes to enjoy spiritual happiness.</p>
-
 <p>In a Vedic mantra it is said that as he becomes learned in association with the Supreme Personality of Godhead, he proportionately relishes his eternal blissful life.</p>
-
-<p><a name="13.23"><strong>13.23</strong></a></p>
-
-<p>upadraṣṭānumantā ca</p>
-
-<p>bhartā bhoktā maheśvaraḥ</p>
-
-<p>paramātmeti cāpy ukto</p>
-
-<p>dehe ’smin puruṣaḥ paraḥ</p>
-
-<p>upadraṣṭā—overseer; anumantā—permitter; ca—also; bhartā—master; bhoktā—supreme enjoyer; maheśvaraḥ—the Supreme Lord; paramātmā—Supersoul; iti—also; ca—and; api uktaḥ—is said; dehe—in this body; asmin—this; puruṣaḥ—enjoyer; paraḥ—transcendental.</p>
-
+<h3><a class="header" href="#1323" id="1323">13.23</a></h3>
+<p>upadrastanumanta ca</p>
+<p>bharta bhokta mahesvarah</p>
+<p>paramatmeti capy ukto</p>
+<p>dehe 'smin purusah parah</p>
+<p>upadrasta--overseer; anumanta--permitter; ca--also; bharta--master; bhokta--supreme enjoyer; mahesvarah--the Supreme Lord; paramatma--Supersoul; iti--also; ca--and; api uktah--is said; dehe--in this body; asmin--this; purusah--enjoyer; parah--transcendental.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>Yet in this body there is another, a transcendental enjoyer who is the Lord, the supreme proprietor, who exists as the overseer and permitter, and who is known as the Supersoul.</p>
-
 <p><strong>PURPORT</strong></p>
-
 <p>It is stated here that the Supersoul, who is always with the individual soul, is the representation of the Supreme Lord.</p>
-
 <p>He is not an ordinary living entity.</p>
-
 <p>Because the monist philosophers take the knower of the body to be one, they think that there is no difference between the Supersoul and the individual soul.</p>
-
-<p>To clarify this, the Lord says that He is the representation of Paramātmā in every body.</p>
-
-<p>He is different from the individual soul; He is paraḥ, transcendental.</p>
-
+<p>To clarify this, the Lord says that He is the representation of Paramatma in every body.</p>
+<p>He is different from the individual soul; He is parah, transcendental.</p>
 <p>The individual soul enjoys the activities of a particular field, but the Supersoul is present not as finite enjoyer nor as one taking part in bodily activities, but as the witness, overseer, permitter and supreme enjoyer.</p>
-
-<p>His name is Paramātmā, not ātmā, and He is transcendental.</p>
-
-<p>It is distinctly clear that the ātmā and Paramātmā are different.</p>
-
-<p>The Supersoul, the Paramātmā, has legs and hands everywhere, but the individual soul does not.</p>
-
-<p>And because He is the Supreme Lord, He is present within to sanction the individual soul’s desiring material enjoyment.</p>
-
+<p>His name is Paramatma, not atma, and He is transcendental.</p>
+<p>It is distinctly clear that the atma and Paramatma are different.</p>
+<p>The Supersoul, the Paramatma, has legs and hands everywhere, but the individual soul does not.</p>
+<p>And because He is the Supreme Lord, He is present within to sanction the individual soul's desiring material enjoyment.</p>
 <p>Without the sanction of the Supreme Soul, the individual soul cannot do anything.</p>
-
 <p>The individual is bhakta or the sustained, and He is bhukta or the maintainer.</p>
-
 <p>There are innumerable living entities, and He is staying in them as a friend.</p>
-
 <p>The fact is that individual living entities are eternally part and parcel of the Supreme Lord, and both of them are very intimately related as friends.</p>
-
 <p>But the living entity has the tendency to reject the sanction of the Supreme Lord and act independantly in an attempt to dominate the supreme nature, and because he has this tendency, he is called the marginal energy of the Supreme Lord.</p>
-
 <p>The living entity can be situated either in the material energy or the spiritual energy.</p>
-
 <p>As long as he is conditioned by the material energy, the Supreme Lord, as his friend, the Supersoul, stays with him just to get him to return to the spiritual energy.</p>
-
 <p>The Lord is always eager to take him back to the spiritual energy, but due to his minute independence, the individual entity is continually rejecting the association of spiritual light.</p>
-
 <p>This misuse of independence is the cause of his material strife in the conditioned nature.</p>
-
 <p>The Lord, therefore, is always giving instruction from within and from without.</p>
-
-<p>From without He gives instructions as stated in Bhagavad-gītā, and from within He tries to convince him that his activities in the material field are not conducive to real happiness.</p>
-
-<p>“Just give it up and turn your faith toward Me.</p>
-
-<p>Then you will be happy,” He says.</p>
-
-<p>Thus the intelligent person who places his faith in the Paramātmā or the Supreme Personality of Godhead begins to advance toward a blissful eternal life of knowledge</p>
-
-<p><a name="13.24"><strong>13.24</strong></a></p>
-
-<p>ya evaṁ vetti puruṣaṁ</p>
-
-<p>prakṛtiṁ ca guṇaiḥ saha</p>
-
-<p>sarvathā vartamāno ’pi</p>
-
-<p>na sa bhūyo ’bhijāyate</p>
-
-<p>yaḥ—anyone; evam—thus; vetti—understands; puruṣam—the living entities; prakṛtim—material nature; ca—and; guṇaiḥ—modes of material nature; saha—with; sarvathā—by all means; vartamānaḥ—situated; api—in spite of; na—never; saḥ—he; bhūyaḥ—again; abhijāyate—takes his birth.</p>
-
+<p>From without He gives instructions as stated in Bhagavad-gita, and from within He tries to convince him that his activities in the material field are not conducive to real happiness.</p>
+<p>&quot;Just give it up and turn your faith toward Me.</p>
+<p>Then you will be happy,&quot; He says.</p>
+<p>Thus the intelligent person who places his faith in the Paramatma or the Supreme Personality of Godhead begins to advance toward a blissful eternal life of knowledge</p>
+<h3><a class="header" href="#1324" id="1324">13.24</a></h3>
+<p>ya evam vetti purusam</p>
+<p>prakrtim ca gunaih saha</p>
+<p>sarvatha vartamano 'pi</p>
+<p>na sa bhuyo 'bhijayate</p>
+<p>yah--anyone; evam--thus; vetti--understands; purusam--the living entities; prakrtim--material nature; ca--and; gunaih--modes of material nature; saha--with; sarvatha--by all means; vartamanah--situated; api--in spite of; na--never; sah--he; bhuyah--again; abhijayate--takes his birth.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>One who understands this philosophy concerning material nature, the living entity and the interaction of the modes of nature is sure to attain liberation.</p>
-
 <p>He will not take birth here again, regardless of his present position.</p>
-
 <p><strong>PURPORT</strong></p>
-
 <p>Clear understanding of material nature, the Supersoul, the individual soul and their interrelation makes one eligible to become liberated and turn to the spiritual atmosphere without being forced to return to this material nature.</p>
-
 <p>This is the result of knowledge.</p>
-
 <p>The purpose of knowledge is to understand distinctly that the living entity has by chance fallen into this material existence.</p>
-
-<p>By his personal endeavor in association with authorities, saintly persons and a spiritual master, he has to understand his position and then revert to spiritual consciousness or Kṛṣṇa consciousness by understanding Bhagavad-gītā as it is explained by the Personality of Godhead.</p>
-
+<p>By his personal endeavor in association with authorities, saintly persons and a spiritual master, he has to understand his position and then revert to spiritual consciousness or Krsna consciousness by understanding Bhagavad-gita as it is explained by the Personality of Godhead.</p>
 <p>Then it is certain that he will never come again into this material existence; he will be transferred into the spiritual world for a blissful eternal life of knowledge.</p>
-
-<p><a name="13.25"><strong>13.25</strong></a></p>
-
-<p>dhyānenātmani paśyanti</p>
-
-<p>kecid ātmānam ātmanā</p>
-
-<p>anye sāṅkhyena yogena</p>
-
-<p>karma-yogena cāpare</p>
-
-<p>dhyānena—by meditation; ātmani—self; paśyanti—see; kecit—one; ātmānam—Supersoul; ātmanā—by the mind; anye—others; sāṅkhyena—by philosophical discussion; yogena—by the yoga system; karma-yogena—by activities without fruitive desire; ca—also; apare—others.</p>
-
+<h3><a class="header" href="#1325" id="1325">13.25</a></h3>
+<p>dhyanenatmani pasyanti</p>
+<p>kecid atmanam atmana</p>
+<p>anye sankhyena yogena</p>
+<p>karma-yogena capare</p>
+<p>dhyanena--by meditation; atmani--self; pasyanti--see; kecit--one; atmanam--Supersoul; atmana--by the mind; anye--others; sankhyena--by philosophical discussion; yogena--by the yoga system; karma-yogena--by activities without fruitive desire; ca--also; apare--others.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>That Supersoul is perceived by some through meditation, by some through the cultivation of knowledge, and by others through working without fruitive desire.</p>
-
 <p><strong>PURPORT</strong></p>
-
-<p>The Lord informs Arjuna that the conditioned soul can be divided into two classes as far as man’s search for self-realization is concerned.</p>
-
+<p>The Lord informs Arjuna that the conditioned soul can be divided into two classes as far as man's search for self-realization is concerned.</p>
 <p>Those who are atheists, agnostics and skeptics are beyond the sense of spiritual understanding.</p>
-
 <p>But there are others who are faithful in their understanding of spiritual life, and they are called workers who have renounced fruitive results.</p>
-
 <p>Those who always try to establish the doctrine of monism are also counted among the atheists and agnostics.</p>
-
-<p>In other words, only the devotees of the Supreme Personality of Godhead are really capable of spiritual understanding because they understand that beyond this material nature there is the spiritual world and the Supreme Personality of Godhead who is expanded as the Paramātmā, the Supersoul in everyone, the all-pervading Godhead.</p>
-
+<p>In other words, only the devotees of the Supreme Personality of Godhead are really capable of spiritual understanding because they understand that beyond this material nature there is the spiritual world and the Supreme Personality of Godhead who is expanded as the Paramatma, the Supersoul in everyone, the all-pervading Godhead.</p>
 <p>Of course there are those who try to understand the Supreme Absolute Truth by cultivation of knowledge, and they can be counted in the second class.</p>
-
 <p>The atheistic philosophers analyze this material world into twenty-four elements, and they place the individual soul as the twenty-fifth item.</p>
-
 <p>When they are able to understand the nature of the individual soul to be transcendental to the material elements, they are able to understand also that above the individual soul there is the Supreme Personality of Godhead.</p>
-
 <p>He is the twenty-sixth element.</p>
-
-<p>Thus gradually they also come to the standard of devotional service in Kṛṣṇa consciousness.</p>
-
+<p>Thus gradually they also come to the standard of devotional service in Krsna consciousness.</p>
 <p>Those who work without fruitive results are also perfect in their attitude.</p>
-
-<p>They are given a chance to advance to the platform of devotional service in Kṛṣṇa consciousness.</p>
-
+<p>They are given a chance to advance to the platform of devotional service in Krsna consciousness.</p>
 <p>Here it is stated that there are some people who are pure in consciousness and who try to find out the Supersoul by meditation, and when they discover the Supersoul within themselves, they become transcendentally situated.</p>
-
-<p>Similarly, there are others who also try to understand the Supreme Soul by cultivation of knowledge, and there are others who cultivate the haṭha-yoga system and who try to satisfy the Supreme Personality of Godhead by childish activities.</p>
-
-<p><a name="13.26"><strong>13.26</strong></a></p>
-
-<p>anye tv evam ajānantaḥ</p>
-
-<p>śrutvānyebhya upāsate</p>
-
-<p>te ’pi cātitaranty eva</p>
-
-<p>mṛtyuṁ śruti-parāyaṇāḥ</p>
-
-<p>anye—others; tu—but; evam—this; ajānantaḥ—without spiritual knowledge; śrutvā—by hearing; anyebhyaḥ—from others; upāsate—begin to worship; te—they; api—also; ca—and; atitaranti—transcend; eva—certainly; mṛtyum—the path of death; śruti-parāyaṇāḥ—inclined to the process of hearing.</p>
-
+<p>Similarly, there are others who also try to understand the Supreme Soul by cultivation of knowledge, and there are others who cultivate the hatha-yoga system and who try to satisfy the Supreme Personality of Godhead by childish activities.</p>
+<h3><a class="header" href="#1326" id="1326">13.26</a></h3>
+<p>anye tv evam ajanantah</p>
+<p>srutvanyebhya upasate</p>
+<p>te 'pi catitaranty eva</p>
+<p>mrtyum sruti-parayanah</p>
+<p>anye--others; tu--but; evam--this; ajanantah--without spiritual knowledge; srutva--by hearing; anyebhyah--from others; upasate--begin to worship; te--they; api--also; ca--and; atitaranti--transcend; eva--certainly; mrtyum--the path of death; sruti-parayanah--inclined to the process of hearing.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>Again there are those who, although not conversant in spiritual knowledge, begin to worship the Supreme Person upon hearing about Him from others.</p>
-
 <p>Because of their tendency to hear from authorities, they also transcend the path of birth and death.</p>
-
 <p><strong>PURPORT</strong></p>
-
 <p>This verse is particularly applicable to modern society because in modern society there is practically no education in spiritual matters.</p>
-
 <p>Some of the people may appear to be atheistic or agnostic or philosophical, but actually there is no knowledge of philosophy.</p>
-
 <p>As for the common man, if he is a good soul, then there is a chance for advancement by hearing.</p>
-
 <p>This hearing process is very important.</p>
-
-<p>Lord Caitanya, who preached Kṛṣṇa consciousness in the modern world, gave great stress to hearing because if the common man simply hears from authoritative sources, he can progress, especially, according to Lord Caitanya, if he hears the transcendental vibration Hare Kṛṣṇa Hare Kṛṣṇa Kṛṣṇa Kṛṣṇa Hare Hare, Hare Rāma Hare Rāma Rāma Rāma Hare Hare.</p>
-
+<p>Lord Caitanya, who preached Krsna consciousness in the modern world, gave great stress to hearing because if the common man simply hears from authoritative sources, he can progress, especially, according to Lord Caitanya, if he hears the transcendental vibration Hare Krsna Hare Krsna Krsna Krsna Hare Hare, Hare Rama Hare Rama Rama Rama Hare Hare.</p>
 <p>It is stated, therefore, that all men should take advantage of hearing from realized souls and gradually become able to understand everything.</p>
-
 <p>The worship of the Supreme Lord will then undoubtedly take place.</p>
-
 <p>Lord Caitanya has said that in this age no one needs to change his position, but one should give up the endeavor to understand the Absolute Truth by speculative reasoning.</p>
-
 <p>One should learn to become the servant of those who are in knowledge of the Supreme Lord.</p>
-
 <p>If one is fortunate enough to take shelter of a pure devotee, hear from him about self-realization and follow in his footsteps, he will be gradually elevated to the position of a pure devotee.</p>
-
 <p>In this verse particularly the process of hearing is strongly recommended, and this is very appropriate.</p>
-
 <p>Although the common man is often not as capable as so-called philosophers, faithful hearing from an authoritative person will help one transcend this material existence and go back to Godhead, back to home.</p>
-
-<p><a name="13.27"><strong>13.27</strong></a></p>
-
-<p>yāvat sañjāyate kiñcit</p>
-
-<p>sattvaṁ sthāvara-jaṅgamam</p>
-
-<p>kṣetra-kṣetrajña-saṁyogāt</p>
-
-<p>tad viddhi bharatarṣabha</p>
-
-<p>yāvat—whatever; saṁjāyate—takes place; kiñcit—anything; sattvam—existence; sthāvara—not moving; jaṅgamam—moving; kṣetra—the body; kṣetrajña—knower of the body; saṁyogāt—union between; tat viddhi—you must know it; bharatarṣabha—O chief of the Bhāratas.</p>
-
+<h3><a class="header" href="#1327" id="1327">13.27</a></h3>
+<p>yavat sanjayate kincit</p>
+<p>sattvam sthavara-jangamam</p>
+<p>ksetra-ksetrajna-samyogat</p>
+<p>tad viddhi bharatarsabha</p>
+<p>yavat--whatever; samjayate--takes place; kincit--anything; sattvam--existence; sthavara--not moving; jangamam--moving; ksetra--the body; ksetrajna--knower of the body; samyogat--union between; tat viddhi--you must know it; bharatarsabha--O chief of the Bharatas.</p>
 <p><strong>TRANSLATION</strong></p>
-
-<p>O chief of the Bhāratas, whatever you see in existence, both moving and unmoving, is only the combination of the field of activities and the knower of the field.</p>
-
+<p>O chief of the Bharatas, whatever you see in existence, both moving and unmoving, is only the combination of the field of activities and the knower of the field.</p>
 <p><strong>PURPORT</strong></p>
-
 <p>Both material nature and the living entity, which were existing before the creation of the cosmos, are explained in this verse.</p>
-
 <p>Whatever is created is but a combination of the living entity and material nature.</p>
-
 <p>There are many manifestations like trees, mountains and hills, which are not moving, and there are many existences which are moving, and all of them are but combinations of material nature and superior nature, the living entity.</p>
-
 <p>Without the touch of the superior nature, the living entity, nothing can grow.</p>
-
 <p>Therefore the relationship between matter and nature is eternally going on, and this combination is effected by the Supreme Lord; therefore He is the controller of both the superior and inferior natures.</p>
-
 <p>The material nature is created by Him, and the superior nature is placed in this material nature, and thus all these activities and manifestations take place.</p>
-
-<p><a name="13.28"><strong>13.28</strong></a></p>
-
-<p>samaṁ sarveṣu bhūteṣu</p>
-
-<p>tiṣṭhantaṁ parameśvaram</p>
-
-<p>vinaśyatsv avinaśyantaṁ</p>
-
-<p>yaḥ paśyati sa paśyati</p>
-
-<p>samam—equally; sarveṣu—in all; bhūteṣu—living entities; tiṣṭhantam—residing; parameśvaram—the Supersoul; vinaśyatsu—in the destructible; avinaśyantam—not destroyed; yaḥ—anyone; paśyati—see; saḥ—he; paśyati—actually sees.</p>
-
+<h3><a class="header" href="#1328" id="1328">13.28</a></h3>
+<p>samam sarvesu bhutesu</p>
+<p>tisthantam paramesvaram</p>
+<p>vinasyatsv avinasyantam</p>
+<p>yah pasyati sa pasyati</p>
+<p>samam--equally; sarvesu--in all; bhutesu--living entities; tisthantam--residing; paramesvaram--the Supersoul; vinasyatsu--in the destructible; avinasyantam--not destroyed; yah--anyone; pasyati--see; sah--he; pasyati--actually sees.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>One who sees the Supersoul accompanying the individual soul in all bodies and who understands that neither the soul nor the Supersoul is ever destroyed, actually sees.</p>
-
 <p><strong>PURPORT</strong></p>
-
-<p>Anyone who can see three things—the body, the proprietor of the body, or individual soul, and the friend of the individual soul, combined together by good association—is actually in knowledge.</p>
-
-<p>Those who are not associated with the soul’s friend are ignorant; they simply see the body, and when the body is destroyed they think that everything is finished, but actually it is not so.</p>
-
+<p>Anyone who can see three things--the body, the proprietor of the body, or individual soul, and the friend of the individual soul, combined together by good association--is actually in knowledge.</p>
+<p>Those who are not associated with the soul's friend are ignorant; they simply see the body, and when the body is destroyed they think that everything is finished, but actually it is not so.</p>
 <p>After the destruction of the body, both the soul and the Supersoul exist, and they go on eternally in many various moving and unmoving forms.</p>
-
-<p>The Sanskrit word parameśvaram is sometimes translated as the individual soul because the soul is the master of the body, and after the destruction of the body he transfers to another form.</p>
-
+<p>The Sanskrit word paramesvaram is sometimes translated as the individual soul because the soul is the master of the body, and after the destruction of the body he transfers to another form.</p>
 <p>In that way he is master.</p>
-
-<p>But there are others who interpret this parameśvaram to be the Supersoul.</p>
-
+<p>But there are others who interpret this paramesvaram to be the Supersoul.</p>
 <p>In either case, both the Supersoul and the individual soul continue.</p>
-
 <p>They are not destroyed.</p>
-
 <p>One who can see in this way can actually see what is happening.</p>
-
-<p><a name="13.29"><strong>13.29</strong></a></p>
-
-<p>samaṁ paśyan hi sarvatra</p>
-
-<p>samavasthitam īśvaram</p>
-
-<p>na hinasty ātmanātmānaṁ</p>
-
-<p>tato yāti parāṁ gatim</p>
-
-<p>samam—equally; paśyan—seeing; hi—certainly; sarvatra—everywhere; samavasthitam—equally situated; īśvaram—Supersoul; na—does not; hinasti—degrade; ātmanā—by the mind; ātmānam—the soul; tataḥ yāti—then reaches; parām—the transcendental; gatim—destination.</p>
-
+<h3><a class="header" href="#1329" id="1329">13.29</a></h3>
+<p>samam pasyan hi sarvatra</p>
+<p>samavasthitam isvaram</p>
+<p>na hinasty atmanatmanam</p>
+<p>tato yati param gatim</p>
+<p>samam--equally; pasyan--seeing; hi--certainly; sarvatra--everywhere; samavasthitam--equally situated; isvaram--Supersoul; na--does not; hinasti--degrade; atmana--by the mind; atmanam--the soul; tatah yati--then reaches; param--the transcendental; gatim--destination.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>One who sees the Supersoul in every living being and equal everywhere does not degrade himself by his mind.</p>
-
 <p>Thus he approaches the transcendental destination.</p>
-
 <p><strong>PURPORT</strong></p>
-
 <p>The living entity, by accepting his material existence as just so much suffering, can become situated in his spiritual existence.</p>
-
-<p>If one understands that the Supreme is situated in His Paramātmā manifestation everywhere, that is, if one can see the presence of the Supreme Personality of Godhead in every living thing, he does not degrade himself, and he therefore gradually advances in the spiritual world.</p>
-
+<p>If one understands that the Supreme is situated in His Paramatma manifestation everywhere, that is, if one can see the presence of the Supreme Personality of Godhead in every living thing, he does not degrade himself, and he therefore gradually advances in the spiritual world.</p>
 <p>The mind is generally addicted to self-centered processes; but when the mind turns to the Supersoul, one becomes advanced in spiritual understanding.</p>
-
-<p><a name="13.30"><strong>13.30</strong></a></p>
-
-<p>prakṛtyaiva ca karmāṇi</p>
-
-<p>kriyamāṇāni sarvaśaḥ</p>
-
-<p>yaḥ paśyati tathātmānam</p>
-
-<p>akartāraṁ sa paśyati</p>
-
-<p>prakṛtyā—material nature; eva—certainly; ca—also; karmāṇi—activities; kriyamāṇāni—engaged in performing; sarvaśaḥ—in all respects; yaḥ—anyone who; paśyati—sees; tathā—also; ātmānam—himself; akartāram—non-doer; saḥ—he; paśyati—sees perfectly.</p>
-
+<h3><a class="header" href="#1330" id="1330">13.30</a></h3>
+<p>prakrtyaiva ca karmani</p>
+<p>kriyamanani sarvasah</p>
+<p>yah pasyati tathatmanam</p>
+<p>akartaram sa pasyati</p>
+<p>prakrtya--material nature; eva--certainly; ca--also; karmani--activities; kriyamanani--engaged in performing; sarvasah--in all respects; yah--anyone who; pasyati--sees; tatha--also; atmanam--himself; akartaram--non-doer; sah--he; pasyati--sees perfectly.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>One who can see that all activities are performed by the body, which is created of material nature, and sees that the self does nothing, actually sees.</p>
-
 <p><strong>PURPORT</strong></p>
-
-<p>This body is made by material nature under the direction of the Supersoul, and whatever activities are going on in respect to one’s body are not his doing.</p>
-
+<p>This body is made by material nature under the direction of the Supersoul, and whatever activities are going on in respect to one's body are not his doing.</p>
 <p>Whatever one is supposed to do, either for happiness or for distress, one is forced to do because of the bodily constitution.</p>
-
 <p>The self, however, is outside all these bodily activities.</p>
-
-<p>This body is given according to one’s past desires.</p>
-
+<p>This body is given according to one's past desires.</p>
 <p>To fulfill desires, one is given the body, with which he acts accordingly.</p>
-
 <p>Practically speaking, the body is a machine, designed by the Supreme Lord, to fulfill desires.</p>
-
 <p>Because of desires, one is put into difficult circumstances to suffer or to enjoy.</p>
-
 <p>This transcendental vision of the living entity, when developed, makes one separate from bodily activities.</p>
-
 <p>One who has such a vision is an actual seer.</p>
-
-<p><a name="13.31"><strong>13.31</strong></a></p>
-
-<p>yadā bhūta-pṛthag-bhāvam</p>
-
-<p>eka-stham anupaśyati</p>
-
-<p>tata eva ca vistāraṁ</p>
-
-<p>brahma sampadyate tadā</p>
-
-<p>yadā—when; bhūta—living entities; pṛthak-bhāvam—separated entities; eka-stham—situated in one; anupaśyati—tries to see through authority; tataḥ eva—thereafter; ca—also; vistāram—expanded; brahma—the Absolute; sampadyate—attains; tadā—at that time.</p>
-
+<h3><a class="header" href="#1331" id="1331">13.31</a></h3>
+<p>yada bhuta-prthag-bhavam</p>
+<p>eka-stham anupasyati</p>
+<p>tata eva ca vistaram</p>
+<p>brahma sampadyate tada</p>
+<p>yada--when; bhuta--living entities; prthak-bhavam--separated entities; eka-stham--situated in one; anupasyati--tries to see through authority; tatah eva--thereafter; ca--also; vistaram--expanded; brahma--the Absolute; sampadyate--attains; tada--at that time.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>When a sensible man ceases to see different identities, which are due to different material bodies, he attains to the Brahman conception.</p>
-
 <p>Thus he sees that beings are expanded everywhere.</p>
-
 <p><strong>PURPORT</strong></p>
-
 <p>When one can see that the various bodies of living entities arise due to the different desires of the individual soul and do not actually belong to the soul itself, one actually sees.</p>
-
 <p>In the material conception of life, we find someone a demigod, someone a human being, a dog, a cat, etc.</p>
-
 <p>This is material vision, not actual vision.</p>
-
 <p>This material differentiation is due to a material conception of life.</p>
-
 <p>After the destruction of the material body, this spirit soul is one.</p>
-
 <p>The spirit soul, due to contact with material nature, gets different types of bodies.</p>
-
-<p>When one can see this, he attains spiritual vision; thus being freed from differentiations like man, animal, big, low, etc., one becomes beautified in his consciousness and able to develop Kṛṣṇa consciousness in his spiritual identity.</p>
-
+<p>When one can see this, he attains spiritual vision; thus being freed from differentiations like man, animal, big, low, etc., one becomes beautified in his consciousness and able to develop Krsna consciousness in his spiritual identity.</p>
 <p>How he then sees things will be explained in the next verse.</p>
-
-<p><a name="13.32"><strong>13.32</strong></a></p>
-
-<p>anāditvān nirguṇatvāt</p>
-
-<p>paramātmāyam avyayaḥ</p>
-
-<p>śarīra-stho ’pi kaunteya</p>
-
+<h3><a class="header" href="#1332" id="1332">13.32</a></h3>
+<p>anaditvan nirgunatvat</p>
+<p>paramatmayam avyayah</p>
+<p>sarira-stho 'pi kaunteya</p>
 <p>na karoti na lipyate</p>
-
-<p>anāditvāt—due to eternity; nirguṇatvāt—due to transcendental; param—beyond material nature; ātmā—spirit; ayam—this; avyayaḥ—inexhaustable; śarīra-sthaḥ api—though dwelling in the body; kaunteya—O son of Kuntī; na karoti—never does anything; na lipyate—nor is he entangled.</p>
-
+<p>anaditvat--due to eternity; nirgunatvat--due to transcendental; param--beyond material nature; atma--spirit; ayam--this; avyayah--inexhaustable; sarira-sthah api--though dwelling in the body; kaunteya--O son of Kunti; na karoti--never does anything; na lipyate--nor is he entangled.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>Those with the vision of eternity can see that the soul is transcendental, eternal, and beyond the modes of nature.</p>
-
 <p>Despite contact with the material body, O Arjuna, the soul neither does anything nor is entangled.</p>
-
 <p><strong>PURPORT</strong></p>
-
 <p>A living entity appears to be born because of the birth of the material body, but actually the living entity is eternal; he is not born, and in spite of his being situated in a material body, he is transcendental and eternal.</p>
-
 <p>Thus he cannot be destroyed.</p>
-
 <p>By nature he is full of bliss.</p>
-
 <p>He does not engage himself in any material activities; therefore the activities performed due to his contact with material bodies do not entangle him.</p>
-
-<p><a name="13.33"><strong>13.33</strong></a></p>
-
-<p>yathā sarva-gataṁ saukṣmyād</p>
-
-<p>ākāśaṁ nopalipyate</p>
-
-<p>sarvatrāvasthito dehe</p>
-
-<p>tathātmā nopalipyate</p>
-
-<p>yathā—as; sarva-gatam—all-pervading; saukṣmyāt—due to being subtle; ākāśam—the sky; na—never; upalipyate—mixes; sarvatra—everywhere; avasthitaḥ—situated; dehe—in the body; tathā—such; ātmā—the self; na—never; upalipyate—mixes.</p>
-
+<h3><a class="header" href="#1333" id="1333">13.33</a></h3>
+<p>yatha sarva-gatam sauksmyad</p>
+<p>akasam nopalipyate</p>
+<p>sarvatravasthito dehe</p>
+<p>tathatma nopalipyate</p>
+<p>yatha--as; sarva-gatam--all-pervading; sauksmyat--due to being subtle; akasam--the sky; na--never; upalipyate--mixes; sarvatra--everywhere; avasthitah--situated; dehe--in the body; tatha--such; atma--the self; na--never; upalipyate--mixes.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>The sky, due to its subtle nature, does not mix with anything, although it is all-pervading.</p>
-
 <p>Similarly, the soul, situated in Brahman vision, does not mix with the body, though situated in that body.</p>
-
 <p><strong>PURPORT</strong></p>
-
 <p>The air enters into water, mud, stool and whatever else is there; still it does not mix with anything.</p>
-
 <p>Similarly, the living entity, even though situated in varieties of bodies, is aloof from them due to his subtle nature.</p>
-
 <p>Therefore it is impossible to see with the material eyes how the living entity is in contact with this body and how he is out of it after the destruction of the body.</p>
-
 <p>No one in science can ascertain this.</p>
-
-<p><a name="13.34"><strong>13.34</strong></a></p>
-
-<p>yathā prakāśayaty ekaḥ</p>
-
-<p>kṛtsnaṁ lokam imaṁ raviḥ</p>
-
-<p>kṣetraṁ kṣetrī tathā kṛtsnaṁ</p>
-
-<p>prakāśayati bhārata</p>
-
-<p>yathā—as; prakāśayati—illuminates; ekaḥ—one; kṛtsnam—the whole; lokam—universe; imam—this; raviḥ—the sun, kṣetram—this body; kṣetrī—the soul; tathā—similarly; kṛtsnam—all; prakāśayati—illuminates; bhārata—O son of Bharata.</p>
-
+<h3><a class="header" href="#1334" id="1334">13.34</a></h3>
+<p>yatha prakasayaty ekah</p>
+<p>krtsnam lokam imam ravih</p>
+<p>ksetram ksetri tatha krtsnam</p>
+<p>prakasayati bharata</p>
+<p>yatha--as; prakasayati--illuminates; ekah--one; krtsnam--the whole; lokam--universe; imam--this; ravih--the sun, ksetram--this body; ksetri--the soul; tatha--similarly; krtsnam--all; prakasayati--illuminates; bharata--O son of Bharata.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>O son of Bharata, as the sun alone illuminates all this universe, so does the living entity, one within the body, illuminate the entire body by consciousness.</p>
-
 <p><strong>PURPORT</strong></p>
-
 <p>There are various theories regarding consciousness.</p>
-
-<p>Here in Bhagavad-gītā the example of the sun and the sunshine is given.</p>
-
+<p>Here in Bhagavad-gita the example of the sun and the sunshine is given.</p>
 <p>As the sun is situated in one place, but is illuminating the whole universe, so a small particle of spirit soul, although situated in the heart of this body, is illuminating the whole body by consciousness.</p>
-
 <p>Thus consciousness is the proof of the presence of the soul, as sunshine or light is the proof of the presence of the sun.</p>
-
 <p>When the soul is present in the body, there is consciousness all over the body, and as soon as the soul has passed from the body, there is no more consciousness.</p>
-
 <p>This can be easily understood by any intelligent man.</p>
-
 <p>Therefore consciousness is not a production of the combinations of matter.</p>
-
 <p>It is the symptom of the living entity.</p>
-
 <p>The consciousness of the living entity, although qualitatively one with the supreme consciousness, is not supreme because the consciousness of one particular body does not share that of another body.</p>
-
 <p>But the Supersoul, which is situated in all bodies as the friend of the individual soul, is conscious of all bodies.</p>
-
 <p>That is the difference between supreme consciousness and individual consciousness.</p>
-
-<p><a name="13.35"><strong>13.35</strong></a></p>
-
-<p>kṣetra-kṣetrajñayor evam</p>
-
-<p>antaraṁ jñāna-cakṣuṣā</p>
-
-<p>bhūta-prakṛti-mokṣaṁ ca</p>
-
-<p>ye vidur yānti te param</p>
-
-<p>kṣetra—body; kṣetrajñayoḥ—of the proprietor of the body; evam—that; antaram—difference; jñāna-cakṣuṣā—by vision of knowledge; bhūta—living entity; prakṛti—material nature; mokṣam—liberation; ca—also; ye—one who; viduḥ—knows; yānti—approaches; te—they; param—Supreme.</p>
-
+<h3><a class="header" href="#1335" id="1335">13.35</a></h3>
+<p>ksetra-ksetrajnayor evam</p>
+<p>antaram jnana-caksusa</p>
+<p>bhuta-prakrti-moksam ca</p>
+<p>ye vidur yanti te param</p>
+<p>ksetra--body; ksetrajnayoh--of the proprietor of the body; evam--that; antaram--difference; jnana-caksusa--by vision of knowledge; bhuta--living entity; prakrti--material nature; moksam--liberation; ca--also; ye--one who; viduh--knows; yanti--approaches; te--they; param--Supreme.</p>
 <p><strong>TRANSLATION</strong></p>
-
 <p>One who knowingly sees this difference between the body and the owner of the body and can understand the process of liberation from this bondage, also attains to the supreme goal.</p>
-
 <p><strong>PURPORT</strong></p>
-
 <p>The purport of this Thirteenth Chapter is that one should know the distinction between the body, the owner of the body, and the Supersoul.</p>
-
 <p>A faithful person should at first have some good association to hear of God and thus gradually become enlightened.</p>
-
 <p>If one accepts a spiritual master, he can learn to distinguish between matter and spirit, and that becomes the steppingstone for further spiritual realization.</p>
-
 <p>A spiritual master teaches his students to get free from the material concept of life by various instructions.</p>
-
-<p>For instance, in Bhagavad-gītā we find Kṛṣṇa instructing Arjuna to free him from materialistic considerations.</p>
-
+<p>For instance, in Bhagavad-gita we find Krsna instructing Arjuna to free him from materialistic considerations.</p>
 <p>One can understand that this body is matter; it can be analyzed with its twenty-four elements.</p>
-
 <p>That is the gross manifestation.</p>
-
 <p>And the subtle manifestation is the mind and psychological effects.</p>
-
 <p>And the symptoms of life are the interaction of these features.</p>
-
 <p>But over and above this, there is the soul, and there is also the Supersoul.</p>
-
 <p>The soul and the Supersoul are two.</p>
-
 <p>This material world is working by the conjunction of the soul and the twenty-four material elements.</p>
-
 <p>One who can see the constitution of the whole material manifestation as this combination of the soul and material elements and also can see the situation of the Supreme Soul becomes eligible for transfer to the spiritual world.</p>
-
 <p>These things are meant for contemplation and for realization, and one should have a complete understanding of this chapter with the help of the spiritual master.</p>
 
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="12.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="14.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="12.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="14.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
