@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#060c07">
 <title>The Gita Ascent</title>
 <style>
-/* ── Fonts — system monospace only, no external dependencies ── */
+ @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323:wght@400&display=swap');
 :root {
   --green:      #33ff66;
   --green-dim:  #1a7a33;
@@ -62,7 +62,8 @@ body::before {
   text-align:center;
 }
 .load-title {
-  font-size:42px; font-weight:bold; letter-spacing:4px;
+  font-family: 'VT323', monospace;
+  font-size:42px; letter-spacing:4px;
   color:var(--green); text-shadow:var(--glow);
   animation: flicker 8s infinite;
   line-height:1.1;
@@ -81,7 +82,7 @@ body::before {
   align-items:center; justify-content:center; gap:16px; padding:24px;
 }
 .menu-title {
-  font-size:52px; font-weight:bold; letter-spacing:5px;
+  font-size:52px; font-family: 'VT323', monospace; letter-spacing:5px;
   color:var(--green); text-shadow:var(--glow);
   text-align:center; animation:flicker 8s infinite;
   line-height:1;
@@ -269,7 +270,7 @@ body::before {
 }
 #panel.open { display:block; }
 .panel-title {
-  font-size:24px; font-weight:bold; letter-spacing:2px;
+  font-size:24px; font-family: 'VT323', monospace; letter-spacing:2px;
   color:var(--green); text-shadow:var(--glow-dim);
   margin-bottom:12px; border-bottom:1px solid var(--border);
   padding-bottom:8px;
@@ -309,7 +310,7 @@ body::before {
 }
 #overlay-help.open { display:block; }
 .help-box { background:var(--bg2); border:1px solid var(--border); padding:20px; }
-.help-title { font-size:26px; font-weight:bold; letter-spacing:3px;
+.help-title { font-size:26px; font-family: 'VT323', monospace; letter-spacing:3px;
   color:var(--green); text-shadow:var(--glow-dim); margin-bottom:14px; }
 .help-section { margin-bottom:12px; }
 .help-section h4 { color:var(--amber); font-size:10px;
@@ -335,7 +336,7 @@ body::before {
   flex-direction:column; gap:12px;
 }
 #zone-flash.show { display:flex; }
-.flash-title { font-size:40px; font-weight:bold; letter-spacing:4px;
+.flash-title { font-size:40px; font-family: 'VT323', monospace; letter-spacing:4px;
   color:var(--green); text-shadow:var(--glow); text-align:center; }
 .flash-sub { color:var(--green-dim); font-size:12px; letter-spacing:2px; text-align:center; }
 
@@ -345,7 +346,7 @@ body::before {
   padding:32px 24px; text-align:center;
 }
 .summit-title {
-  font-size:52px; font-weight:bold; letter-spacing:4px;
+  font-size:52px; font-family: 'VT323', monospace; letter-spacing:4px;
   color:var(--amber); text-shadow:0 0 20px #ffb83399;
   animation:flicker 6s infinite;
 }
@@ -374,7 +375,7 @@ body::before {
 <!-- ═══════════════ MENU SCREEN ════════════════════════════════════ -->
 <div id="screen-menu" class="screen">
   <div class="menu-title">THE GITA<br>ASCENT</div>
-  <div class="menu-tagline">18 Zones · 653 Verses · Sanskrit</div>
+  <div class="menu-tagline">Journey through the Bhagavad-gita</div>
   <div class="menu-box">
     <button class="menu-item" id="menu-resume" onclick="menuChoice(1)">
       <span class="key">[1]</span> Resume Journey
