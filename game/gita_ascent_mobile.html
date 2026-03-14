@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#060c07">
+<title>The Gita Ascent</title>
+<style>
+/* ── Fonts — system monospace only, no external dependencies ── */
+:root {
+  --green:      #33ff66;
+  --green-dim:  #1a7a33;
+  --green-dark: #0d3d1a;
+  --amber:      #ffb833;
+  --red:        #ff4444;
+  --bg:         #060c07;
+  --bg2:        #0a110c;
+  --border:     #1a5c2a;
+  --glow:       0 0 6px #33ff6688, 0 0 14px #33ff6633;
+  --glow-dim:   0 0 4px #33ff6644;
+  --zg: #2a2050; --zw: #5544aa; --zh: #9977ff; --zd: #1a1040;
+  --mono: 'Courier New', Courier, monospace;
+  --display: 'Courier New', Courier, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+html, body {
+  height: 100%; height: 100dvh;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--green);
+  font-family: var(--mono);
+  font-size: 14px;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+body {
+  background-image: repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(0,0,0,0.15) 2px, rgba(0,0,0,0.15) 4px
+  );
+}
+body::before {
+  content:''; position:fixed; inset:0;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.6) 100%);
+  pointer-events:none; z-index:9999;
+}
+
+/* ══ SCREENS ═══════════════════════════════════════════════════════ */
+.screen { display:none; height:100dvh; flex-direction:column; }
+.screen.active { display:flex; }
+
+/* ══ LOAD SCREEN ════════════════════════════════════════════════════ */
+#screen-load {
+  align-items:center; justify-content:center;
+  gap:20px; padding:32px 24px;
+  text-align:center;
+}
+.load-title {
+  font-size:42px; font-weight:bold; letter-spacing:4px;
+  color:var(--green); text-shadow:var(--glow);
+  animation: flicker 8s infinite;
+  line-height:1.1;
+}
+.load-subtitle {
+  color:var(--green-dim); font-size:12px;
+  letter-spacing:2px; text-transform:uppercase;
+}
+#load-status {
+  color:var(--amber); font-size:13px;
+  letter-spacing:1px; min-height:20px;
+}
+
+/* ══ MENU SCREEN ════════════════════════════════════════════════════ */
+#screen-menu {
+  align-items:center; justify-content:center; gap:16px; padding:24px;
+}
+.menu-title {
+  font-size:52px; font-weight:bold; letter-spacing:5px;
+  color:var(--green); text-shadow:var(--glow);
+  text-align:center; animation:flicker 8s infinite;
+  line-height:1;
+}
+.menu-tagline {
+  color:var(--green-dim); font-size:11px; letter-spacing:2px;
+  text-align:center; text-transform:uppercase;
+}
+.menu-box {
+  border:1px solid var(--border); background:var(--bg2);
+  width:min(340px,90vw);
+}
+.menu-item {
+  display:block; width:100%; background:transparent;
+  border:none; border-bottom:1px solid var(--green-dark);
+  color:var(--green-dim); padding:15px 16px;
+  font-family:var(--mono); font-size:15px;
+  cursor:pointer; text-align:left; letter-spacing:1px;
+  transition:all 0.1s;
+}
+.menu-item:last-child { border-bottom:none; }
+.menu-item:active { color:var(--green); background:var(--green-dark); }
+.menu-item .key { color:var(--amber); margin-right:10px; font-size:13px; }
+.menu-item.disabled { opacity:0.3; pointer-events:none; }
+#menu-save-info { color:var(--green-dim); font-size:11px; letter-spacing:1px; text-align:center; }
+
+/* ══ GAME SCREEN ════════════════════════════════════════════════════ */
+#screen-game { padding:0; overflow:hidden; }
+
+/* HUD top */
+#hud-top {
+  background:var(--bg2); border-bottom:1px solid var(--border);
+  padding:4px 10px; display:flex; gap:8px;
+  align-items:baseline; flex-shrink:0; flex-wrap:wrap;
+}
+.hud-zone { color:var(--green); font-size:10px; flex:1; min-width:0;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.hud-stat { color:var(--green-dim); font-size:10px; white-space:nowrap; }
+.hud-stat span { color:var(--green); }
+.hud-score { color:var(--amber); font-size:11px; font-weight:bold; white-space:nowrap; }
+
+/* Progress bar */
+#hud-progress {
+  background:var(--bg2); border-bottom:1px solid var(--border);
+  padding:2px 10px; display:flex; gap:8px; align-items:center; flex-shrink:0;
+}
+.prog-label { color:var(--green-dim); font-size:10px; white-space:nowrap; }
+.prog-bar { flex:1; height:5px; background:var(--green-dark); border:1px solid var(--border); }
+.prog-fill { height:100%; background:var(--green); box-shadow:var(--glow-dim); transition:width 0.3s; }
+.prog-pct { color:var(--green-dim); font-size:10px; white-space:nowrap; }
+
+/* Map */
+#map-container {
+  flex:1; display:flex; align-items:center; justify-content:center;
+  overflow:hidden; background:var(--bg); min-height:0;
+}
+#map-pre {
+  font-family:var(--mono); font-size:14px; line-height:1.45;
+  white-space:pre; color:var(--green-dim); letter-spacing:1px;
+  text-align:left;
+}
+
+/* Cell colours */
+.cg  { color:var(--zg); }
+.cw  { color:var(--zw); }
+.ch  { color:var(--zh); }
+.cd  { color:var(--zd); }
+.c-vread   { color:#33664a; }
+.c-fragcol { color:#225544; }
+.c-exit    { color:#ff8833; text-shadow:0 0 8px #ff883388; }
+.c-entry   { color:#8833ff; opacity:0.8; }
+.c-player  { color:#fff; text-shadow:0 0 10px #fff, 0 0 20px var(--green); }
+
+/* Text band */
+#text-band {
+  background:var(--bg2); border-top:1px solid var(--border);
+  padding:6px 10px; flex-shrink:0;
+  min-height:72px; max-height:30vh; overflow-y:auto;
+}
+.text-mode {
+  font-size:10px; color:var(--green); letter-spacing:2px;
+  text-transform:uppercase; margin-bottom:3px;
+}
+.text-content {
+  color:var(--amber); font-size:13px; line-height:1.55; white-space:pre-wrap;
+}
+.text-content.dim { color:var(--amber); font-size:12px; }
+#read-progress-wrap { margin-bottom:5px; }
+#read-progress-bar  { height:3px; background:var(--green-dark); border:1px solid var(--border); }
+#read-progress-fill { height:100%; background:var(--green); box-shadow:var(--glow-dim); width:0%; transition:width 0.15s; }
+
+/* ══ TOUCH CONTROLS ═════════════════════════════════════════════════ */
+#controls {
+  background:var(--bg2); border-top:1px solid var(--border);
+  padding:6px 10px 10px; flex-shrink:0;
+  padding-bottom:max(10px, env(safe-area-inset-bottom));
+}
+
+/* Explore controls: D-pad left + actions right */
+#ctrl-explore {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:8px;
+}
+.dpad {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap:3px;
+  width:min(140px, 38vw);
+  justify-self:start;
+}
+.dpad-btn {
+  background:var(--green-dark); border:1px solid var(--border);
+  color:var(--green); font-size:18px; font-family:var(--mono);
+  display:flex; align-items:center; justify-content:center;
+  height:44px; cursor:pointer; border-radius:4px;
+  transition:background 0.08s;
+  -webkit-touch-callout:none;
+}
+.dpad-btn:active { background:var(--green); color:var(--bg); }
+.dpad-center { background:var(--bg); border-color:transparent; }
+.dpad-empty  { background:transparent; border-color:transparent; pointer-events:none; }
+
+.action-btns {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap:5px;
+  align-self:start;
+}
+.act-btn {
+  background:var(--bg); border:1px solid var(--border);
+  color:var(--green-dim); font-family:var(--mono); font-size:11px;
+  padding:10px 4px; cursor:pointer; border-radius:4px;
+  letter-spacing:1px; text-transform:uppercase; text-align:center;
+  transition:all 0.08s;
+  -webkit-touch-callout:none;
+}
+.act-btn:active { background:var(--green-dark); color:var(--green); }
+.act-btn.dig { border-color:var(--amber); color:var(--amber); font-size:12px; font-weight:bold; }
+.act-btn.dig:active { background:var(--amber); color:var(--bg); }
+
+/* ── secondary row ── */
+.secondary-row {
+  display:flex; gap:4px; margin-top:5px;
+}
+.sec-btn {
+  flex:1; background:transparent; border:1px solid var(--green-dark);
+  color:var(--green-dim); font-family:var(--mono); font-size:10px;
+  padding:6px 2px; cursor:pointer; border-radius:3px;
+  letter-spacing:1px; text-transform:uppercase; text-align:center;
+  -webkit-touch-callout:none;
+}
+.sec-btn:active { background:var(--green-dark); color:var(--green); }
+.sec-btn.danger { border-color:var(--red); color:var(--red); }
+.sec-btn.danger:active { background:var(--red); color:#fff; }
+
+/* Read controls */
+#ctrl-read {
+  display:none; flex-direction:column; gap:5px;
+}
+.read-main {
+  display:grid; grid-template-columns:1fr 1fr; gap:6px;
+}
+.read-btn {
+  background:var(--green-dark); border:1px solid var(--border);
+  color:var(--green); font-family:var(--mono); font-size:13px;
+  padding:13px 8px; cursor:pointer; border-radius:4px;
+  text-align:center; letter-spacing:1px; text-transform:uppercase;
+  -webkit-touch-callout:none;
+}
+.read-btn:active { background:var(--green); color:var(--bg); }
+.read-btn.prev { color:var(--green-dim); font-size:11px; }
+.read-secondary {
+  display:flex; gap:4px;
+}
+
+/* ══ SIDE PANEL ═════════════════════════════════════════════════════ */
+#panel {
+  display:none; position:fixed; inset:0;
+  background:var(--bg2); z-index:100;
+  overflow-y:auto; padding:16px;
+  padding-bottom: max(16px, env(safe-area-inset-bottom));
+}
+#panel.open { display:block; }
+.panel-title {
+  font-size:24px; font-weight:bold; letter-spacing:2px;
+  color:var(--green); text-shadow:var(--glow-dim);
+  margin-bottom:12px; border-bottom:1px solid var(--border);
+  padding-bottom:8px;
+}
+.panel-close {
+  float:right; background:none; border:1px solid var(--green-dark);
+  color:var(--green-dim); font-family:var(--mono); font-size:13px;
+  cursor:pointer; padding:4px 10px; border-radius:3px;
+}
+.panel-close:active { background:var(--red); color:#fff; border-color:var(--red); }
+.panel-item {
+  padding:10px 0; border-bottom:1px solid var(--green-dark); font-size:13px;
+}
+.panel-item:last-child { border-bottom:none; }
+.panel-ref { color:var(--amber); margin-right:8px; font-weight:bold; }
+.panel-skt { color:var(--green-dim); font-size:11px; margin-top:3px;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.zone-row {
+  display:grid; grid-template-columns:40px 1fr 50px;
+  gap:8px; align-items:center; padding:7px 0;
+  border-bottom:1px solid var(--green-dark); font-size:12px;
+}
+.zone-row:last-child { border-bottom:none; }
+.zone-row.current { color:var(--green); }
+.zone-row:not(.current) { color:var(--green-dim); }
+.zone-bar-wrap { height:5px; background:var(--green-dark); border-radius:2px; overflow:hidden; }
+.zone-bar-fill { height:100%; background:var(--green-dim); transition:width 0.3s; }
+.zone-row.current .zone-bar-fill { background:var(--green); }
+.zone-pct { text-align:right; font-size:11px; }
+
+/* ══ HELP OVERLAY ═══════════════════════════════════════════════════ */
+#overlay-help {
+  display:none; position:fixed; inset:0;
+  background:rgba(0,0,0,0.9); z-index:200;
+  overflow-y:auto; padding:20px;
+  padding-bottom: max(20px, env(safe-area-inset-bottom));
+}
+#overlay-help.open { display:block; }
+.help-box { background:var(--bg2); border:1px solid var(--border); padding:20px; }
+.help-title { font-size:26px; font-weight:bold; letter-spacing:3px;
+  color:var(--green); text-shadow:var(--glow-dim); margin-bottom:14px; }
+.help-section { margin-bottom:12px; }
+.help-section h4 { color:var(--amber); font-size:10px;
+  letter-spacing:2px; text-transform:uppercase; margin-bottom:6px; }
+.help-row { display:flex; gap:10px; margin-bottom:4px;
+  font-size:12px; color:var(--green-dim); }
+.help-row kbd { color:var(--amber); font-family:var(--mono);
+  border:1px solid var(--green-dark); padding:1px 6px;
+  min-width:60px; font-size:11px; text-align:center; }
+.btn {
+  display:block; background:transparent; border:1px solid var(--green);
+  color:var(--green); padding:12px 20px; font-family:var(--mono);
+  font-size:13px; cursor:pointer; letter-spacing:2px;
+  text-transform:uppercase; text-align:center; width:100%; margin-top:12px;
+  border-radius:3px;
+}
+.btn:active { background:var(--green-dark); }
+
+/* ══ ZONE FLASH ═════════════════════════════════════════════════════ */
+#zone-flash {
+  display:none; position:fixed; inset:0; background:var(--green-dark);
+  z-index:300; align-items:center; justify-content:center;
+  flex-direction:column; gap:12px;
+}
+#zone-flash.show { display:flex; }
+.flash-title { font-size:40px; font-weight:bold; letter-spacing:4px;
+  color:var(--green); text-shadow:var(--glow); text-align:center; }
+.flash-sub { color:var(--green-dim); font-size:12px; letter-spacing:2px; text-align:center; }
+
+/* ══ SUMMIT ═════════════════════════════════════════════════════════ */
+#screen-summit {
+  align-items:center; justify-content:center; gap:20px;
+  padding:32px 24px; text-align:center;
+}
+.summit-title {
+  font-size:52px; font-weight:bold; letter-spacing:4px;
+  color:var(--amber); text-shadow:0 0 20px #ffb83399;
+  animation:flicker 6s infinite;
+}
+.summit-verse { color:var(--green-dim); font-size:14px; line-height:2; max-width:320px; }
+.summit-verse em { color:var(--green); font-style:normal; }
+.summit-stats { color:var(--amber); font-size:16px; letter-spacing:2px; }
+
+/* ══ ANIMATIONS ═════════════════════════════════════════════════════ */
+@keyframes flicker {
+  0%,95%,100%{opacity:1} 96%{opacity:0.9} 97%{opacity:1} 98%{opacity:0.85} 99%{opacity:1}
+}
+::-webkit-scrollbar { width:4px; }
+::-webkit-scrollbar-track { background:var(--bg); }
+::-webkit-scrollbar-thumb { background:var(--green-dark); }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ LOAD SCREEN ════════════════════════════════════ -->
+<div id="screen-load" class="screen active">
+  <div class="load-title">THE GITA<br>ASCENT</div>
+  <div class="load-subtitle">ASCII journey · Bhagavad-gita</div>
+  <div id="load-status">Loading verses…</div>
+</div>
+
+<!-- ═══════════════ MENU SCREEN ════════════════════════════════════ -->
+<div id="screen-menu" class="screen">
+  <div class="menu-title">THE GITA<br>ASCENT</div>
+  <div class="menu-tagline">18 Zones · 653 Verses · Sanskrit</div>
+  <div class="menu-box">
+    <button class="menu-item" id="menu-resume" onclick="menuChoice(1)">
+      <span class="key">[1]</span> Resume Journey
+    </button>
+    <button class="menu-item" onclick="menuChoice(2)">
+      <span class="key">[2]</span> New Journey
+    </button>
+    <button class="menu-item" onclick="menuChoice(3)">
+      <span class="key">[3]</span> Random Zone
+    </button>
+    <button class="menu-item" onclick="menuChoice(4)">
+      <span class="key">[4]</span> Choose Zone (1–18)
+    </button>
+  </div>
+  <div id="menu-save-info"></div>
+</div>
+
+<!-- ═══════════════ GAME SCREEN ════════════════════════════════════ -->
+<div id="screen-game" class="screen">
+
+  <!-- HUD -->
+  <div id="hud-top">
+    <div class="hud-zone" id="hud-zone-name">Zone 1</div>
+    <div class="hud-stat">V:<span id="hud-zone-prog">0/39</span></div>
+    <div class="hud-score" id="hud-score">0</div>
+  </div>
+  <div id="hud-progress">
+    <div class="prog-label">Journey: <span id="prog-num">0</span>/653</div>
+    <div class="prog-bar"><div class="prog-fill" id="prog-fill" style="width:0%"></div></div>
+    <div class="prog-pct" id="prog-pct">0%</div>
+  </div>
+
+  <!-- Map viewport -->
+  <div id="map-container">
+    <pre id="map-pre"></pre>
+  </div>
+
+  <!-- Text band -->
+  <div id="text-band">
+    <div class="text-mode" id="text-mode"></div>
+    <div id="read-progress-wrap" style="display:none;">
+      <div id="read-progress-bar">
+        <div id="read-progress-fill"></div>
+      </div>
+    </div>
+    <div class="text-content" id="text-content">Move with the D-pad. Tap DIG to excavate.</div>
+  </div>
+
+  <!-- Touch controls -->
+  <div id="controls">
+
+    <!-- EXPLORE mode controls -->
+    <div id="ctrl-explore">
+
+      <!-- D-pad -->
+      <div class="dpad">
+        <div class="dpad-empty"></div>
+        <button class="dpad-btn" ontouchstart="e=>{e.preventDefault();touchMove('n')}" onclick="touchMove('n')">▲</button>
+        <div class="dpad-empty"></div>
+        <button class="dpad-btn" ontouchstart="e=>{e.preventDefault();touchMove('w')}" onclick="touchMove('w')">◀</button>
+        <div class="dpad-btn dpad-center">✦</div>
+        <button class="dpad-btn" ontouchstart="e=>{e.preventDefault();touchMove('e')}" onclick="touchMove('e')">▶</button>
+        <div class="dpad-empty"></div>
+        <button class="dpad-btn" ontouchstart="e=>{e.preventDefault();touchMove('s')}" onclick="touchMove('s')">▼</button>
+        <div class="dpad-empty"></div>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="action-btns">
+        <button class="act-btn dig" style="grid-column:span 2;"
+          ontouchstart="event.preventDefault();touchDig()" onclick="touchDig()">
+          ⛏ DIG / READ
+        </button>
+        <button class="act-btn" onclick="openPanel('journal')">📜 Log</button>
+        <button class="act-btn" onclick="openPanel('fragments')">ॐ Skt</button>
+      </div>
+
+    </div>
+
+    <!-- Secondary row (explore) -->
+    <div class="secondary-row" id="secondary-explore">
+      <button class="sec-btn" onclick="openPanel('zones')">Zones</button>
+      <button class="sec-btn" onclick="openHelp()">Help</button>
+      <button class="sec-btn" onclick="touchSaveQuit()" style="color:var(--amber);border-color:var(--amber);">Save+Quit</button>
+    </div>
+
+    <!-- READ mode controls -->
+    <div id="ctrl-read">
+      <div class="read-main">
+        <button class="read-btn prev"
+          ontouchstart="event.preventDefault();touchPrev()" onclick="touchPrev()">
+          ← Prev
+        </button>
+        <button class="read-btn"
+          ontouchstart="event.preventDefault();touchNext()" onclick="touchNext()">
+          Next →
+        </button>
+      </div>
+      <div class="read-secondary">
+        <button class="sec-btn" onclick="touchRestart()">Restart</button>
+        <button class="sec-btn" onclick="touchClose()">Close</button>
+        <button class="sec-btn" onclick="touchSaveQuit()" style="color:var(--amber);border-color:var(--amber);">Save+Quit</button>
+      </div>
+    </div>
+
+  </div><!-- /controls -->
+</div><!-- /screen-game -->
+
+<!-- ═══════════════ SUMMIT SCREEN ══════════════════════════════════ -->
+<div id="screen-summit" class="screen">
+  <div class="summit-title">✦ SUMMIT ✦</div>
+  <div class="summit-verse">
+    <em>Sarva-dharman parityajya mam ekam saranam vraja</em><br>
+    Abandon all varieties of dharma and just surrender unto Me.<br>
+    — Bhagavad-gita 18.66
+  </div>
+  <div class="summit-stats" id="summit-stats"></div>
+  <button class="btn" onclick="showMenu()">▶ Return to Menu</button>
+</div>
+
+<!-- ═══════════════ SIDE PANEL ═════════════════════════════════════ -->
+<div id="panel">
+  <div class="panel-title">
+    <button class="panel-close" onclick="closePanel()">✕ Close</button>
+    <span id="panel-title-text">Journal</span>
+  </div>
+  <div id="panel-content"></div>
+</div>
+
+<!-- ═══════════════ HELP OVERLAY ═══════════════════════════════════ -->
+<div id="overlay-help">
+  <div class="help-box">
+    <div class="help-title">HOW TO PLAY</div>
+    <div class="help-section">
+      <h4>Movement</h4>
+      <div class="help-row">Use the D-pad to move in any direction.</div>
+    </div>
+    <div class="help-section">
+      <h4>Excavating</h4>
+      <div class="help-row">Tap <kbd>DIG</kbd> to excavate the cell you stand on.</div>
+      <div class="help-row">Warmer colours (bright) hint at hidden verses nearby.</div>
+      <div class="help-row"><kbd style="color:#ffdd33">V</kbd> Verse buried here — dig to reveal</div>
+      <div class="help-row"><kbd style="color:#33bbdd">*</kbd> Sanskrit fragment — dig to collect</div>
+    </div>
+    <div class="help-section">
+      <h4>Reading</h4>
+      <div class="help-row">Tap <kbd>Next →</kbd> to advance a sentence.</div>
+      <div class="help-row">Tap <kbd>← Prev</kbd> to go back a sentence.</div>
+      <div class="help-row">Sanskrit is shown above the translation.</div>
+    </div>
+    <div class="help-section">
+      <h4>Portals</h4>
+      <div class="help-row"><kbd style="color:#ff8833">&gt;</kbd> Step onto to ascend to next zone</div>
+      <div class="help-row"><kbd style="color:#8833ff">&lt;</kbd> Step onto to descend to previous zone</div>
+    </div>
+    <div class="help-section">
+      <h4>Scoring</h4>
+      <div class="help-row"><kbd>+50</kbd> Verse discovered</div>
+      <div class="help-row"><kbd>+25</kbd> Sanskrit fragment collected</div>
+      <div class="help-row"><kbd>+200</kbd> Zone fully explored</div>
+    </div>
+    <button class="btn" onclick="closeHelp()">[ CLOSE ]</button>
+  </div>
+</div>
+
+<!-- ═══════════════ ZONE FLASH ══════════════════════════════════════ -->
+<div id="zone-flash">
+  <div class="flash-title" id="flash-title">ASCENDING</div>
+  <div class="flash-sub" id="flash-sub">Zone 2</div>
+</div>
+
+<script>
+'use strict';
+
+
+// ════════════════════════════════════════════════════════════════════
+//  CONSTANTS
+// ════════════════════════════════════════════════════════════════════
+const CELL  = { GROUND:0, DUG:1, VERSE:2, VREAD:3, FRAG:4, FRAGCOL:5, EXIT:8, ENTRY:9 };
+const STATE = { EXPLORE:1, READ:2 };
+const SCORE = { VERSE:50, FRAG:25, ZONE:200 };
+const TOTAL_FILES = 653;
+
+const ZONE_COUNTS = [0,39,71,43,42,27,42,30,28,34,40,52,16,29,24,19,19,24,74];
+const ZONE_NAMES  = [
+  '',
+  'Cave Mouth         [1  Observing the Armies on the Battlefield of Kurukṣetra]',
+  'Cave Depths        [2  Contents of the Gītā Summarized]',
+  'Underground River  [3  Karma-yoga]',
+  'Crystal Cavern     [4  Transcendental Knowledge]',
+  'Cave Exit & Roots  [5  Karma-yoga—Action in Kṛṣṇa Consciousness]',
+  'Forest Floor       [6  Sāṅkhya-yoga]',
+  'Forest Clearing    [7  Knowledge of the Absolute]',
+  'Forest Canopy      [8  Attaining the Supreme]',
+  'Sacred Grove       [9  The Most Confidential Knowledge]',
+  'Ancient Grove      [10 The Opulence of the Absolute]',
+  'Mountain Base      [11 The Universal Form]',
+  'Rocky Foothills    [12 Devotional Service]',
+  'Lower Slopes       [13 Nature, the Enjoyer, and Consciousness]',
+  'Misty Mid-Slopes   [14 The Three Modes of Material Nature]',
+  'High Ridge         [15 The Yoga of the Supreme Person]',
+  'Storm Cliffs       [16 The Divine & Demonic Natures]',
+  'Summit Approach    [17 The Divisions of Faith]',
+  'The Peak           [18 Conclusion—The Perfection of Renunciation]',
+];
+
+// ════════════════════════════════════════════════════════════════════
+//  FILE LOADING
+// ════════════════════════════════════════════════════════════════════
+const verseFiles = new Map();
+
+//document.getElementById('file-input').addEventListener('change', async (e) => {
+//  const files = Array.from(e.target.files);
+//  const status = document.getElementById('load-status');
+//  const verseRegex = /^v\d{3}\.txt$/i;
+//  const verseFileList = files.filter(f => verseRegex.test(f.name));
+//  if (verseFileList.length === 0) {
+//    status.textContent = '✗ No verse files found (expected v001.txt–v653.txt)';
+//    status.style.color = 'var(--red)'; return;
+//  }
+//  status.textContent = `Loading ${verseFileList.length} verse files...`;
+//  status.style.color = 'var(--amber)';
+//  let loaded = 0;
+//  await Promise.all(verseFileList.map(file => new Promise(resolve => {
+//    const reader = new FileReader();
+//    reader.onload = () => {
+//      verseFiles.set(file.name.toLowerCase(), reader.result);
+//      loaded++;
+//      if (loaded % 50 === 0) status.textContent = `Loading... ${loaded}/${verseFileList.length}`;
+//      resolve();
+//    };
+//    reader.readAsText(file);
+//  })));
+//  status.textContent = `✓ Loaded ${verseFileList.length} verse files`;
+// status.style.color = 'var(--green)';
+//  setTimeout(() => showMenu(), 700);
+//});
+//function startWithoutVerses() { showMenu(); }
+
+async function loadVersesFromServer() {
+  const status = document.getElementById('load-status');
+  const pad = n => n < 10 ? `00${n}` : n < 100 ? `0${n}` : `${n}`;
+  let loaded = 0;
+
+  const fetches = [];
+  for (let i = 1; i <= 653; i++) {
+    const fname = `v${pad(i)}.txt`;
+    fetches.push(
+      fetch(`./verses/${fname}`)
+        .then(r => r.text())
+        .then(text => {
+          verseFiles.set(fname, text);
+          loaded++;
+          if (loaded % 50 === 0) {
+            status.textContent = `Loading verses… ${loaded}/653`;
+          }
+        })
+        .catch(() => {
+          // silently skip missing files
+        })
+    );
+  }
+
+  await Promise.all(fetches);
+  status.textContent = `✓ ${loaded} verses loaded`;
+  setTimeout(() => showMenu(), 500);
+}
+
+loadVersesFromServer();
+
+
+
+// ════════════════════════════════════════════════════════════════════
+//  ZONE DEFINITIONS — unique structure per chapter theme
+// ════════════════════════════════════════════════════════════════════
+const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, Math.round(v)));
+
+// ── Placement helpers ────────────────────────────────────────────────
+// All return [row, col] in 1-based coords
+
+// Golden-angle phyllotaxis spiral.  inward=true → verse 1 outermost.
+function spiralPlace(vi, n, w, h, inward, scale) {
+  const i  = inward ? (n - vi) : (vi - 1);
+  const a  = i * 2.39996;
+  const r  = Math.sqrt(i + 1) * Math.min(w, h) * scale;
+  return [clamp(h/2 + r * Math.sin(a) * 0.55, 2, h-1),
+          clamp(w/2 + r * Math.cos(a),          2, w-1)];
+}
+// Even rectangular grid, left-to-right top-to-bottom.
+function gridPlace(vi, n, w, h, cols) {
+  const cs = Math.floor((w - 4) / cols);
+  const rs = Math.floor((h - 4) / Math.ceil(n / cols));
+  return [clamp(2 + Math.floor((vi-1)/cols)*rs, 2, h-1),
+          clamp(2 + ((vi-1)%cols)*cs,            2, w-1)];
+}
+// Sine-wave path bottom→top (karma flows like a river).
+function wavePlace(vi, n, w, h, freq) {
+  const t = (vi-1) / (n-1||1);
+  return [clamp(h-3 - t*(h-6),                       2, h-1),
+          clamp(w/2 + w*0.3*Math.sin(t*Math.PI*freq), 2, w-1)];
+}
+// Two diagonals forming an X (jnana = crossing beams of light).
+function diagPlace(vi, n, w, h) {
+  const half = Math.ceil(n/2);
+  const i = (vi-1) % half;
+  const t = i / (half-1||1);
+  return vi <= half
+    ? [clamp(2 + t*(h-4), 2, h-1), clamp(2 + t*(w-4),   2, w-1)]
+    : [clamp(2 + t*(h-4), 2, h-1), clamp(w-1 - t*(w-4), 2, w-1)];
+}
+// Three concentric rings (dhyana = ripples of stillness).
+function ringPlace(vi, n, w, h) {
+  const pr  = Math.ceil(n/3);
+  const ring = Math.min(Math.floor((vi-1)/pr), 2);
+  const pos  = (vi-1) % pr;
+  const radii = [h*0.12, h*0.26, h*0.42];
+  const a = pos * (2*Math.PI/pr) - Math.PI/2;
+  return [clamp(h/2 + radii[ring]*Math.sin(a)*0.62, 2, h-1),
+          clamp(w/2 + radii[ring]*Math.cos(a),       2, w-1)];
+}
+// Two clusters — lower nature (bottom-left) and higher nature (top-right).
+function clusterPlace(vi, n, w, h) {
+  const half = Math.ceil(n/2);
+  const gw   = Math.floor(w*0.43);
+  const cols = Math.ceil(Math.sqrt(half));
+  const cs   = Math.max(2, Math.floor(gw/cols));
+  const rs   = Math.max(2, Math.floor((h-4)/Math.ceil(half/cols)));
+  if (vi <= half) {
+    return [clamp(Math.floor(h/2)+1 + Math.floor((vi-1)/cols)*rs, 2, h-1),
+            clamp(2 + ((vi-1)%cols)*cs, 2, gw)];
+  }
+  const i = vi-half;
+  return [clamp(2 + Math.floor((i-1)/cols)*rs, 2, h-1),
+          clamp(Math.floor(w*0.57) + ((i-1)%cols)*cs, 2, w-1)];
+}
+// Plus-sign / cross — four arms from centre (the imperishable in all directions).
+function crossPlace(vi, n, w, h) {
+  const pa  = Math.ceil(n/4);
+  const arm = Math.min(Math.floor((vi-1)/pa), 3);
+  const pos = (vi-1) % pa;
+  const t   = (pos+1) / (pa+1);
+  const cx  = Math.floor(w/2), cy = Math.floor(h/2);
+  if (arm===0) return [clamp(cy - t*(cy-2),   2,h-1), cx]; // N
+  if (arm===1) return [clamp(cy + t*(h-2-cy), 2,h-1), cx]; // S
+  if (arm===2) return [cy, clamp(cx + t*(w-2-cx), 2,w-1)]; // E
+              return [cy, clamp(cx - t*(cx-2),    2,w-1)]; // W
+}
+// Diamond perimeter — regal, structured (raja = king).
+function diamondPlace(vi, n, w, h) {
+  const ps = Math.ceil(n/4);
+  const side = Math.min(Math.floor((vi-1)/ps), 3);
+  const t    = ((vi-1)%ps) / (ps-1||1);
+  const cx = Math.floor(w/2), cy = Math.floor(h/2);
+  const rx = Math.floor(cx*0.80), ry = Math.floor(cy*0.72);
+  const corners = [[cy-ry,cx],[cy,cx+rx],[cy+ry,cx],[cy,cx-rx]];
+  const [r1,c1] = corners[side], [r2,c2] = corners[(side+1)%4];
+  return [clamp(r1 + t*(r2-r1), 2,h-1), clamp(c1 + t*(c2-c1), 2,w-1)];
+}
+// Field (left) and knower (right) — two halves with clear gap between.
+function fieldPlace(vi, n, w, h) {
+  const half = Math.ceil(n/2);
+  const gw   = Math.floor(w*0.40);
+  const cols = Math.ceil(Math.sqrt(half));
+  const cs   = Math.max(2, Math.floor(gw/cols));
+  const rs   = Math.max(2, Math.floor((h-4)/Math.ceil(half/cols)));
+  if (vi <= half) {
+    return [clamp(2 + Math.floor((vi-1)/cols)*rs, 2,h-1),
+            clamp(2 + ((vi-1)%cols)*cs,            2,gw)];
+  }
+  const i = vi-half;
+  return [clamp(2 + Math.floor((i-1)/cols)*rs, 2,h-1),
+          clamp(Math.floor(w*0.60) + ((i-1)%cols)*cs, 2,w-1)];
+}
+// Three horizontal bands — tamas(bottom), rajas(mid), sattva(top).
+function bandPlace(vi, n, w, h) {
+  const band = (vi-1) % 3;           // 0=sattva,1=rajas,2=tamas (top→bottom)
+  const pos  = Math.floor((vi-1)/3);
+  const bh   = Math.floor((h-4)/3);
+  const bw   = Math.max(2, Math.floor((w-4)/Math.ceil(n/3)));
+  return [clamp(2 + band*bh + Math.floor(bh/2), 2,h-1),
+          clamp(2 + pos*bw,                      2,w-1)];
+}
+// Inverted tree — trunk at bottom, branches fan upward (the cosmic Ashvattha).
+function treePlace(vi, n, w, h) {
+  const cx = Math.floor(w/2);
+  if (vi <= 3) return [h-vi, cx]; // trunk base
+  const b     = vi-4;
+  const level = Math.floor(b/4)+1;
+  const pos   = b%4;
+  const offsets = [-3,-1,1,3];
+  return [clamp(h-3 - level*3, 2,h-1),
+          clamp(cx + offsets[pos]*level, 2,w-1)];
+}
+// Mirror halves — divine (left) vs demonic (right), alternating verse placement.
+function mirrorPlace(vi, n, w, h) {
+  const isDivine = (vi%2 === 1);
+  const i    = isDivine ? Math.ceil(vi/2) : Math.floor(vi/2);
+  const half = Math.ceil(n/2);
+  const gw   = Math.floor(w*0.42);
+  const cols = Math.ceil(Math.sqrt(half));
+  const cs   = Math.max(2, Math.floor(gw/cols));
+  const rs   = Math.max(2, Math.floor((h-4)/Math.ceil(half/cols)));
+  const r = clamp(2 + Math.floor((i-1)/cols)*rs, 2, h-1);
+  const c = clamp(2 + ((i-1)%cols)*cs, 2, gw);
+  return isDivine ? [r, c] : [r, c + Math.floor(w*0.56)];
+}
+// Heart shape parametric (bhakti = pure love, 16 verses = compact heart).
+function heartPlace(vi, n, w, h) {
+  const t  = (vi-1)/n * 2*Math.PI;
+  const hx = 16 * Math.pow(Math.sin(t), 3);
+  const hy = 13*Math.cos(t) - 5*Math.cos(2*t) - 2*Math.cos(3*t) - Math.cos(4*t);
+  return [clamp(Math.floor(h/2)+2 - hy*0.48, 2,h-1),
+          clamp(Math.floor(w/2)   + hx*0.78, 2,w-1)];
+}
+
+// ── Zone definitions ────────────────────────────────────────────────
+// pal: [ground-color, warm-hint, hot-hint, dug-color, map-bg]
+const ZONE_DEFS = [null,
+  // Z1: Arjuna's Despair — inward spiral, claustrophobic (38×22)
+  { w:46,h:26, ch:'#',
+    pal:['#2a2050','#5544aa','#9977ff','#1a1040','#06020e'],
+    en:(w,h)=>[h-2,2],       ex:(w,h)=>[2,w-1],
+    place:(vi,n,w,h)=>spiralPlace(vi,n,w,h,true,0.052) },
+
+  // Z2: Sankhya — orderly 9-column grid, vast map (58×28)
+  { w:64,h:26, ch:'-',
+    pal:['#1a3060','#2255bb','#4488ff','#0d1830','#020810'],
+    en:(w,h)=>[h-2,Math.floor(w/2)], ex:(w,h)=>[2,Math.floor(w/2)],
+    place:(vi,n,w,h)=>gridPlace(vi,n,w,h,9) },
+
+  // Z3: Karma Yoga — S-curve river from bottom-right to top-left (44×26)
+  { w:46,h:26, ch:'~',
+    pal:['#5a2800','#aa5500','#ff8833','#2a1400','#0c0500'],
+    en:(w,h)=>[h-2,w-2],     ex:(w,h)=>[2,2],
+    place:(vi,n,w,h)=>wavePlace(vi,n,w,h,2.5) },
+
+  // Z4: Jnana — X diagonal beams crossing at centre (44×24)
+  { w:46,h:26, ch:':',
+    pal:['#0a3040','#1a7090','#33ccee','#051820','#020c12'],
+    en:(w,h)=>[Math.floor(h/2),2], ex:(w,h)=>[Math.floor(h/2),w-1],
+    place:(vi,n,w,h)=>diagPlace(vi,n,w,h) },
+
+  // Z5: Renunciation — vast empty grid, very sparse (50×26)
+  { w:64,h:26, ch:'.',
+    pal:['#1e1e1e','#333333','#555555','#0e0e0e','#080808'],
+    en:(w,h)=>[2,2],          ex:(w,h)=>[h-2,w-2],
+    place:(vi,n,w,h)=>gridPlace(vi,n,w,h,6) },
+
+  // Z6: Dhyana — three concentric rings, meditation ripples (42×24)
+  { w:46,h:26, ch:'o',
+    pal:['#1a0835','#442288','#8855cc','#0d0420','#050108'],
+    en:(w,h)=>[h-2,Math.floor(w/2)], ex:(w,h)=>[2,Math.floor(w/2)],
+    place:(vi,n,w,h)=>ringPlace(vi,n,w,h) },
+
+  // Z7: Jnana-Vijnana — two clusters, lower/higher nature (42×24)
+  { w:46,h:26, ch:'"',
+    pal:['#3a2800','#886600','#ffcc00','#1a1000','#080500'],
+    en:(w,h)=>[h-2,3],        ex:(w,h)=>[2,w-2],
+    place:(vi,n,w,h)=>clusterPlace(vi,n,w,h) },
+
+  // Z8: Akshara Brahma — plus/cross, imperishable in all directions (40×22)
+  { w:46,h:26, ch:'=',
+    pal:['#083838','#1a7070','#33aaaa','#041c1c','#010e0e'],
+    en:(w,h)=>[h-2,Math.floor(w/2)], ex:(w,h)=>[2,Math.floor(w/2)],
+    place:(vi,n,w,h)=>crossPlace(vi,n,w,h) },
+
+  // Z9: Raja Vidya — diamond perimeter, royal structure (44×26)
+  { w:46,h:26, ch:'+',
+    pal:['#300830','#882288','#cc44cc','#180018','#080008'],
+    en:(w,h)=>[Math.floor(h/2)+Math.floor(h*0.36),Math.floor(w/2)],
+    ex:(w,h)=>[Math.floor(h/2)-Math.floor(h*0.36),Math.floor(w/2)],
+    place:(vi,n,w,h)=>diamondPlace(vi,n,w,h) },
+
+  // Z10: Vibhutis — hash-scattered, manifestations everywhere (46×26)
+  { w:46,h:26, ch:'*',
+    pal:['#083018','#1a6030','#33aa55','#041808','#020c04'],
+    en:(w,h)=>[h-2,2],        ex:(w,h)=>[2,w-1],
+    place:(vi,n,w,h)=>{
+      const ha=(vi*1619)%(w-6), hb=(vi*2017)%(h-6);
+      return [3+hb, 3+ha];
+    } },
+
+  // Z11: Vishvarupa — outward spiral, cosmic expansion, LARGEST map (54×30)
+  { w:46,h:26, ch:'%',
+    pal:['#3a1800','#aa4400','#ff8800','#1c0c00','#080400'],
+    en:(w,h)=>[Math.floor(h/2),Math.floor(w/2)], ex:(w,h)=>[2,w-2],
+    place:(vi,n,w,h)=>spiralPlace(vi,n,w,h,false,0.060) },
+
+  // Z12: Bhakti — heart shape, devotion, smallest map (34×20)
+  { w:46,h:26, ch:'.',
+    pal:['#300818','#882244','#ff4488','#180410','#080208'],
+    en:(w,h)=>[h-2,Math.floor(w/2)], ex:(w,h)=>[2,Math.floor(w/2)],
+    place:(vi,n,w,h)=>heartPlace(vi,n,w,h) },
+
+  // Z13: Kshetra/Kshetrajna — two halves with gap (44×24)
+  { w:46,h:26, ch:',',
+    pal:['#1a1a08','#3a3a18','#6a6a28','#0c0c04','#040402'],
+    en:(w,h)=>[h-2,Math.floor(w*0.25)], ex:(w,h)=>[2,Math.floor(w*0.75)],
+    place:(vi,n,w,h)=>fieldPlace(vi,n,w,h) },
+
+  // Z14: Three Gunas — three horizontal bands (40×22)
+  { w:46,h:26, ch:';',
+    pal:['#1a0808','#4a2222','#cc6644','#0c0404','#040202'],
+    en:(w,h)=>[h-2,w-2],     ex:(w,h)=>[2,2],
+    place:(vi,n,w,h)=>bandPlace(vi,n,w,h) },
+
+  // Z15: Purushottama — inverted tree, cosmic Ashvattha (36×26)
+  { w:46,h:26, ch:'/',
+    pal:['#041808','#0a3a10','#22aa33','#021008','#010804'],
+    en:(w,h)=>[h-2,Math.floor(w/2)], ex:(w,h)=>[2,Math.floor(w/2)],
+    place:(vi,n,w,h)=>treePlace(vi,n,w,h) },
+
+  // Z16: Daiva-Asura — mirrored halves, divine left / demonic right (36×22)
+  { w:46,h:26, ch:'|',
+    pal:['#1c0808','#5a2222','#cc3333','#0c0404','#060202'],
+    en:(w,h)=>[h-2,2],        ex:(w,h)=>[2,w-1],
+    place:(vi,n,w,h)=>mirrorPlace(vi,n,w,h) },
+
+  // Z17: Shraddha — three bands of faith (38×22)
+  { w:46,h:26, ch:'~',
+    pal:['#2a1808','#6a4422','#cc8844','#140c04','#070402'],
+    en:(w,h)=>[h-2,Math.floor(w/2)], ex:(w,h)=>[2,Math.floor(w/2)],
+    place:(vi,n,w,h)=>bandPlace(vi,n,w,h) },
+
+  // Z18: Moksha — full illuminated field, convergence to summit (50×32)
+  { w:64,h:26, ch:"'",
+    pal:['#181818','#484848','#cccccc','#0c0c0c','#080808'],
+    en:(w,h)=>[h-2,Math.floor(w/2)], ex:(w,h)=>[2,Math.floor(w/2)],
+    place:(vi,n,w,h)=>{
+      const ha=(vi*1619)%(w-6), hb=(vi*2017)%(h-6);
+      // Bias toward top as vi grows (liberation = ascending)
+      const rowBias = Math.floor((vi-1)/(n-1||1) * (h-6) * 0.6);
+      return [clamp(h-3 - rowBias - hb%(Math.max(1,Math.round((h-4)*0.4))), 2, h-1),
+              clamp(3+ha, 2, w-1)];
+    } },
+];
+
+// ════════════════════════════════════════════════════════════════════
+//  MAP GENERATION  — no corridors, no walls; everything is open ground
+// ════════════════════════════════════════════════════════════════════
+function generateZone(zoneNum) {
+  const def   = ZONE_DEFS[zoneNum];
+  const count = ZONE_COUNTS[zoneNum];
+  const { w, h, place } = def;
+  const cells = new Uint8Array(w * h); // all CELL.GROUND = 0
+  const idx   = (r,c) => (r-1)*w + (c-1);
+
+  let start = 1;
+  for (let z = 1; z < zoneNum; z++) start += ZONE_COUNTS[z];
+
+  const vcols = new Array(count+1).fill(0);
+  const vrows = new Array(count+1).fill(0);
+  const used  = new Set();
+  const ukey  = (r,c) => r*1000+c;
+
+  // Reserve portal cells before verse placement
+  const [enR,enC] = def.en(w,h);
+  const [exR,exC] = def.ex(w,h);
+  used.add(ukey(clamp(enR,1,h), clamp(enC,1,w)));
+  used.add(ukey(clamp(exR,1,h), clamp(exC,1,w)));
+
+  // Place verse anchors
+  for (let vi = 1; vi <= count; vi++) {
+    let [r,c] = place(vi, count, w, h);
+    r = clamp(r, 2, h-1); c = clamp(c, 2, w-1);
+    // Collision avoidance: step right then down
+    for (let d = 0; d < 30 && used.has(ukey(r,c)); d++) {
+      c++; if (c > w-1) { c = 2; r = r < h-1 ? r+1 : 2; }
+      r = clamp(r,2,h-1); c = clamp(c,2,w-1);
+    }
+    used.add(ukey(r,c));
+    vcols[vi] = c; vrows[vi] = r;
+    cells[idx(r,c)] = CELL.VERSE;
+  }
+
+  // Place fragments (right of verse anchor, fallback below)
+  for (let vi = 1; vi <= count; vi++) {
+    const vr = vrows[vi], vc = vcols[vi];
+    if (vc+1 <= w-1 && !used.has(ukey(vr, vc+1))) {
+      cells[idx(vr, vc+1)] = CELL.FRAG;
+      used.add(ukey(vr, vc+1));
+    } else if (vr+1 <= h-1 && !used.has(ukey(vr+1, vc))) {
+      cells[idx(vr+1, vc)] = CELL.FRAG;
+      used.add(ukey(vr+1, vc));
+    }
+  }
+
+  // Place portals (override anything — portals are always visible)
+  cells[idx(clamp(enR,1,h), clamp(enC,1,w))] = CELL.ENTRY;
+  cells[idx(clamp(exR,1,h), clamp(exC,1,w))] = CELL.EXIT;
+
+  return { w, h, cells, vcols, vrows, count, start };
+}
+
+const zoneCache = new Map();
+function getZone(z) {
+  if (!zoneCache.has(z)) zoneCache.set(z, generateZone(z));
+  return zoneCache.get(z);
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  HINT MAP  — proximity hints for hidden verses/fragments
+// ════════════════════════════════════════════════════════════════════
+function buildHintMap() {
+  const { w, h, cells } = G.zone;
+  const hint = new Uint8Array(w * h);
+  const idx  = (r,c) => (r-1)*w + (c-1);
+  for (let r = 1; r <= h; r++) {
+    for (let c = 1; c <= w; c++) {
+      const cv = cells[idx(r,c)];
+      if (cv !== CELL.VERSE && cv !== CELL.FRAG) continue;
+      for (let dr = -2; dr <= 2; dr++) {
+        for (let dc = -2; dc <= 2; dc++) {
+          const dist = Math.abs(dr) + Math.abs(dc);
+          if (dist===0 || dist>2) continue;
+          const nr = r+dr, nc = c+dc;
+          if (nr<1||nr>h||nc<1||nc>w) continue;
+          const ni  = idx(nr,nc);
+          const hv  = dist===1 ? 2 : 1;
+          if (hv > hint[ni]) hint[ni] = hv;
+        }
+      }
+    }
+  }
+  G.hintMap = hint;
+}
+
+function applyZonePalette(z) {
+  const p = ZONE_DEFS[z].pal;
+  const s = document.documentElement.style;
+  s.setProperty('--zg', p[0]);
+  s.setProperty('--zw', p[1]);
+  s.setProperty('--zh', p[2]);
+  s.setProperty('--zd', p[3]);
+  document.getElementById('map-container').style.background = p[4];
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  VERSE PARSING
+// ════════════════════════════════════════════════════════════════════
+function parseVerse(fileNum) {
+  const pad = n => n < 10 ? `00${n}` : n < 150 ? `0${n}` : `${n}`;
+  const fname = `v${pad(fileNum)}.txt`;
+  const text = verseFiles.get(fname);
+
+  if (!text) {
+    return {
+      ref: `${fileNum}`,
+      sanskrit: '(verse file not loaded)',
+      sentences: ['Verse file not found. Load verse folder to read the Bhagavad-gita text.'],
+      purport: []
+    };
+  }
+
+  const lines = text.replace(/\r/g, '').split('\n');
+  let ref = '', skt = '', trans = [], purport = [];
+  let section = 0; // 0=preamble, 1=translation, 2=purport
+
+  for (let i = 0; i < lines.length; i++) {
+    const raw = lines[i].trim();
+    if (i === 0) { ref = raw; continue; }
+    if (!raw) continue;
+    if (raw.startsWith('TRANSLATION')) { section = 1; continue; }
+    if (raw.startsWith('PURPORT')) { section = 2; continue; }
+
+    if (section === 0) {
+      // Count semicolons — glossary line has 4+
+      const semiCount = (raw.match(/;/g) || []).length;
+      if (semiCount >= 4) continue;
+      skt += (skt ? ' ' : '') + raw;
+    } else if (section === 1) {
+      // Split into sentences on ". " boundaries
+      const sentences = raw.match(/[^.!?]+[.!?]+[”"']*/g) || [raw];
+      trans.push(...sentences.map(s => s.trim()).filter(Boolean));
+    } else {
+      const sentences = raw.match(/[^.!?]+[.!?]+[”"']*/g) || [raw];
+      purport.push(...sentences.map(s => s.trim()).filter(Boolean));
+    }
+  }
+
+  if (!ref) ref = `${fileNum}`;
+  if (!skt) skt = '(Sanskrit not found)';
+  if (trans.length === 0) trans = ['Translation not found.'];
+
+  return { ref, sanskrit: skt, sentences: trans, purport };
+}
+
+
+// ════════════════════════════════════════════════════════════════════
+//  GAME STATE
+// ════════════════════════════════════════════════════════════════════
+const G = {
+  curZone: 1, playerCol: 2, playerRow: 2,
+  score: 0, totalDisc: 0, zoneDisc: 0,
+  discMap: new Uint8Array(TOTAL_FILES + 1),
+  fragMap: new Uint8Array(TOTAL_FILES + 1),
+  zone: null,
+  hintMap: null,
+  curState: STATE.EXPLORE,
+  readMode: 0, readSentences: [], readIndex: 0,
+  purportSentences: [], curVerseRef: '', curFileSkt: '',
+  curFileN: 0, displayText: '',
+};
+
+function zoneStart(z) {
+  let s = 1;
+  for (let i = 1; i < z; i++) s += ZONE_COUNTS[i];
+  return s;
+}
+
+function loadZone(zoneNum, restoreState) {
+  G.curZone = zoneNum;
+  G.zone    = getZone(zoneNum);
+  G.zone.cells = G.zone.cells.slice(); // mutable copy
+  applyZonePalette(zoneNum);
+
+  if (restoreState) {
+    const { vcols, vrows, start, count, w, h } = G.zone;
+    const idx = (r,c) => (r-1)*w + (c-1);
+    G.zoneDisc = 0;
+    for (let vi = 1; vi <= count; vi++) {
+      const ai = start + vi - 1;
+      if (G.discMap[ai]) {
+        G.zone.cells[idx(vrows[vi], vcols[vi])] = CELL.VREAD;
+        G.zoneDisc++;
+      }
+      if (G.fragMap[ai]) {
+        // Try right, then below
+        const tryFrag = (fr, fc) => {
+          if (fc < 1||fc > w||fr < 1||fr > h) return;
+          if (G.zone.cells[idx(fr,fc)] === CELL.FRAG)
+            G.zone.cells[idx(fr,fc)] = CELL.FRAGCOL;
+        };
+        tryFrag(vrows[vi], vcols[vi]+1);
+        tryFrag(vrows[vi]+1, vcols[vi]);
+      }
+    }
+  } else {
+    G.zoneDisc = 0;
+    for (let vi = 1; vi <= G.zone.count; vi++)
+      if (G.discMap[G.zone.start+vi-1]) G.zoneDisc++;
+    placePlayerAtEntry();
+  }
+  buildHintMap();
+}
+
+function findVi(col, row) {
+  const { vcols, vrows, count } = G.zone;
+  for (let vi = 1; vi <= count; vi++)
+    if (vcols[vi]===col && vrows[vi]===row) return vi;
+  return 0;
+}
+
+function placePlayerAtEntry() {
+  const { w, h, cells } = G.zone;
+  for (let i = 0; i < w*h; i++) {
+    if (cells[i] === CELL.ENTRY) {
+      G.playerRow = Math.max(1, Math.min(h, Math.floor(i/w)+1));
+      G.playerCol = Math.max(1, Math.min(w, (i%w)+1));
+      return;
+    }
+  }
+  G.playerCol = 2; G.playerRow = 2;
+}
+function placePlayerAtExit() {
+  const { w, h, cells } = G.zone;
+  for (let i = 0; i < w*h; i++) {
+    if (cells[i] === CELL.EXIT) {
+      G.playerRow = Math.max(1, Math.min(h, Math.floor(i/w)+1));
+      G.playerCol = Math.max(1, Math.min(w, (i%w)+1));
+      return;
+    }
+  }
+}
+// ════════════════════════════════════════════════════════════════════
+
+//  SAVE / LOAD
+// ════════════════════════════════════════════════════════════════════
+function saveGame() {
+  const data = {
+    curZone: G.curZone,
+    playerCol: G.playerCol,
+    playerRow: G.playerRow,
+    score: G.score,
+    totalDisc: G.totalDisc,
+    discMap: Array.from(G.discMap),
+    fragMap: Array.from(G.fragMap),
+  };
+  localStorage.setItem('gita_ascent_save', JSON.stringify(data));
+}
+
+function loadGame() {
+  const raw = localStorage.getItem('gita_ascent_save');
+  if (!raw) return false;
+  try {
+    const data = JSON.parse(raw);
+    G.curZone    = data.curZone;
+    G.playerCol  = data.playerCol;
+    G.playerRow  = data.playerRow;
+    G.score      = data.score;
+    G.totalDisc  = data.totalDisc;
+    G.discMap    = new Uint8Array(data.discMap);
+    G.fragMap    = new Uint8Array(data.fragMap);
+    return true;
+  } catch(e) { return false; }
+}
+
+function hasSave() {
+  return !!localStorage.getItem('gita_ascent_save');
+}
+
+// ════════════════════════════════════════════════════════════════════//  SCREEN MANAGEMENT
+// ════════════════════════════════════════════════════════════════════
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function showMenu() {
+  const resumeBtn = document.getElementById('menu-resume');
+  const saveInfo = document.getElementById('menu-save-info');
+  if (hasSave()) {
+    resumeBtn.classList.remove('disabled');
+    const raw = JSON.parse(localStorage.getItem('gita_ascent_save'));
+    saveInfo.textContent = `Saved: Zone ${raw.curZone} · Score ${raw.score} · ${raw.totalDisc}/653 verses`;
+  } else {
+    resumeBtn.classList.add('disabled');
+    saveInfo.textContent = '';
+  }
+  showScreen('screen-menu');
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  MENU CHOICES
+function menuChoice(n) {
+  if (n===1) { if (!hasSave()) return; if (loadGame()) { loadZone(G.curZone,true); startGame(); } }
+  else if (n===2) { resetGame(); loadZone(1,false); startGame(); }
+  else if (n===3) { resetGame(); loadZone(1+Math.floor(Math.random()*18),false); startGame(); }
+  else if (n===4) {
+    const z = parseInt(prompt('Enter zone number (1–18):'),10);
+    if (z>=1&&z<=18) { resetGame(); loadZone(z,false); startGame(); }
+  }
+}
+
+function resetGame() {
+  G.score=0; G.totalDisc=0; G.zoneDisc=0;
+  G.discMap=new Uint8Array(TOTAL_FILES+1);
+  G.fragMap=new Uint8Array(TOTAL_FILES+1);
+  G.curState=STATE.EXPLORE; G.displayText=''; G.curFileN=0;
+  zoneCache.clear();
+}
+
+function startGame() {
+  G.curState=STATE.EXPLORE;
+  showScreen('screen-game');
+  render(); attachInput();
+}
+
+
+// ════════════════════════════════════════════════════════════════════
+//  RENDERER  (mobile viewport — 21 cols × 15 rows centred on player)
+// ════════════════════════════════════════════════════════════════════
+const VP_COLS = 21;
+const VP_ROWS = 15;
+
+function updateReadProgress() {
+  const wrap = document.getElementById('read-progress-wrap');
+  const fill = document.getElementById('read-progress-fill');
+  if (G.curState !== STATE.READ) { wrap.style.display='none'; return; }
+  const tt = G.readSentences.length, pt = G.purportSentences.length;
+  const gt = tt + pt;
+  if (!gt) { wrap.style.display='none'; return; }
+  const pos = G.readMode===0 ? G.readIndex : tt + G.readIndex;
+  wrap.style.display='block';
+  fill.style.width = Math.round(pos/gt*100)+'%';
+}
+
+function render() {
+  if (!G.zone) return;
+  const { w, h, cells, count } = G.zone;
+  const idx = (r,c) => (r-1)*w + (c-1);
+  const def = ZONE_DEFS[G.curZone];
+
+  // ── HUD ──────────────────────────────────────────────────────────
+  document.getElementById('hud-zone-name').textContent = ZONE_NAMES[G.curZone];
+  document.getElementById('hud-zone-prog').textContent = `${G.zoneDisc}/${count}`;
+  document.getElementById('hud-score').textContent     = `${G.score}`;
+  document.getElementById('prog-num').textContent      = G.totalDisc;
+  const pct = Math.floor(G.totalDisc*100/TOTAL_FILES);
+  document.getElementById('prog-fill').style.width = pct+'%';
+  document.getElementById('prog-pct').textContent  = pct+'%';
+
+  // ── VIEWPORT MAP ─────────────────────────────────────────────────
+  const halfC = Math.floor(VP_COLS/2);
+  const halfR = Math.floor(VP_ROWS/2);
+  const startC = Math.max(1, Math.min(G.playerCol - halfC, w - VP_COLS + 1));
+  const startR = Math.max(1, Math.min(G.playerRow - halfR, h - VP_ROWS + 1));
+  const endC   = Math.min(w, startC + VP_COLS - 1);
+  const endR   = Math.min(h, startR + VP_ROWS - 1);
+  const gch = def.ch;
+  let html = '';
+  for (let row = startR; row <= endR; row++) {
+    for (let col = startC; col <= endC; col++) {
+      if (row===G.playerRow && col===G.playerCol) {
+        html += '<span class="c-player">@</span>'; continue;
+      }
+      const ci = idx(row,col);
+      const cv = cells[ci];
+      if (cv===CELL.VREAD)   { html += '<span class="c-vread">v</span>';   continue; }
+      if (cv===CELL.FRAGCOL) { html += '<span class="c-fragcol">+</span>'; continue; }
+      if (cv===CELL.EXIT)    { html += '<span class="c-exit">&gt;</span>';  continue; }
+      if (cv===CELL.ENTRY)   { html += '<span class="c-entry">&lt;</span>'; continue; }
+      if (cv===CELL.DUG)     { html += '<span class="cd">·</span>';      continue; }
+      const h2 = G.hintMap ? G.hintMap[ci] : 0;
+      const cls = h2===2 ? 'ch' : h2===1 ? 'cw' : 'cg';
+      html += `<span class="${cls}">${gch}</span>`;
+    }
+    html += '\n';
+  }
+  document.getElementById('map-pre').innerHTML = html;
+
+  // ── TEXT BAND ─────────────────────────────────────────────────────
+  const modeEl    = document.getElementById('text-mode');
+  const contentEl = document.getElementById('text-content');
+  if (G.curState === STATE.READ) {
+    modeEl.textContent = G.readMode===0
+      ? `▶ ${G.curVerseRef} — TRANSLATION`
+      : `▶ ${G.curVerseRef} — PURPORT`;
+    const sents  = G.readMode===0 ? G.readSentences : G.purportSentences;
+    const sktLine = G.curFileSkt ? `❧ ${G.curFileSkt}\n\n` : '';
+    contentEl.textContent = sktLine + (sents[G.readIndex] || '—');
+    contentEl.className = 'text-content';
+  } else {
+    modeEl.textContent = '';
+    contentEl.textContent = G.displayText || 'Exploring…';
+    contentEl.className = 'text-content dim';
+  }
+  updateReadProgress();
+
+  // ── TOUCH CONTROLS visibility ─────────────────────────────────────
+  const reading = G.curState === STATE.READ;
+  document.getElementById('ctrl-explore').style.display = reading ? 'none' : 'grid';
+  document.getElementById('ctrl-read').style.display    = reading ? 'flex' : 'none';
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  INPUT — keyboard (desktop) + touch buttons (mobile)
+// ════════════════════════════════════════════════════════════════════
+let inputAttached = false;
+function attachInput() {
+  if (inputAttached) return;
+  inputAttached = true;
+  document.addEventListener('keydown', handleKey);
+}
+
+function handleKey(e) {
+  if (!document.getElementById('screen-game').classList.contains('active')) return;
+  if (document.getElementById('overlay-help').classList.contains('open')) {
+    if (e.key==='Escape'||e.key==='h'||e.key==='H') closeHelp();
+    return;
+  }
+  const k = e.key;
+  if (k==='Enter') { e.preventDefault(); advanceSentence(); render(); return; }
+  if (k===' ') {
+    e.preventDefault();
+    if (G.curState===STATE.READ) { if(e.shiftKey) retreatSentence(); else advanceSentence(); }
+    else dig();
+    render(); return;
+  }
+  const dirMap={'w':'n','W':'n','ArrowUp':'n','s':'s','S':'s','ArrowDown':'s',
+                'd':'e','D':'e','ArrowRight':'e','a':'w','A':'w','ArrowLeft':'w'};
+  if (dirMap[k]) {
+    e.preventDefault();
+    if (G.curState===STATE.READ) G.curState=STATE.EXPLORE;
+    move(dirMap[k]); render(); return;
+  }
+  switch(k) {
+    case 'r': case 'R':
+      if (G.curFileN>0) {
+        const v=parseVerse(G.curFileN);
+        G.curFileSkt=v.sanskrit; G.readSentences=v.sentences;
+        G.purportSentences=v.purport; G.readMode=0; G.readIndex=0;
+        G.curState=STATE.READ; render();
+      } break;
+    case 'j': case 'J': openPanel('journal'); break;
+    case 'f': case 'F': openPanel('fragments'); break;
+    case 'z': case 'Z': openPanel('zones'); break;
+    case 'h': case 'H': case '?': openHelp(); break;
+    case 'q': case 'Q':
+      saveGame(); G.displayText='[ Journey saved. ]'; render();
+      setTimeout(()=>showMenu(),1200); break;
+    case 'Escape': closePanel(); break;
+  }
+}
+
+// Touch action functions called by HTML buttons
+function touchMove(dir) {
+  if (G.curState===STATE.READ) G.curState=STATE.EXPLORE;
+  move(dir); render();
+}
+function touchDig()     { dig(); render(); }
+function touchNext()    { advanceSentence(); render(); }
+function touchPrev()    { retreatSentence(); render(); }
+function touchRestart() {
+  if (G.curFileN>0) {
+    const v=parseVerse(G.curFileN);
+    G.curFileSkt=v.sanskrit; G.readSentences=v.sentences;
+    G.purportSentences=v.purport; G.readMode=0; G.readIndex=0;
+    G.curState=STATE.READ; render();
+  }
+}
+function touchClose() { G.curState=STATE.EXPLORE; render(); }
+function touchSaveQuit() { saveGame(); G.displayText='[ Saved. ]'; render(); setTimeout(()=>showMenu(),1200); }
+
+// ════════════════════════════════════════════════════════════════════
+//  EXCAVATION  (Space key)
+// ════════════════════════════════════════════════════════════════════
+function dig() {
+  const { w, h, cells, vcols, vrows, count, start } = G.zone;
+  const ci = (G.playerRow-1)*w + G.playerCol-1;
+  const cv = cells[ci];
+
+  if (cv === CELL.VERSE) {
+    const vi = findVi(G.playerCol, G.playerRow);
+    if (vi > 0) {
+      const ai = start + vi - 1;
+      cells[ci] = CELL.VREAD;
+      if (!G.discMap[ai]) {
+        G.discMap[ai]=1; G.totalDisc++; G.zoneDisc++;
+        G.score += SCORE.VERSE;
+        if (G.zoneDisc === count) {
+          G.score += SCORE.ZONE;
+          G.displayText = `ZONE COMPLETE! +${SCORE.ZONE} bonus!`;
+        }
+      }
+      G.curFileN = ai;
+      const v = parseVerse(ai);
+      G.curVerseRef=v.ref; G.curFileSkt=v.sanskrit;
+      G.readSentences=v.sentences; G.purportSentences=v.purport;
+      G.readMode=0; G.readIndex=0; G.curState=STATE.READ;
+      buildHintMap();
+    }
+  } else if (cv === CELL.VREAD) {
+    // Re-read
+    const vi = findVi(G.playerCol, G.playerRow);
+    if (vi > 0) {
+      G.curFileN = start + vi - 1;
+      const v = parseVerse(G.curFileN);
+      G.curVerseRef=v.ref; G.curFileSkt=v.sanskrit; G.readSentences=v.sentences;
+      G.purportSentences=v.purport; G.readMode=0; G.readIndex=0;
+      G.curState=STATE.READ;
+    }
+  } else if (cv === CELL.FRAG) {
+    let fragVi = 0;
+    for (let vi=1; vi<=count; vi++) {
+      if ((vcols[vi]+1===G.playerCol && vrows[vi]===G.playerRow) ||
+          (vcols[vi]===G.playerCol   && vrows[vi]+1===G.playerRow)) {
+        fragVi=vi; break;
+      }
+    }
+    if (fragVi > 0) {
+      const ai = start + fragVi - 1;
+      cells[ci] = CELL.FRAGCOL;
+      if (!G.fragMap[ai]) {
+        G.fragMap[ai]=1; G.score += SCORE.FRAG;
+        const v = parseVerse(ai);
+        G.displayText = `Sanskrit: ${v.sanskrit}`;
+      } else {
+        G.displayText = 'Fragment already collected.';
+      }
+      buildHintMap();
+    }
+  } else if (cv === CELL.FRAGCOL) {
+    let fragVi = 0;
+    for (let vi = 1; vi <= count; vi++) {
+      if ((vcols[vi]+1 === G.playerCol && vrows[vi] === G.playerRow) ||
+          (vcols[vi] === G.playerCol   && vrows[vi]+1 === G.playerRow)) {
+        fragVi = vi; break;
+      }
+    }
+    if (fragVi > 0) {
+      const v = parseVerse(start + fragVi - 1);
+      G.displayText = `Sanskrit: ${v.sanskrit}`;
+    } else {
+      G.displayText = 'Fragment already collected.';
+    }
+  } else if (cv === CELL.GROUND) {
+    cells[ci] = CELL.DUG;
+    const h2 = G.hintMap ? G.hintMap[ci] : 0;
+    G.displayText = h2===2 ? 'Something stirs close by\u2026'
+                  : h2===1 ? 'Ancient knowledge lingers near\u2026'
+                  :          'Nothing here.';
+  } else if (cv === CELL.DUG) {
+    G.displayText = 'Already excavated.';
+  } else if (cv === CELL.EXIT) {
+    G.displayText = 'Step forward to ascend \u2192';
+  } else if (cv === CELL.ENTRY) {
+    G.displayText = 'Step back to descend \u2190';
+  }
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  MOVEMENT
+// ════════════════════════════════════════════════════════════════════
+function move(dir) {
+  const { w, h, cells } = G.zone;
+  G.playerCol = Math.max(1, Math.min(w, G.playerCol));
+  G.playerRow = Math.max(1, Math.min(h, G.playerRow));
+  let nc = G.playerCol, nr = G.playerRow;
+  if (dir==='n') nr--;
+  if (dir==='s') nr++;
+  if (dir==='e') nc++;
+  if (dir==='w') nc--;
+
+  if (nc<1||nc>w||nr<1||nr>h) {
+    G.displayText = 'The edge of this realm.'; return;
+  }
+  G.playerCol = nc; G.playerRow = nr;
+  const ci = (nr-1)*w + nc-1;
+  const cv = cells[ci];
+
+  if (cv === CELL.EXIT) {
+    if (G.curZone < 18) {
+      saveGame();
+      const next = G.curZone+1;
+      showZoneFlash(next, 'ASCENDING');
+      setTimeout(() => {
+        loadZone(next, true); placePlayerAtEntry(); 
+        G.curState=STATE.EXPLORE;
+        G.displayText='You ascend\u2026';
+        hideZoneFlash(); render();
+      }, 1600);
+    } else { saveGame(); showSummit(); }
+    return;
+  }
+  if (cv === CELL.ENTRY) {
+    if (G.curZone > 1) {
+      saveGame();
+      const prev = G.curZone-1;
+      showZoneFlash(prev, 'DESCENDING');
+      setTimeout(() => {
+        loadZone(prev, true); placePlayerAtExit();
+        G.curState=STATE.EXPLORE;
+        G.displayText='You descend\u2026';
+        hideZoneFlash(); render();
+      }, 1600);
+    } else {
+      G.displayText = 'You stand at the beginning of the journey.';
+    }
+    return;
+  }
+  if (cv === CELL.VREAD) {
+    const vi = findVi(nc, nr);
+    if (vi > 0) {
+      const v = parseVerse(G.zone.start + vi - 1);
+      G.displayText = `${v.ref} — Verse site `;
+    } else {
+      G.displayText = 'Verse site';
+    }
+    return;
+  }
+  if (cv === CELL.FRAGCOL) {
+    const { vcols, vrows, count, start } = G.zone;
+    let fragVi = 0;
+    for (let vi = 1; vi <= count; vi++) {
+      if ((vcols[vi] + 1 === nc && vrows[vi] === nr) ||
+          (vcols[vi] === nc && vrows[vi] + 1 === nr)) {
+        fragVi = vi; break;
+      }
+    }
+    if (fragVi > 0) {
+      const v = parseVerse(start + fragVi - 1);
+      G.displayText = `Sanskrit site — ${v.ref}  `;
+    } else {
+      G.displayText = 'Sanskrit site';
+    }
+    return;
+  }
+  // Hint message
+  const h2 = G.hintMap ? G.hintMap[ci] : 0;
+  if      (cv === CELL.VERSE) G.displayText = 'Verse buried\u2026';
+  else if (cv === CELL.FRAG)  G.displayText = 'Sanskrit fragment\u2026';
+  else if (h2===2)            G.displayText = 'Something stirs beneath your feet\u2026';
+  else if (h2===1)            G.displayText = 'You sense ancient knowledge nearby\u2026';
+  else                        G.displayText = '';
+}
+
+//  SENTENCE FWD-RWD
+// ════════════════════════════════════════════════════════════════════
+function advanceSentence() {
+  if (G.curState !== STATE.READ) return;
+  const sentences = G.readMode === 0 ? G.readSentences : G.purportSentences;
+  G.readIndex++;
+  if (G.readIndex >= sentences.length) {
+    if (G.readMode === 0 && G.purportSentences.length > 0) {
+      G.readMode = 1;
+      G.readIndex = 0;
+    } else {
+      G.curState = STATE.EXPLORE;
+      G.displayText = `Verse ${G.curVerseRef} — fully read.`;
+    }
+  }
+}
+
+function retreatSentence() {
+  if (G.curState !== STATE.READ) return;
+  G.readIndex--;
+  if (G.readIndex < 0) {
+    if (G.readMode === 1) {
+      // Step back from purport into translation
+      G.readMode = 0;
+      G.readIndex = G.readSentences.length - 1;
+    } else {
+      // Already at the very first sentence, clamp to 0
+      G.readIndex = 0;
+    }
+  }
+}
+// ════════════════════════════════════════════════════════════════════
+//  PANELS//  PANELS
+// ════════════════════════════════════════════════════════════════════
+function openPanel(type) {
+  const panel = document.getElementById('panel');
+  const title = document.getElementById('panel-title-text');
+  const content = document.getElementById('panel-content');
+  panel.classList.add('open');
+
+  if (type === 'journal') {
+    title.textContent = 'JOURNAL';
+    let html = '';
+    let found = 0;
+    for (let i = 1; i <= TOTAL_FILES; i++) {
+      if (G.discMap[i]) {
+        found++;
+        const v = parseVerse(i);
+        html += `<div class="panel-item">
+          <span class="panel-ref">${v.ref}</span>
+          <div class="panel-skt">${v.sanskrit.substring(0, 90)}${v.sanskrit.length>90?'…':''}</div>
+        </div>`;
+      }
+    }
+    if (!found) html = '<div class="panel-item" style="color:var(--green-dim)">No verses discovered yet.</div>';
+    content.innerHTML = html;
+
+  } else if (type === 'fragments') {
+    title.textContent = 'SANSKRIT';
+    let html = '';
+    let found = 0;
+    for (let i = 1; i <= TOTAL_FILES; i++) {
+      if (G.fragMap[i]) {
+        found++;
+        const v = parseVerse(i);
+        html += `<div class="panel-item">
+          <span class="panel-ref">${v.ref}</span>
+          <div class="panel-skt" style="white-space:normal;overflow:visible;">${v.sanskrit}</div>
+        </div>`;
+      }
+    }
+    if (!found) html = '<div class="panel-item" style="color:var(--green-dim)">No Sanskrit fragments collected yet.</div>';
+    content.innerHTML = html;
+
+  } else if (type === 'zones') {
+    title.textContent = 'ZONES';
+    let html = '';
+    let fileAcc = 0;
+    for (let oz = 1; oz <= 18; oz++) {
+      const ozCount = ZONE_COUNTS[oz];
+      let ozDisc = 0;
+      for (let ov = 1; ov <= ozCount; ov++) {
+        if (G.discMap[fileAcc + ov]) ozDisc++;
+      }
+      const pct = Math.floor(ozDisc * 100 / ozCount);
+      const isCur = oz === G.curZone;
+      const barW = Math.floor(ozDisc * 100 / ozCount);
+      html += `<div class="zone-row ${isCur ? 'current' : ''}">
+        <span>${isCur ? '▶' : ''} ${String(oz).padStart(2,' ')}</span>
+        <div>
+          <div style="font-size:16px;margin-bottom:3px;">${ozDisc}/${ozCount}</div>
+          <div class="zone-bar-wrap"><div class="zone-bar-fill" style="width:${barW}%"></div></div>
+        </div>
+        <span class="zone-pct">${pct}%</span>
+      </div>`;
+      fileAcc += ozCount;
+    }
+    content.innerHTML = html;
+  }
+}
+
+function closePanel() {
+  document.getElementById('panel').classList.remove('open');
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  HELP / FLASH / SUMMIT
+// ════════════════════════════════════════════════════════════════════
+function openHelp() {
+  document.getElementById('overlay-help').classList.add('open');
+}
+function closeHelp() {
+  document.getElementById('overlay-help').classList.remove('open');
+}
+
+function showZoneFlash(zoneNum, verb) {
+  const fl = document.getElementById('zone-flash');
+  document.getElementById('flash-title').textContent = verb;
+  document.getElementById('flash-sub').textContent = ZONE_NAMES[zoneNum];
+  fl.classList.add('show');
+}
+function hideZoneFlash() {
+  document.getElementById('zone-flash').classList.remove('show');
+}
+
+function showSummit() {
+  document.getElementById('summit-stats').textContent =
+    `Score: ${G.score}  ·  Verses: ${G.totalDisc}/653`;
+  showScreen('screen-summit');
+}
+
+// ════════════════════════════════════════════════════════════════════
+//  KEYBOARD SHORTCUTS ON MENU//  KEYBOARD SHORTCUTS ON MENU
+// ════════════════════════════════════════════════════════════════════
+document.addEventListener('keydown', e => {
+  if (document.getElementById('screen-menu').classList.contains('active')) {
+    if (e.key === '1') menuChoice(1);
+    if (e.key === '2') menuChoice(2);
+    if (e.key === '3') menuChoice(3);
+    if (e.key === '4') menuChoice(4);
+  }
+});
+
+</script>
+</body>
+</html>
